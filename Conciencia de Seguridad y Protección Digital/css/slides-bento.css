@@ -1,0 +1,758 @@
+/* =====================================================================
+   CISCO NETACAD & UMSA // CONCIENCIA SOBRE SEGURIDAD - SLIDES BENTO
+   Dense Multi-Tiered Layouts + Interactive Cyber Defense Widgets
+   Updated: 100% Space Utilization, Larger Fonts & Bootstrap Icons
+   Course: Conciencia sobre Seguridad y Protección Digital
+   Asistente de Enseñanza: Alex Arturo Jamachi Condori
+   ===================================================================== */
+
+/* Grids Bento Estructurales (100% Altura y Distribución) */
+.bento-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.bento-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.bento-sidebar-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 16px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.bento-sidebar-left {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 16px;
+  height: 100%;
+  align-items: stretch;
+}
+
+.bento-4grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* Tarjetas Bento de Alta Densidad y Espaciado Amplio */
+.bento-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  box-shadow: var(--shadow-hard-xs);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.bento-card:hover {
+  border-color: var(--cyber-purple-neon);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.25);
+}
+
+.card-purple {
+  border-color: var(--border-purple);
+  box-shadow: var(--shadow-hard-purple);
+}
+
+.card-cyan {
+  border-color: var(--border-cyan);
+  box-shadow: var(--shadow-hard-cyan);
+}
+
+.card-amber {
+  border-color: var(--border-amber);
+  box-shadow: var(--shadow-hard-amber);
+}
+
+.card-featured {
+  background: linear-gradient(145deg, #131A2D, #0A0E1A);
+  border: 2px solid var(--border-purple);
+  box-shadow: var(--shadow-hard-purple), 0 0 25px rgba(139, 92, 246, 0.2);
+}
+
+/* Card Header Label */
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.label-purple { color: var(--cyber-purple-neon); }
+.label-cyan { color: var(--cisco-cyan); }
+.label-amber { color: var(--warn-amber); }
+.label-mint { color: var(--pop-mint); }
+.label-coral { color: var(--pop-coral); }
+
+/* Píldoras de Destacado */
+.feat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.feat-pill-purple {
+  background: rgba(139, 92, 246, 0.2);
+  border: 1.5px solid var(--cyber-purple);
+  color: var(--cyber-purple-neon);
+}
+
+.feat-pill-cyan {
+  background: rgba(0, 188, 235, 0.2);
+  border: 1.5px solid var(--cisco-cyan);
+  color: var(--cisco-cyan);
+}
+
+.feat-pill-amber {
+  background: rgba(245, 158, 11, 0.2);
+  border: 1.5px solid var(--warn-amber);
+  color: var(--warn-amber);
+}
+
+.feat-pill-coral {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1.5px solid var(--pop-coral);
+  color: #F87171;
+}
+
+.feat-pill-mint {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1.5px solid var(--pop-mint);
+  color: var(--pop-mint);
+}
+
+/* Cajas de Analogía y Conceptos Clave */
+.analogy-box {
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.analogy-icon {
+  font-size: 26px;
+  color: var(--cyber-purple-neon);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.analogy-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.analogy-text {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+/* Pipelines y Listas de Proceso */
+.process-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.process-step:hover {
+  transform: translateX(4px);
+  border-color: var(--border-bright);
+}
+
+.process-num {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 15px;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.num-purple { background: rgba(139, 92, 246, 0.25); color: var(--cyber-purple-neon); border: 1px solid var(--cyber-purple); }
+.num-cyan { background: rgba(0, 188, 235, 0.25); color: var(--cisco-cyan); border: 1px solid var(--cisco-cyan); }
+.num-amber { background: rgba(245, 158, 11, 0.25); color: var(--warn-amber); border: 1px solid var(--warn-amber); }
+.num-mint { background: rgba(16, 185, 129, 0.25); color: var(--pop-mint); border: 1px solid var(--pop-mint); }
+
+.process-text {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.process-text strong {
+  color: #FFFFFF;
+}
+
+/* Callouts de Examen y Preguntas Oficiales */
+.exam-callout {
+  border-radius: var(--radius-sm);
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+}
+
+.callout-purple {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: var(--cyber-purple);
+}
+
+.callout-cyan {
+  background: rgba(0, 188, 235, 0.12);
+  border-color: var(--cisco-cyan);
+}
+
+.callout-amber {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: var(--warn-amber);
+}
+
+.callout-mint {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: var(--pop-mint);
+}
+
+.exam-callout-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.exam-callout-content {
+  flex: 1;
+}
+
+.exam-callout-title {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.exam-callout-text {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+/* Banners de Estadísticas y Reglas de Oro */
+.stat-banner {
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.banner-purple { border-color: var(--cyber-purple); }
+.banner-cyan { border-color: var(--cisco-cyan); }
+.banner-amber { border-color: var(--warn-amber); }
+.banner-mint { border-color: var(--pop-mint); }
+
+.stat-num {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.stat-desc {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.42;
+}
+
+.stat-desc strong {
+  color: #FFFFFF;
+}
+
+/* ================= COMPONENTES INTERACTIVOS AMPLIADOS ================= */
+
+/* Dinámica 1: Clasificador de Amenazas (Tarjetas Altas y Enriquecidas) */
+.threat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.threat-item-card {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  min-height: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.threat-item-card:hover {
+  border-color: var(--cyber-purple-neon);
+  transform: translateY(-2px);
+  background: var(--bg-elevated);
+}
+
+.threat-item-card.is-active-threat {
+  border-color: var(--cyber-purple-neon);
+  background: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+}
+
+/* Dinámica 2: Auditor de Huella Digital */
+.footprint-habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footprint-habit-toggle {
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 11px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-body);
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.footprint-habit-toggle:hover {
+  border-color: var(--cisco-cyan);
+  background: var(--bg-elevated);
+}
+
+.footprint-habit-toggle.is-checked {
+  border-color: var(--warn-amber);
+  background: rgba(245, 158, 11, 0.15);
+  color: #FFFFFF;
+}
+
+.footprint-meter-track {
+  width: 100%;
+  height: 14px;
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.footprint-meter-fill {
+  height: 100%;
+  width: 20%;
+  background: linear-gradient(90deg, var(--pop-mint), var(--warn-amber));
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+/* Dinámica 3: Detector Forense de Deepfakes */
+.deepfake-lenses-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.deepfake-lens-btn {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 13px 18px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  color: var(--text-body);
+}
+
+.deepfake-lens-btn:hover {
+  border-color: var(--cyber-purple-neon);
+  background: var(--bg-elevated);
+}
+
+.deepfake-lens-btn.is-active-lens {
+  border-color: var(--cyber-purple-neon);
+  background: rgba(139, 92, 246, 0.22);
+  color: #FFFFFF;
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.35);
+}
+
+/* Dinámica 4: Simulador EmailPal */
+.emailpal-inbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.email-row-item {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.email-row-item:hover {
+  border-color: var(--cisco-cyan);
+  background: var(--bg-elevated);
+}
+
+.email-row-item.is-selected {
+  border-color: var(--cyber-purple-neon);
+  background: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
+}
+
+.email-action-btn {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  color: #FFFFFF;
+  padding: 10px 16px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email-action-btn.action-phishing:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: var(--pop-coral);
+  color: #FCA5A5;
+}
+
+.email-action-btn.action-spam:hover {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: var(--warn-amber);
+  color: #FCD34D;
+}
+
+.email-action-btn.action-inbox:hover {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: var(--pop-mint);
+  color: #6EE7B7;
+}
+
+/* Checkpoint / Quiz Slides */
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+.quiz-btn {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 15px;
+  min-height: 48px;
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  line-height: 1.32;
+}
+
+.quiz-btn:hover:not([disabled]) {
+  border-color: var(--cisco-cyan);
+  background: var(--bg-elevated);
+  transform: translateY(-1px);
+}
+
+.quiz-btn.is-correct {
+  border-color: var(--pop-mint) !important;
+  background: rgba(16, 185, 129, 0.25) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.45) !important;
+}
+
+.quiz-btn.is-incorrect {
+  border-color: var(--pop-coral) !important;
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #FCA5A5 !important;
+}
+
+.quiz-btn.is-dimmed {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.quiz-explanation {
+  background: var(--bg-nested);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 15px;
+  line-height: 1.45;
+  display: none;
+}
+
+.quiz-explanation.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.quiz-explanation.is-correct-box {
+  border-color: var(--pop-mint);
+  background: rgba(16, 185, 129, 0.15);
+  color: #A7F3D0;
+}
+
+.quiz-explanation.is-incorrect-box {
+  border-color: var(--pop-coral);
+  background: rgba(239, 68, 68, 0.15);
+  color: #FECACA;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* =====================================================================
+   SESIÓN 2 INTERACTIVE SIMULATORS & CASE SELECTION STYLES
+   ===================================================================== */
+.case-select-btn,
+.endpoint-case-btn,
+.network-case-btn,
+.tracking-case-btn,
+.policy-case-btn {
+  background: var(--bg-nested);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.case-select-btn:hover,
+.endpoint-case-btn:hover,
+.network-case-btn:hover,
+.tracking-case-btn:hover,
+.policy-case-btn:hover {
+  border-color: var(--cyber-purple-neon);
+  background: var(--bg-elevated);
+  transform: translateY(-2px);
+}
+
+.case-select-btn.is-active-case,
+.endpoint-case-btn.is-active-case,
+.network-case-btn.is-active-case,
+.tracking-case-btn.is-active-case,
+.policy-case-btn.is-active-case {
+  border-color: var(--cisco-cyan) !important;
+  background: rgba(0, 188, 235, 0.14) !important;
+  box-shadow: 0 0 16px rgba(0, 188, 235, 0.35) !important;
+}
+
+.case-btn-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.case-btn-title {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.case-btn-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Session Switcher Pills in Header */
+.session-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 22, 38, 0.8);
+  border: 1px solid var(--border-color);
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.session-pill {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.session-pill:hover {
+  color: #FFFFFF;
+  border-color: var(--border-bright);
+}
+
+.session-pill.active {
+  background: var(--cyber-purple-deep);
+  color: #FFFFFF;
+  border-color: var(--cyber-purple);
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+
+/* ================= RESPONSIVE MOBILE & TABLET PORTRAIT ================= */
+@media (max-width: 900px) {
+  .bento-2col,
+  .bento-3col,
+  .bento-sidebar-layout,
+  .bento-sidebar-left,
+  .bento-4grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    height: auto !important;
+    gap: 12px !important;
+  }
+
+  .bento-card {
+    height: auto !important;
+    overflow: visible !important;
+    justify-content: flex-start !important;
+    padding: 14px !important;
+    gap: 10px !important;
+  }
+
+  .bento-card:hover {
+    transform: none !important;
+  }
+
+  .bento-card h1 {
+    font-size: clamp(22px, 6.2vw, 30px) !important;
+    line-height: 1.15 !important;
+  }
+
+  .card-label {
+    font-size: 14.5px !important;
+    flex-wrap: wrap !important;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-card [style*="grid-template-columns"],
+  .quiz-options-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .quiz-btn {
+    min-height: 44px !important;
+    font-size: 14.5px !important;
+    padding: 9px 12px !important;
+  }
+
+  .stat-banner,
+  .exam-callout,
+  .analogy-box {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 10px 12px !important;
+  }
+}

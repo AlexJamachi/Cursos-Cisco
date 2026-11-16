@@ -1,0 +1,72 @@
+/* =====================================================================
+   CISCO NETACAD & UMSA // CONCIENCIA SOBRE SEGURIDAD Y PROTECCIÓN DIGITAL
+   Design Tokens: Dark Obsidian Cyber-Security + Tactical Neo-Brutalist
+   Course: Conciencia sobre Seguridad y Protección Digital - Viernes 17:30-19:00 Virtual
+   Asistente de Enseñanza: Alex Arturo Jamachi Condori
+   Optimized: Large Readable Fonts & 100% Space Utilization
+   ===================================================================== */
+
+:root {
+  /* 1. Cyber-Security Tactical Palette (Darker, Violet & Cyan) */
+  --cyber-purple: #8B5CF6;
+  --cyber-purple-neon: #A78BFA;
+  --cyber-purple-deep: #4C1D95;
+  --cyber-purple-glow: rgba(139, 92, 246, 0.25);
+  
+  --cisco-cyan: #00BCEB;
+  --cisco-blue: #049FD9;
+  --cisco-navy: #0A1128;
+  
+  --warn-amber: #F59E0B;
+  --warn-gold: #FBBF24;
+  --pop-mint: #10B981;
+  --pop-coral: #EF4444;
+  --umsa-blue: #0A3871;
+
+  /* 2. Darker Obsidian Surfaces & Backgrounds */
+  --bg-canvas: #050811;
+  --bg-stage: #0A0E1A;
+  --bg-card: #101626;
+  --bg-card-hover: #162035;
+  --bg-nested: #070B14;
+  --bg-elevated: #131C30;
+  
+  /* 3. Borders & Grid Lines */
+  --border-color: #24304A;
+  --border-bright: #3D4F75;
+  --border-purple: #7C3AED;
+  --border-cyan: #00BCEB;
+  --border-amber: #F59E0B;
+
+  /* 4. Typography Scale - SIGNIFICANTLY ENLARGED FOR PRESENTATION READABILITY */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --size-title-hero: 38px;
+  --size-title-slide: 24px;
+  --size-title-card: 20px;
+  --size-title-sub: 17px;
+  --size-body-lg: 17.5px;
+  --size-body: 16px;
+  --size-body-sm: 15px;
+  --size-caption: 14px;
+  --size-mono: 14px;
+
+  --text-display: #FFFFFF;
+  --text-body: #E2E8F0;
+  --text-muted: #94A3B8;
+  --text-faint: #64748B;
+
+  /* 5. Neo-Brutalist Hard Shadows */
+  --shadow-hard-purple: 4px 4px 0px rgba(139, 92, 246, 0.45);
+  --shadow-hard-cyan: 4px 4px 0px rgba(0, 188, 235, 0.45);
+  --shadow-hard-amber: 4px 4px 0px rgba(245, 158, 11, 0.45);
+  --shadow-hard-xs: 2px 2px 0px rgba(0, 0, 0, 0.7);
+
+  /* 6. Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+}

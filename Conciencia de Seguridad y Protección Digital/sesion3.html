@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco NetAcad &amp; UMSA // Conciencia sobre Seguridad y Protección Digital - Sesión 3 (Módulos 4 y 5)</title>
+
+  <!-- Tipografías Oficiales Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Iconos Vectoriales Bootstrap Icons (0 Emojis) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Hojas de Estilo del Sistema -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/slides-base.css">
+  <link rel="stylesheet" href="css/slides-bento.css">
+  <link rel="stylesheet" href="css/presenter-hud.css">
+</head>
+<body>
+
+  <!-- Canvas Ambiental de Fondo (Grid Táctico de Ciberdefensa) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <div class="app-container">
+    <div class="stage-container" id="stageContainer">
+      <div class="slide-stage" id="slideStage">
+        <div class="top-progress-bar" id="slideProgress" style="width: 4.16%;"></div>
+        <!-- SLIDE 01: CARÁTULA PRINCIPAL // SESIÓN 3 FINAL -->
+        <div class="slide-view is-active" data-index="0" data-title="Carátula // Sesión 3 Final: Módulos 4 y 5" data-desc="Salud Mental, Física y Ambiental, Pensamiento Crítico, Algoritmos y Resumen Integral del Curso" data-notes="Dar la bienvenida a la tercera y última sesión del programa Conciencia sobre Seguridad y Protección Digital. Aclarar a estudiantes nuevos que los Módulos 4 y 5 se comprenden de forma autónoma e incluyen puente exprés. Presentarse como Asistente de Enseñanza Oficial Alex Arturo Jamachi Condori.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                UMSA // CISCO NETWORKING ACADEMY
+              </span>
+              <span class="header-context">Conciencia sobre Seguridad y Protección Digital</span>
+            </div>
+            <div class="header-right">
+              <div class="session-switcher">
+                <a href="sesion1.html" class="session-pill" title="Ir a Sesión 1 (Módulo 1)">S1</a>
+                <a href="sesion2.html" class="session-pill" title="Ir a Sesión 2 (Módulos 2 y 3)">S2</a>
+                <span class="session-pill active" title="Sesión Actual (Módulos 4 y 5)">S3</span>
+              </div>
+              <span class="header-telemetry"><i class="bi bi-calendar-event"></i> VIERNES | 17:30 – 19:00</span>
+              <span class="slide-index-pill">01 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Tarjeta Principal Izquierda -->
+              <div class="bento-card card-featured">
+                <div>
+                  <span class="feat-pill feat-pill-mint"><i class="bi bi-flag-fill"></i> SESIÓN 3 DE 3 // CLAUSURA DEL CURSO</span>
+                  <h1 style="font-family:var(--font-display); font-size:35px; font-weight:800; color:#FFFFFF; line-height:1.12; margin-top:12px;">
+                    Salud Digital, Pensamiento Crítico &amp; <span style="color:var(--cisco-cyan);">Cierre Integral</span>
+                  </h1>
+                  <p style="font-size:17px; color:var(--text-body); margin-top:8px; line-height:1.42;">
+                    <strong>Módulo 4:</strong> Bienestar mental, físico y ambiental + hechos vs. opiniones + algoritmos.
+                    <br><strong>Módulo 5:</strong> Resumen maestro integrador y plan de acción post-curso.
+                  </p>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:11.5px; color:var(--cyber-purple-neon); font-weight:700;">ASISTENTE DE ENSEÑANZA OFICIAL</div>
+                      <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:#FFFFFF; margin-top:2px;">Alex Arturo Jamachi Condori</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-cyan); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:11.5px; color:var(--cisco-cyan); font-weight:700;">DURACIÓN &amp; MODALIDAD</div>
+                      <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:#FFFFFF; margin-top:2px;">90 Minutos • En Vivo Virtual</div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:12px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:9px 11px; font-size:13.5px; color:var(--text-body); line-height:1.35;">
+                      <strong style="color:var(--cyber-purple-neon); display:block; font-family:var(--font-mono); font-size:11.5px; margin-bottom:2px;">4.0–4.2 // SALUD Y CRITERIO</strong>
+                      Luz azul, 20-20-20, 6 filtros anti-bulos y cámaras de eco.
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-amber); border-radius:var(--radius-sm); padding:9px 11px; font-size:13.5px; color:var(--text-body); line-height:1.35;">
+                      <strong style="color:var(--warn-amber); display:block; font-family:var(--font-mono); font-size:11.5px; margin-bottom:2px;">4.3 // TRIAGE ÉTICO</strong>
+                      Eliminar bulos publicados, cero piratería y canales internos.
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:9px 11px; font-size:13.5px; color:var(--text-body); line-height:1.35;">
+                      <strong style="color:var(--pop-mint); display:block; font-family:var(--font-mono); font-size:11.5px; margin-bottom:2px;">5.0 // CIERRE 360°</strong>
+                      Mapa M1–M4, simulador global y Protocolo de 7 Días.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:26px;"><i class="bi bi-people-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>Bienvenidos Cursantes Nuevos:</strong> Incluye nivelación rápida de Módulos 1–3 y dinámicas guiadas paso a paso.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Lateral Derecha -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:12px; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <img src="assets/umsa-logo.png" alt="UMSA Logo" style="height:48px; width:auto; object-fit:contain;">
+                    <div>
+                      <div style="font-family:var(--font-display); font-size:15.5px; font-weight:800; color:#FFFFFF;">UNIVERSIDAD MAYOR DE SAN ANDRÉS</div>
+                      <div style="font-size:13.5px; color:var(--text-muted);">Facultad de Ciencias Puras y Naturales</div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:12px; background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:14px 16px; text-align:center;">
+                    <div style="width:64px; height:64px; margin:0 auto 8px auto; border-radius:50%; background:rgba(139,92,246,0.18); border:2px solid var(--cyber-purple); display:flex; align-items:center; justify-content:center; box-shadow:0 0 22px rgba(139,92,246,0.4);">
+                      <i class="bi bi-heart-pulse-fill" style="font-size:32px; color:var(--cyber-purple-neon);"></i>
+                    </div>
+                    <div style="font-family:var(--font-display); font-size:17.5px; font-weight:800; color:#FFFFFF;">
+                      Del Blindaje Técnico al Bienestar
+                    </div>
+                    <div style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.4;">
+                      Equilibramos mente, ergonomía, criterio informativo y algoritmos para cerrar el programa.
+                    </div>
+                  </div>
+
+                  <div style="margin-top:10px; display:flex; flex-direction:column; gap:8px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:9px 14px; display:flex; align-items:center; gap:12px;">
+                      <i class="bi bi-cpu-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                      <div style="font-size:14.5px; color:var(--text-body);"><strong>4 Simuladores Tácticos</strong> distribuidos en clase</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:9px 14px; display:flex; align-items:center; gap:12px;">
+                      <i class="bi bi-patch-check-fill" style="color:var(--pop-mint); font-size:20px;"></i>
+                      <div style="font-size:14.5px; color:var(--text-body);"><strong>8 Checkpoints NetAcad</strong> con debate en vivo</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-broadcast exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Participación Activa</div>
+                    <div class="exam-callout-text">Comparte tu voto A, B, C o D en el chat durante cada evaluación en vivo.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Cisco NetAcad // Seguridad Digital</span>
+              <span class="footer-chip">Sesión 3 Final: Módulos 4 &amp; 5</span>
+              <span class="footer-chip">UMSA Informática</span>
+            </div>
+            <div class="footer-meta">Siguiente: Puente Express (Módulos 1–3) y Agenda &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 02: PUENTE EXPRESS Y HOJA DE RUTA -->
+        <div class="slide-view" data-index="1" data-title="Hoja de Ruta // Puente Módulos 1–3 y Agenda (90 min)" data-desc="Resumen en 60 segundos de las sesiones previas y distribución de tiempos para Módulos 4 y 5" data-notes="Nivelar en 1 minuto a quienes se conectan hoy por primera vez resumiendo Módulos 1, 2 y 3, y explicar la agenda distribuida de 90 minutos.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                AGENDA Y NIVELACIÓN // 90 MIN
+              </span>
+              <span class="header-context">Puente Express (Módulos 1–3) hacia Módulos 4 y 5</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-compass-fill"></i> MAPA DE SESIÓN</span>
+              <span class="slide-index-pill">02 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Recap Express Módulos 1-3 -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-lightning-fill"></i> Puente Express (Módulos 1–3)</span>
+                    <span class="feat-pill feat-pill-amber">PARA NUEVOS</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.38; margin-top:4px;">
+                    Si te unes hoy por primera vez, esta es la base acumulada que conectamos ahora:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">M1</span>
+                      <div class="process-text"><strong>Amenazas &amp; Huella:</strong> Malware, phishing, deepfakes y huella digital indeleble en Internet.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">M2</span>
+                      <div class="process-text"><strong>Defensa Técnica:</strong> Parches, Windows Hello, 2FA, SIM Swapping, Dark Web, routers WPA3 y VPN.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">M3</span>
+                      <div class="process-text"><strong>Rastreo &amp; Ética:</strong> Cookies, fingerprinting, contratos T&amp;C, efecto dominó y 4% CO<sub>2</sub>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">HOY</span>
+                      <div class="process-text"><strong>M4 y M5 (Factor Humano):</strong> Salud física/mental, verdad vs. bulos, algoritmos y cierre global.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-check2-circle exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Cero Barreras</div>
+                    <div class="exam-callout-text">Cada bloque explica los conceptos desde cero con casos reales y guías prácticas.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Los 4 Bloques de la Sesión 3 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-map-fill"></i> Los 4 Bloques de Hoy (90 Min)</span>
+                    <span class="feat-pill feat-pill-purple">RITMO ACTIVO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">4.0</span>
+                      <div class="process-text"><strong>Mente, Cuerpo y Planeta (20 min):</strong> Redes, sobrecarga, luz azul, regla 20-20-20, e-waste + <em>Dinámica 1 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">4.1</span>
+                      <div class="process-text"><strong>Hechos vs. Opiniones (20 min):</strong> 6 filtros anti-desinformación, pensamiento crítico + <em>Dinámica 2 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">4.2–4.3</span>
+                      <div class="process-text"><strong>Algoritmos &amp; Bienestar (24 min):</strong> Cámaras de eco, apps de salud, bienestar flexible, triage + <em>Dinámica 3 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">5.0</span>
+                      <div class="process-text"><strong>Resumen Maestro &amp; Plan 7D (26 min):</strong> Síntesis Módulos 1–4, <em>Triage 360°</em>, <em>Quiz Final</em> y clausura.</div>
+                    </div>
+                  </div>
+
+                  <div class="exam-callout callout-cyan" style="margin-top:10px;">
+                    <i class="bi bi-ui-checks-grid exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                    <div class="exam-callout-content">
+                      <div class="exam-callout-title" style="color:var(--cisco-cyan);">Metodología de la Sesión</div>
+                      <div class="exam-callout-text">Alternamos teoría corta con simuladores interactivos y votación inmediata A/B/C/D en el chat.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan);">4+4</span>
+                  <div class="stat-desc">
+                    <strong>Equilibrio Dinámico:</strong> Cada tema combina casos reales interactivos con preguntas oficiales NetAcad.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Nivelación Express</span>
+              <span class="footer-chip">Agenda 90 min</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 4.0 // Salud Mental, Sobrecarga y Luz Azul &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 03: 4.0 SALUD MENTAL, SOBRECARGA Y SUEÑO -->
+        <div class="slide-view" data-index="2" data-title="4.0 Salud Mental // Redes, Sobrecarga y Luz Azul" data-desc="Riesgos psicológicos, fatiga en la toma de decisiones y alteraciones de la melatonina" data-notes="Basado en Transcripts 35 y 36 (4.0). Destacar el arma de doble filo de redes sociales (autoestima y comparación), la sobrecarga de información + fatiga de decisiones, y el círculo vicioso entre estrés y luz azul antes de dormir.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 4.0 // BIENESTAR MENTAL
+              </span>
+              <span class="header-context">Redes Sociales, Sobrecarga de Información y Sueño</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-brain"></i> CISCO 4.0.1 – 4.0.3</span>
+              <span class="slide-index-pill">03 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Redes Sociales y Adicción -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-phone-flip"></i> Redes y Agotamiento Digital</span>
+                    <span class="feat-pill feat-pill-purple">ARMA DOBLE FILO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Comparación y Autoestima:</strong> La presión de proyectar una imagen "perfecta" en Facebook o Instagram genera ansiedad, insuficiencia y depresión.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Diseño Adictivo (Scroll Infinito):</strong> Perder horas en feeds interminables o videojuegos produce agotamiento, estrés y menor concentración.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text"><strong>Sobrecarga de Información:</strong> El volumen y la velocidad de correos, chats y noticias 24/7 provocan <em>fatiga en la toma de decisiones</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">4</span>
+                      <div class="process-text"><strong>Aislamiento Social:</strong> Priorizar la interacción pasiva en pantalla reduce el contacto presencial y debilita tu red real de apoyo.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-moon-stars-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Defensa Diaria</div>
+                    <div class="exam-callout-text">Crea zonas libres de tecnología (comidas y descansos), elige cuentas positivas y haz jornadas de desintoxicación digital.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Luz Azul, Melatonina y Notificaciones -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-eye-slash-fill"></i> Círculo Vicioso de la Luz Azul</span>
+                    <span class="feat-pill feat-pill-amber">ALTERACIÓN SUEÑO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber"><i class="bi bi-brightness-high-fill"></i></span>
+                      <div class="process-text"><strong>Bloqueo de Melatonina:</strong> La luz azul nocturna engaña al cerebro, desajusta el reloj interno e impide conciliar sueño reparador.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber"><i class="bi bi-arrow-repeat"></i></span>
+                      <div class="process-text"><strong>Ciclo Estrés–Pantalla:</strong> Estar abrumado nos lleva a distraernos con el móvil de noche, empeorando el insomnio y la fatiga diurna.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-bell-slash-fill"></i></span>
+                      <div class="process-text"><strong>Silenciar Alertas No Críticas:</strong> Desactiva avisos de grupos, redes y noticias; fija <strong>2 horarios diarios</strong> (mañana y tarde) para revisar mensajes.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-sunrise-fill"></i></span>
+                      <div class="process-text"><strong>Arranque Matutino Sin Estrés:</strong> Evita revisar noticias o chats en los primeros 30 minutos al despertar; prioriza luz natural e hidratación.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan);">Modo No Molestar:</strong> Programa bloqueo automático de apps de 22:00 a 07:00.
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:var(--cyber-purple-neon);">Cargador Lejos:</strong> Deja el celular cargando fuera del alcance de tu cama.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;">60 MIN</span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>Regla Nocturna:</strong> Desconecta pantallas al menos <strong>1 hora antes de dormir</strong> para proteger tu melatonina.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.0.1 Salud Mental</span>
+              <span class="footer-chip">Melatonina &amp; Fatiga</span>
+            </div>
+            <div class="footer-meta">Siguiente: 4.0 Salud Física, Regla 20-20-20 y Planeta Sano &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 04: 4.0 SALUD FÍSICA, ERGONOMÍA Y PLANETA SANO -->
+        <div class="slide-view" data-index="3" data-title="4.0 Cuerpo & Planeta // Regla 20-20-20, Ergonomía y E-Waste" data-desc="Fatiga visual digital, prevención del túnel carpiano y huella ambiental de dispositivos" data-notes="Basado en Transcript 35 (01:58-04:45). Explicar claramente la regla 20-20-20 (20 min / 20 seg / 20 pies = ~6 m), ergonomía del puesto y el problema oculto de centros de datos + residuos electrónicos (e-waste).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                MÓDULO 4.0 // CUERPO Y PLANETA
+              </span>
+              <span class="header-context">Fatiga Ocular (20-20-20), Ergonomía y Residuos Electrónicos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-tree-fill"></i> CISCO 4.0.1 – 4.0.2</span>
+              <span class="slide-index-pill">04 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Col 1: Salud Visual -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-eye-fill"></i> Fatiga Visual Digital</span>
+                  <div class="process-pipeline" style="margin-top:6px; gap:6px;">
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-cyan">A</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Síndrome de Visión por PC:</strong> Provoca ojos secos, dolor de cabeza y visión borrosa tras uso prolongado.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-cyan">B</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Regla 20-20-20:</strong> Cada <strong>20 minutos</strong>, descansa <strong>20 segundos</strong> enfocando un objeto a <strong>20 pies (~6 m)</strong>.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-cyan">C</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Iluminación y Contraste:</strong> Ajusta brillo según la sala y evita reflejos directos en el monitor.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-cyan">D</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Distancia Saludable:</strong> Mantén la pantalla a 50–70 cm y activa luz cálida al atardecer.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-eyeglasses exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Alarma Ocular</div>
+                    <div class="exam-callout-text">Parpadea conscientemente y programa pausas visuales cada 20 min.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 2: Ergonomía Física -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-person-workspace"></i> Puesto Ergonómico</span>
+                  <div class="process-pipeline" style="margin-top:6px; gap:6px;">
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-purple">A</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Riesgos Musculares:</strong> Malas posturas continuas causan dolor lumbar y <strong>síndrome del túnel carpiano</strong>.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-purple">B</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Altura y Silla:</strong> Usa respaldo lumbar, pantalla a altura visual y muñecas neutras al teclear.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-purple">C</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Movimiento Activo:</strong> Levántate y estira brevemente cada hora para activar la circulación.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-purple">D</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Codos y Pies:</strong> Codos en ~90° cerca del torso y ambos pies firmemente apoyados en el suelo.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-check-square-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Quiz 4.0.2</div>
+                    <div class="exam-callout-text">La ergonomía previene directamente <strong>problemas musculoesqueléticos</strong>.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 3: Impacto Ambiental (E-Waste) -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-recycle"></i> Planeta Sano (E-Waste)</span>
+                  <div class="process-pipeline" style="margin-top:6px; gap:6px;">
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Centros de Datos:</strong> Consumen electricidad masiva las 24 h, elevando emisiones de carbono.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Basura Electrónica:</strong> Cambiar equipos sin necesidad filtra químicos nocivos en vertederos.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-mint">3</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Acción Verde:</strong> Desconecta dispositivos sin uso, elige hardware eficiente y recicla equipos.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-mint">4</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Segunda Vida (RAEE):</strong> Repara o dona equipos funcionales y entrega baterías en puntos limpios.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-mint">
+                  <span class="stat-num" style="color:var(--pop-mint); font-size:20px;"><i class="bi bi-plug-fill"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">Equilibrar tiempo en línea y vida física cuida tu salud y el planeta.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Regla 20-20-20</span>
+              <span class="footer-chip">Ergonomía &amp; E-Waste</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 1 // Auditor de Bienestar Digital &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 05: DINÁMICA 1 // AUDITOR DE BIENESTAR DIGITAL -->
+        <div class="slide-view" data-index="4" data-title="Dinámica 1 // Auditor de Bienestar Digital & Ergonómico" data-desc="Simulador interactivo sobre luz azul, fatiga visual, sobrecarga de alertas y residuos electrónicos" data-notes="Dinámica participativa del Bloque 4.0: haz clic en cada uno de los 4 casos clínicos cotidianos y pide al grupo diagnosticar qué hábito debe corregirse.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 1
+              </span>
+              <span class="header-context">Laboratorio Clínico: Auditor de Bienestar y Sostenibilidad 4.0</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-activity"></i> ACTIVIDAD INTERACTIVA</span>
+              <span class="slide-index-pill">05 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector Izquierdo -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-clipboard2-pulse-fill"></i> Selecciona un Caso:</span>
+                    <span class="feat-pill feat-pill-purple">4 ESCENARIOS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:9px; margin-top:10px;">
+                    <button class="case-select-btn wellbeing-case-btn is-active-case" onclick="selectWellbeingCase(this, 'well1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-moon-fill" style="color:var(--cyber-purple-neon);"></i> Caso 1: Insomnio 1:30 AM</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--cyber-purple-neon);">SUEÑO</span>
+                      </div>
+                      <div class="case-btn-desc">Cansancio físico extremo pero insomnio tras ver reels en cama.</div>
+                    </button>
+
+                    <button class="case-select-btn wellbeing-case-btn" onclick="selectWellbeingCase(this, 'well2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-eye-fill" style="color:var(--cisco-cyan);"></i> Caso 2: Vista Borrosa y Muñeca</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--cisco-cyan);">ERGONOMÍA</span>
+                      </div>
+                      <div class="case-btn-desc">5 horas seguidas en laptop baja sobre cama o mesa incómoda.</div>
+                    </button>
+
+                    <button class="case-select-btn wellbeing-case-btn" onclick="selectWellbeingCase(this, 'well3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-bell-fill" style="color:var(--warn-amber);"></i> Caso 3: 180 Alertas Diarias</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--warn-amber);">DECISIONES</span>
+                      </div>
+                      <div class="case-btn-desc">Bloqueo mental y estrés por grupos, noticias y correo continuo.</div>
+                    </button>
+
+                    <button class="case-select-btn wellbeing-case-btn" onclick="selectWellbeingCase(this, 'well4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-trash3-fill" style="color:var(--pop-mint);"></i> Caso 4: Cajón de Móviles Viejos</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--pop-mint);">E-WASTE</span>
+                      </div>
+                      <div class="case-btn-desc">Renovación anual de celular y desechos tirados a basura común.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-chat-dots-fill exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Pregunta al Grupo:</strong> ¿Con cuál de estos 4 síntomas te identificaste esta semana?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Diagnóstico Derecho -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-heart-pulse-fill"></i> Diagnóstico Preventivo Cisco 4.0</span>
+                    <span class="feat-pill feat-pill-purple" id="wellbeingBadge">SUEÑO &amp; MELATONINA</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:18px 20px; margin-top:12px;">
+                    <h3 id="wellbeingTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-bottom:12px;">
+                      Caso 1: Insomnio Crónico por Scroll Nocturno y Luz Azul
+                    </h3>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:#F87171; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-exclamation-octagon-fill"></i> IMPACTO FISIOLÓGICO / DIGITAL:
+                    </div>
+                    <p id="wellbeingRisk" style="font-size:15.5px; color:var(--text-body); line-height:1.45; margin-bottom:14px;">
+                      Mirar el teléfono en la cama dispara un círculo vicioso: la luz azul inhibe la producción de melatonina y desajusta el reloj interno, impidiendo dormir aunque el cuerpo esté agotado.
+                    </p>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--pop-mint); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-shield-check"></i> INTERVENCIÓN RECOMENDADA CISCO:
+                    </div>
+                    <p id="wellbeingAction" style="font-size:15.5px; color:var(--text-body); line-height:1.45;">
+                      Protocolo Cisco 4.0: Establece zonas y horarios libres de tecnología (1 hora antes de dormir y durante las comidas), activa filtro nocturno y sustituye el scroll por lectura física.
+                    </p>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:10px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cyber-purple-neon); display:block; font-family:var(--font-mono); font-size:11.5px;">NOCHE</strong>
+                      60 min sin pantallas
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan); display:block; font-family:var(--font-mono); font-size:11.5px;">OCULAR</strong>
+                      Regla 20-20-20
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--pop-mint); display:block; font-family:var(--font-mono); font-size:11.5px;">PLANETA</strong>
+                      Puntos de reciclaje
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc" id="wellbeingRule" style="font-size:15px;">
+                    <strong>Regla de Bienestar:</strong> Dormir mejor empieza apagando pantallas 60 minutos antes de acostarte para restaurar tu ciclo natural de melatonina.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 1</span>
+              <span class="footer-chip">Auditoría 4.0</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint Cisco 4.0 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 06: CHECKPOINT CISCO 4.0 -->
+        <div class="slide-view" data-index="5" data-title="Checkpoint Cisco // Autoevaluación en Vivo 4.0" data-desc="Preguntas oficiales NetAcad 4.0.2 y 4.0.4 sobre autoestima en redes y alteraciones del sueño" data-notes="Validar comprensión del Bloque 4.0 con dos preguntas oficiales textuales de Cisco NetAcad (c1.png y c10.png).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // MÓDULO 4.0
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-check2-all"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">06 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.0.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Qué puede tener un impacto negativo en nuestra autoestima, según el video?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Reducir la exposición a plataformas sociales ayuda precisamente a proteger tu bienestar emocional.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Reducción de la exposición a plataformas como Facebook e Instagram</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Tomar medidas preventivas fortalece la salud mental y evita el agotamiento digital.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Tomar medidas preventivas para proteger nuestro bienestar</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Usar herramientas para trabajo o comunicación no daña por sí solo la autoestima; el problema es la comparación social.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Depender de la tecnología para el trabajo y el entretenimiento</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q1-exp', '¡Exacto! La presión por mantener una imagen perfecta y compararse constantemente con otros afecta la autoestima y dispara ansiedad.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>La presión por ser perfecto y la constante comparación con los demás</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q1-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.0.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cuál es un factor común en las alteraciones del sueño por uso nocturno de dispositivos?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. Respetar nuestro reloj interno favorece un descanso saludable y regular.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Seguir de cerca nuestros relojes internos biológicos</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. La sobrecarga causa fatiga de decisiones, pero el disruptor directo del sueño frente a pantallas es físico/lumínico.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Tener que tomar decisiones reflexivas durante el día</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. La exposición matutina no interfiere con la melatonina nocturna como sí lo hace mirar pantallas de noche.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Usar pantallas digitales por la mañana</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q2-exp', '¡Correcto! La luz azul emitida por pantallas inhibe la producción de melatonina y desajusta el ciclo natural de sueño.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>La luz azul emitida por las pantallas</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q2-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 4.0</span>
+              <span class="footer-chip">Participación en Vivo</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 4.1 // Detectar Noticias Falsas y Desinformación &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 07: 4.1 DETECTAR NOTICIAS FALSAS Y DESINFORMACIÓN -->
+        <div class="slide-view" data-index="6" data-title="4.1 Desinformación // 6 Filtros Críticos de Verificación" data-desc="Consecuencias reales de las noticias falsas y checklist práctico para evaluar publicaciones" data-notes="Basado en Transcript 37 (4.1.1). Explicar el peligro real en salud y sociedad (ejemplo COVID-19) y detallar los 6 criterios de verificación más Snopes/FactCheck.org/PolitiFact.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-coral">
+                <span class="status-pip pip-amber"></span>
+                MÓDULO 4.1 // VERDAD VS. BULOS
+              </span>
+              <span class="header-context">Impacto de la Desinformación y 6 Filtros de Detección</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-shield-exclamation"></i> CISCO 4.1.1</span>
+              <span class="slide-index-pill">07 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Izquierda: Impacto Real -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-radioactive"></i> ¿Por Qué Importa Tanto?</span>
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">01</span>
+                      <div class="process-text"><strong>Daño Directo a la Salud:</strong> En crisis sanitarias (como COVID-19), curas falsas llevaron a decisiones médicas peligrosas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">02</span>
+                      <div class="process-text"><strong>Polarización Social:</strong> Profundiza divisiones entre ciudadanos y erosiona la confianza en instituciones.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">03</span>
+                      <div class="process-text"><strong>Responsabilidad Colectiva:</strong> Cada reenvío sin filtro amplifica el engaño; detenerlo empieza en uno mismo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">04</span>
+                      <div class="process-text"><strong>Clickbait y Estafas:</strong> Titulares sensacionalistas capturan clics para monetizar o dirigirte a sitios de phishing.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-search exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Verificadores Aliados</div>
+                    <div class="exam-callout-text">Cisco recomienda contrastar dudas en <strong>Snopes</strong>, <strong>FactCheck.org</strong> y <strong>PolitiFact</strong>.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: 6 Filtros Críticos -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-funnel-fill"></i> Los 6 Filtros Anti-Desinformación</span>
+                    <span class="feat-pill feat-pill-cyan">AUDITORÍA RÁPIDA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:6px;">
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Investiga la Fuente:</strong> Revisa "Sobre nosotros" y si el medio tiene historial comprobado de precisión.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Lee Más Allá del Titular:</strong> Muchos titulares sensacionalistas exageran o contradicen el texto completo.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Credenciales del Autor:</strong> Si el artículo oculta quién lo escribió o carece de trayectoria, es alerta roja.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text"><strong>Fecha de Publicación:</strong> Revisa el año para evitar reciclar noticias viejas sacadas de contexto.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">5</span>
+                      <div class="process-text"><strong>Contraste Multi-Medio:</strong> Si ningún otro medio creíble confirma una historia asombrosa, desconfía.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">6</span>
+                      <div class="process-text"><strong>Controla la Emoción:</strong> Miedo, rabia o euforia buscan anular tu criterio lógico antes de compartir.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.1.1 Verificación</span>
+              <span class="footer-chip">6 Filtros Críticos</span>
+            </div>
+            <div class="footer-meta">Siguiente: 4.1 Hechos vs. Opiniones y Pensamiento Crítico &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 08: 4.1 HECHOS VS OPINIONES Y PENSAMIENTO CRÍTICO -->
+        <div class="slide-view" data-index="7" data-title="4.1 Criterio // Hechos vs. Opiniones y Pensamiento Crítico" data-desc="Diferencia entre afirmaciones verificables y creencias subjetivas en la alfabetización digital" data-notes="Basado en Transcript 38 (4.1.3). Comparar ejemplos exactos de Cisco ('la Tierra orbita alrededor del sol' vs 'el atardecer es hermoso') y aclarar que pensamiento crítico evalúa fuente, evidencia y contexto sin volverse cínico.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 4.1 // ALFABETIZACIÓN DIGITAL
+              </span>
+              <span class="header-context">Separar Hechos de Opiniones y Pensamiento Crítico</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-journal-check"></i> CISCO 4.1.3</span>
+              <span class="slide-index-pill">08 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Hecho vs Opinión -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-columns-gap"></i> Hecho Objetivo vs. Opinión Subjetiva</span>
+                    <span class="feat-pill feat-pill-purple">CRITERIO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step" style="border-color:var(--pop-mint);">
+                      <span class="process-num num-mint"><i class="bi bi-check-lg"></i></span>
+                      <div class="process-text"><strong>¿Qué es un Hecho?</strong> Afirmación objetiva respaldada por evidencia científica o documental verificable (ej. <em>"La Tierra orbita alrededor del Sol"</em>).</div>
+                    </div>
+                    <div class="process-step" style="border-color:var(--warn-amber);">
+                      <span class="process-num num-amber"><i class="bi bi-chat-quote-fill"></i></span>
+                      <div class="process-text"><strong>¿Qué es una Opinión?</strong> Refleja creencias o sentimientos personales; es subjetiva y no demostrable universalmente (ej. <em>"El atardecer es más hermoso"</em>).</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-exclamation-diamond-fill"></i></span>
+                      <div class="process-text"><strong>La Mezcla por Clics:</strong> En redes y blogs, un titular promete hechos mientras el cuerpo es comentario cargado de opinión.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-highlighter"></i></span>
+                      <div class="process-text"><strong>Pista Lingüística:</strong> Los hechos citan fechas, cifras y fuentes; las opiniones abusan de calificativos absolutos (<em>"peor"</em>, <em>"siempre"</em>).</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analogy-box" style="border-color:var(--cyber-purple);">
+                  <i class="bi bi-lightbulb-fill analogy-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div>
+                    <div class="analogy-title" style="color:var(--cyber-purple-neon);">Apreciar Sin Confundir</div>
+                    <div class="analogy-text">Las opiniones aportan perspectivas valiosas, pero tus decisiones deben apoyarse siempre en hechos verificables.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Los 3 Pilares del Pensamiento Crítico -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-compass-fill"></i> ¿Qué Evalúa el Pensamiento Crítico?</span>
+                    <span class="feat-pill feat-pill-cyan">NO ES DUDAR TODO</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.4; margin-top:6px;">
+                    Pensamiento crítico <strong>no significa desconfiar cínicamente de todo</strong>, sino analizar de forma reflexiva <strong>3 elementos clave</strong>:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>La Fuente:</strong> ¿Quién publica, qué reputación tiene y qué interés podría perseguir al difundirlo?</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>La Evidencia:</strong> ¿Cita estudios, datos contrastables o testimonios primarios, o solo suposiciones?</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>El Contexto:</strong> ¿Cuándo y dónde ocurrió? ¿Se omitió parte del video o cita para cambiar su sentido?</div>
+                    </div>
+                  </div>
+
+                  <div class="analogy-box" style="margin-top:8px; border-color:var(--cisco-cyan);">
+                    <i class="bi bi-shield-check analogy-icon" style="color:var(--cisco-cyan);"></i>
+                    <div>
+                      <div class="analogy-title" style="color:var(--cisco-cyan);">Mini-Prueba de 15 Segundos</div>
+                      <div class="analogy-text">Antes de reenviar un titular polémico, pregúntate: <em>¿Quién firma, qué estudio lo prueba y en qué año ocurrió?</em></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-people-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>Sociedad Menos Dividida:</strong> Consumir y compartir de manera discerniente construye comunidades más sanas.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.1.3 Alfabetización</span>
+              <span class="footer-chip">Fuente • Evidencia • Contexto</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 2 // Escáner de Noticias &amp; Criterio &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 09: DINÁMICA 2 // ESCÁNER DE NOTICIAS -->
+        <div class="slide-view" data-index="8" data-title="Dinámica 2 // Escáner: ¿Hecho, Opinión o Desinformación?" data-desc="Clasificador en vivo de publicaciones digitales aplicando los 6 filtros y pensamiento crítico" data-notes="Dinámica participativa del Bloque 4.1: analizar 4 titulares/publicaciones reales o típicos de redes sociales y votar en el chat antes de revelar el veredicto Cisco.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 2
+              </span>
+              <span class="header-context">Peritaje Mediático: ¿Hecho, Opinión o Desinformación?</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-newspaper"></i> ACTIVIDAD INTERACTIVA</span>
+              <span class="slide-index-pill">09 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Izquierdo: 4 Casos -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-card-checklist"></i> Selecciona Publicación:</span>
+                    <span class="feat-pill feat-pill-purple">4 CASOS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:9px; margin-top:10px;">
+                    <button class="case-select-btn factcheck-case-btn is-active-case" onclick="selectFactCheckCase(this, 'news1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-megaphone-fill" style="color:#F87171;"></i> Caso 1: "¡Urgente Antes Que Lo Borren!"</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:#F87171;">ALARMA</span>
+                      </div>
+                      <div class="case-btn-desc">Blog anónimo sin fecha, sin autor y lleno de exclamaciones.</div>
+                    </button>
+
+                    <button class="case-select-btn factcheck-case-btn" onclick="selectFactCheckCase(this, 'news2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-chat-left-text-fill" style="color:var(--warn-amber);"></i> Caso 2: "El Peor Error Económico..."</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--warn-amber);">HÍBRIDO</span>
+                      </div>
+                      <div class="case-btn-desc">Mezcla una cifra oficial inicial con juicios personales subjetivos.</div>
+                    </button>
+
+                    <button class="case-select-btn factcheck-case-btn" onclick="selectFactCheckCase(this, 'news3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-heartbreak-fill" style="color:#F87171;"></i> Caso 3: Cadena "Cura Milagrosa"</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:#F87171;">SALUD</span>
+                      </div>
+                      <div class="case-btn-desc">Audio viral de WhatsApp contra tratamientos médicos avalados.</div>
+                    </button>
+
+                    <button class="case-select-btn factcheck-case-btn" onclick="selectFactCheckCase(this, 'news4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-patch-check-fill" style="color:var(--pop-mint);"></i> Caso 4: Reporte con Fuente Primaria</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--pop-mint);">VERIFICADO</span>
+                      </div>
+                      <div class="case-btn-desc">Autor identificable, fecha reciente, estudio y contraste abierto.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-diamond-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Regla de Aula:</strong> Evaluamos <em>Fuente + Evidencia + Contexto</em> antes de opinar.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Derecho: Veredicto Forense -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-search-heart-fill"></i> Resultado del Escáner Crítico</span>
+                    <span class="feat-pill feat-pill-coral" id="factcheckBadge">DESINFORMACIÓN // ALERTA</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:18px 20px; margin-top:12px;">
+                    <h3 id="factcheckTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-bottom:12px;">
+                      Caso 1: Titular Alarmista Sin Autor, Fecha ni Enlaces Primarios
+                    </h3>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--warn-amber); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-flag-fill"></i> SEÑALES DETECTADAS EN EL ANÁLISIS:
+                    </div>
+                    <p id="factcheckSignal" style="font-size:15.5px; color:var(--text-body); line-height:1.45; margin-bottom:14px;">
+                      Banderas rojas detectadas: usa miedo/urgencia extrema ("¡Urgente antes que lo borren!"), omite autor con credenciales, no tiene fecha visible y proviene de un dominio desconocido sin sección "Sobre nosotros".
+                    </p>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--cisco-cyan); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-shield-check"></i> VERIFICACIÓN CISCO 4.1:
+                    </div>
+                    <p id="factcheckVerify" style="font-size:15.5px; color:var(--text-body); line-height:1.45;">
+                      Verificación Cisco 4.1: Contrasta si al menos 2 medios reconocidos reportan el mismo hecho y consulta verificadores independientes como Snopes, FactCheck.org o PolitiFact.
+                    </p>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:10px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cyber-purple-neon); display:block; font-family:var(--font-mono); font-size:11.5px;">PILAR 1</strong>
+                      Fuente y autoría
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan); display:block; font-family:var(--font-mono); font-size:11.5px;">PILAR 2</strong>
+                      Evidencia primaria
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-amber); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--warn-amber); display:block; font-family:var(--font-mono); font-size:11.5px;">PILAR 3</strong>
+                      Fecha y contexto
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc" id="factcheckRule" style="font-size:15px;">
+                    <strong>Regla de Oro:</strong> Cuando una publicación dispara enojo o pánico inmediato y viene de una sola fuente anónima, detente antes de creerla o reenviarla.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 2</span>
+              <span class="footer-chip">Fact-Checking 4.1</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint Cisco 4.1 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 10: CHECKPOINT CISCO 4.1 -->
+        <div class="slide-view" data-index="9" data-title="Checkpoint Cisco // Autoevaluación en Vivo 4.1" data-desc="Preguntas oficiales NetAcad 4.1.2 y 4.1.4 sobre sociedad menos dividida y evaluación de contenido" data-notes="Evaluar el Bloque 4.1 con las dos preguntas oficiales de Cisco NetAcad capturadas en 4.1/c6.png y 4.1/c12.png.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // MÓDULO 4.1
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-check2-all"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">10 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.1.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cómo podemos ayudar a que la sociedad esté menos dividida frente a la desinformación?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. Compartir todo lo mismo sin criterio no distingue hechos reales de manipulaciones.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Compartiendo el mismo panorama general que todos los demás</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q3-exp', '¡Correcto! Al consumir y compartir de manera discerniente y crítica contribuimos a una sociedad mejor informada y menos polarizada.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Consumiendo y compartiendo de manera discerniente</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. Los contextos sociales saludables nacen del discernimiento individual, no de repetir noticias sin filtro.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Fomentando contextos sociales mucho más amplios</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. Cisco recalca justo lo contrario: asegurarnos de que el poder de la información se base en la verdad.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Recordando que el poder no se basa en la verdad</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q3-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.1.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Qué se debe considerar al evaluar cualquier contenido en línea con pensamiento crítico?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q4-exp', '¡Exacto! El pensamiento crítico evalúa de forma reflexiva la fuente, la evidencia proporcionada y el contexto.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>La fuente, la evidencia y el contexto</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. Las creencias personales reflejan opiniones subjetivas, no verificación objetiva.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Las creencias personales del autor</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. Un texto largo puede estar lleno de falsedades y un artículo breve ser altamente riguroso.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>La extensión del artículo</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. Que algo parezca interesante o llamativo suele ser precisamente el gancho del sensacionalismo.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Si el contenido es interesante</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q4-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 4.1</span>
+              <span class="footer-chip">Participación en Vivo</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 4.2 // Algoritmos, Cámaras de Eco y Control &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 11: 4.2 ALGORITMOS Y CÁMARAS DE ECO -->
+        <div class="slide-view" data-index="10" data-title="4.2 Algoritmos // Cámaras de Eco y Clics Conscientes" data-desc="Cómo personalizan los algoritmos tu feed, burbujas de filtro y entrenamiento algorítmico" data-notes="Basado en Transcript 39 (4.2.1). Explicar que abrir desinformación aunque sea por curiosidad o para reírse entrena al algoritmo para mostrar más de lo mismo ('tus clics importan').">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 4.2 // ALGORITMOS EN LA SOMBRA
+              </span>
+              <span class="header-context">Personalización, Cámaras de Eco y Ciclo de Retroalimentación</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-diagram-3-fill"></i> CISCO 4.2.1 – 4.2.2</span>
+              <span class="slide-index-pill">11 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Cómo Opera el Algoritmo -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-cpu-fill"></i> Cómo Aprende de Ti el Algoritmo</span>
+                    <span class="feat-pill feat-pill-cyan">TUS DATOS</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Captura Silenciosa:</strong> Cada clic, <em>Me gusta</em> o pausa prolongada frente a un post queda registrado en segundo plano.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Cámaras de Eco (Burbujas de Filtro):</strong> El sistema prioriza contenido que confirma tus creencias y oculta puntos de vista opuestos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Trampa de la Curiosidad:</strong> Abrir una noticia falsa incluso por escepticismo le indica al algoritmo que quieres ver más bulos similares.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">4</span>
+                      <div class="process-text"><strong>Amplificación Emocional:</strong> El feed premia reacciones rápidas de indignación o miedo por encima de análisis calmados y verificados.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-arrow-repeat exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Ciclo de Retroalimentación</div>
+                    <div class="exam-callout-text">Más interacción con sensacionalismo = feed cada vez más polarizado y alejado de fuentes confiables.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Cómo Tomar el Control -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-sliders2"></i> Entrena Tú al Algoritmo</span>
+                    <span class="feat-pill feat-pill-mint">TÚ MANDAS</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint">01</span>
+                      <div class="process-text"><strong>Ignora el Sensacionalismo:</strong> No regales clics ni comentarios airados a titulares engañosos o manipuladores.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">02</span>
+                      <div class="process-text"><strong>Premia Calidad y Diversidad:</strong> Interactúa activamente con medios serios, científicos y perspectivas plurales.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">03</span>
+                      <div class="process-text"><strong>Alfabetización Mediática:</strong> Evalúa fuente, prueba y utilidad antes de compartir; envías señal de valor al sistema.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">04</span>
+                      <div class="process-text"><strong>Poda Activa del Feed:</strong> Usa <em>"No me interesa"</em> en publicaciones tóxicas y limpia cada mes tus listas de seguimiento.</div>
+                    </div>
+                  </div>
+
+                  <div class="exam-callout callout-cyan" style="margin-top:8px;">
+                    <i class="bi bi-funnel-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                    <div class="exam-callout-content">
+                      <div class="exam-callout-title" style="color:var(--cisco-cyan);">Señal Limpia</div>
+                      <div class="exam-callout-text">Cambiar tus búsquedas y suscripciones durante una semana reconfigura progresivamente tu feed recomendado.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:20px;"><i class="bi bi-mouse2-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>Mensaje Cisco 4.2:</strong> <em>"Tus clics importan. Haz que cuenten"</em> para moldear un entorno digital veraz.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.2.1 Cámaras de Eco</span>
+              <span class="footer-chip">Control Algorítmico</span>
+            </div>
+            <div class="footer-meta">Siguiente: 4.2 Apps de Salud, Mindfulness y Bienestar Flexible &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 12: 4.2 SALUD PROACTIVA Y BIENESTAR FLEXIBLE -->
+        <div class="slide-view" data-index="11" data-title="4.2 Equilibrio // Apps de Salud y Bienestar Flexible" data-desc="Atención plena, aplicaciones físicas/mentales oficiales de Cisco y concepto de Bienestar Flexible" data-notes="Basado en Transcript 40 y 4.2/c14.png. Destacar que la misma tecnología sirve para mejorar la salud (Fitbit, Apple Health, MyFitnessPal, Headspace, Calm, InsightTimer, WebMD, Healthline) y explicar el concepto clave de Bienestar Flexible.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                MÓDULO 4.2 // EQUILIBRIO CONSCIENTE
+              </span>
+              <span class="header-context">Atención Plena, Apps de Bienestar y Bienestar Flexible</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-heart-fill"></i> CISCO 4.2.3 – 4.2.5</span>
+              <span class="slide-index-pill">12 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Tecnología a tu Favor -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-smartwatch"></i> Herramientas Digitales para Tu Salud</span>
+                    <span class="feat-pill feat-pill-cyan">PERSONALIZABLE</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-activity"></i></span>
+                      <div class="process-text"><strong>Salud Física (Fitbit, Apple Health, MyFitnessPal):</strong> Registran pasos diarios, patrones de sueño y nutrición para ajustar tu energía.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-peace-fill"></i></span>
+                      <div class="process-text"><strong>Bienestar Mental (Headspace, Calm, InsightTimer):</strong> Meditación guiada, atención plena y control de estrés adaptados a tu horario.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-journal-medical"></i></span>
+                      <div class="process-text"><strong>Guías en Línea (WebMD, Healthline):</strong> Ofrecen consejos de salud, rutinas de ejercicio en casa y orientación nutricional.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber"><i class="bi bi-speedometer2"></i></span>
+                      <div class="process-text"><strong>Métrica Al Servicio Real:</strong> Usa recordatorios de hidratación o pasos para apoyar tu salud sin convertir los datos en nueva ansiedad.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan);">Privacidad Biométrica:</strong> Revisa qué datos comparten tus apps de salud.
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:var(--pop-mint);">Sin Obsesión:</strong> Descansa de las métricas los fines de semana.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-sun-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Atención Plena Diaria</div>
+                    <div class="exam-callout-text">Elige activamente cuándo usar el móvil en lugar de abrirlo en piloto automático; reserva tiempo offline diario.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Bienestar Flexible (4.2/c14.png) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-bounding-box-circles"></i> Concepto Clave: Bienestar Flexible</span>
+                    <span class="feat-pill feat-pill-purple">CIERRE 4.2</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Herramienta Moldeable:</strong> La tecnología no es ni buena ni mala por sí sola; se adapta a tu momento de vida y trabajo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Sin Reglas Rígidas Inviables:</strong> Algunos días priorizan productividad digital; otros exigen pausa, reflexión y contacto humano real.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text"><strong>Interacción Activa y Valores:</strong> Promovemos aprendizaje usando la tecnología según <strong>nuestros valores y objetivos</strong>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">4</span>
+                      <div class="process-text"><strong>Intencionalidad Consciente:</strong> Distingue entre herramientas que impulsan tu estudio/descanso y distracciones automáticas.</div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px;">
+                    <div style="background:rgba(248,113,113,0.08); border:1px solid rgba(248,113,113,0.35); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:#F87171;">Enfoque Rígido:</strong> Reglas extremas fijas que generan culpa y abandono.
+                    </div>
+                    <div style="background:rgba(16,185,129,0.08); border:1px solid rgba(16,185,129,0.4); border-radius:var(--radius-sm); padding:8px 11px; font-size:13.5px; color:var(--text-body);">
+                      <strong style="color:var(--pop-mint);">Bienestar Flexible:</strong> Ajusta límites reales según cada etapa.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-mint">
+                  <span class="stat-num" style="color:var(--pop-mint); font-size:20px;"><i class="bi bi-stars"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">
+                    <strong>Futuro Sostenible:</strong> Pequeñas elecciones reflexivas (datos, descanso, uso) acumuladas marcan la diferencia.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.2.3 Apps de Salud</span>
+              <span class="footer-chip">Bienestar Flexible</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 3 // Entrenador de Algoritmo &amp; Bienestar &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 13: DINÁMICA 3 // ENTRENADOR DE ALGORITMO Y BIENESTAR -->
+        <div class="slide-view" data-index="12" data-title="Dinámica 3 // Entrenador de Algoritmo & Bienestar Flexible" data-desc="Simulador práctico sobre burbujas de filtro, reentrenamiento de feed y hábitos flexibles" data-notes="Dinámica participativa del Bloque 4.2: explorar cómo responde el feed algorítmico ante distintos clics y cómo diseñar un equilibrio digital personalizado.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 3
+              </span>
+              <span class="header-context">Laboratorio de Control: Algoritmos y Bienestar Flexible</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-sliders"></i> ACTIVIDAD INTERACTIVA</span>
+              <span class="slide-index-pill">13 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-toggles"></i> Selecciona un Escenario:</span>
+                    <span class="feat-pill feat-pill-purple">4 RUTAS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:9px; margin-top:10px;">
+                    <button class="case-select-btn algorithm-case-btn is-active-case" onclick="selectAlgorithmCase(this, 'algo1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-cursor-fill" style="color:#F87171;"></i> Ruta 1: Clic por "Pura Curiosidad"</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:#F87171;">BURBUJA</span>
+                      </div>
+                      <div class="case-btn-desc">Entrar y comentar un video falso solo para contradecirlo.</div>
+                    </button>
+
+                    <button class="case-select-btn algorithm-case-btn" onclick="selectAlgorithmCase(this, 'algo2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-arrow-clockwise" style="color:var(--cisco-cyan);"></i> Ruta 2: Reentrenar Feed Polarizado</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--cisco-cyan);">REINICIO</span>
+                      </div>
+                      <div class="case-btn-desc">Cómo devolver diversidad y calidad a tus recomendaciones.</div>
+                    </button>
+
+                    <button class="case-select-btn algorithm-case-btn" onclick="selectAlgorithmCase(this, 'algo3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-heart-pulse-fill" style="color:var(--pop-mint);"></i> Ruta 3: Rutina con Apps de Salud</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--pop-mint);">SINERGIA</span>
+                      </div>
+                      <div class="case-btn-desc">Integrar Fitbit/Headspace/Healthline sin obsesionarse.</div>
+                    </button>
+
+                    <button class="case-select-btn algorithm-case-btn" onclick="selectAlgorithmCase(this, 'algo4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-sliders2" style="color:var(--cyber-purple-neon);"></i> Ruta 4: Aplicar Bienestar Flexible</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--cyber-purple-neon);">FLEXIBLE</span>
+                      </div>
+                      <div class="case-btn-desc">Adaptar límites de pantalla según semana académica o laboral.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-hand-index-thumb-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Debate Rápido:</strong> ¿Has notado cómo TikTok o YouTube cambian todo tu feed tras ver 1 solo video distinto?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Resultado -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-cpu-fill"></i> Simulación de Impacto Cisco 4.2</span>
+                    <span class="feat-pill feat-pill-coral" id="algorithmBadge">CÁMARA DE ECO ACTIVADA</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:18px 20px; margin-top:12px;">
+                    <h3 id="algorithmTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-bottom:12px;">
+                      Caso 1: "Solo Abrí el Video Falso por Curiosidad"
+                    </h3>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--warn-amber); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-diagram-3-fill"></i> RESPUESTA DEL ALGORITMO / DINÁMICA:
+                    </div>
+                    <p id="algorithmEffect" style="font-size:15.5px; color:var(--text-body); line-height:1.45; margin-bottom:14px;">
+                      El algoritmo no distingue indignación de interés: si te detienes 20 segundos, comentas para discutir o haces clic por morbo en un bulo, el sistema registra preferencia positiva.
+                    </p>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--pop-mint); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-sliders"></i> ESTRATEGIA DE EQUILIBRIO Y CONTROL:
+                    </div>
+                    <p id="algorithmControl" style="font-size:15.5px; color:var(--text-body); line-height:1.45;">
+                      Ciclo de retroalimentación: En los próximos días tu feed se llenará de contenido similar polarizante, filtrando perspectivas opuestas y reforzando una burbuja de filtro.
+                    </p>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:10px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cyber-purple-neon); display:block; font-family:var(--font-mono); font-size:11.5px;">SEÑAL 1</strong>
+                      Pausa en pantalla
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan); display:block; font-family:var(--font-mono); font-size:11.5px;">SEÑAL 2</strong>
+                      Clics y comentarios
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--pop-mint); display:block; font-family:var(--font-mono); font-size:11.5px;">CONTROLA</strong>
+                      Bienestar flexible
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc" id="algorithmRule" style="font-size:15px;">
+                    <strong>Principio Clave:</strong> Tus clics e interacciones entrenan al algoritmo. Si algo es desinformación, no lo comentes ni lo abras por curiosidad: desliza rápido.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 3</span>
+              <span class="footer-chip">Control Algorítmico 4.2</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint Cisco 4.2 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 14: CHECKPOINT CISCO 4.2 -->
+        <div class="slide-view" data-index="13" data-title="Checkpoint Cisco // Autoevaluación en Vivo 4.2" data-desc="Preguntas oficiales NetAcad 4.2.2 y 4.2.6 sobre personalización algorítmica y gestión de tecnología" data-notes="Validar comprensión del Bloque 4.2 con las preguntas exactas vistas en 4.2/c1.png y 4.2/c19.png.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // MÓDULO 4.2
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-check2-all"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">14 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.2.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cómo adaptan los algoritmos el contenido que muestran a cada usuario individual?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Justamente hacen lo opuesto: personalizan el feed de forma única para cada usuario.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Al mostrar exactamente el mismo contenido a todos</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q5-exp', '¡Correcto! Registran clics, likes y pausas para rastrear y analizar tu comportamiento y predecir qué te retiene más.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Al rastrear y analizar el comportamiento en línea de los usuarios</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Infieren intereses observando hábitos continuos, mucho más allá de encuestas puntuales.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Al preguntar manualmente a los usuarios qué contenido prefieren</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Aunque la ubicación influye, la personalización central depende de la actividad conductual.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Al limitar el contenido únicamente según la ubicación física</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q5-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.2.6</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    Bajo el enfoque de Bienestar Flexible, ¿cómo deberíamos gestionar y moldear la tecnología?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. La tecnología es algo que gestionamos activamente, no algo a lo que servimos pasivamente.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Aceptando que nosotros la servimos y dependemos de ella</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. Cisco señala que la flexibilidad funciona mejor que una adhesión rígida a reglas fijas.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Con una adhesión rígida a reglas fijas predefinidas</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. La relación debe ser intencional y consciente, moldeada por el usuario.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Permitiéndole que nos abrace sin establecer límites</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q6-exp', '¡Exacto! Podemos gestionar y moldear activamente nuestras herramientas digitales de acuerdo con nuestros valores y objetivos.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>De acuerdo con nuestros valores y objetivos</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q6-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 4.2</span>
+              <span class="footer-chip">Participación en Vivo</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 4.3 // Consejos de Resolución de Problemas &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 15: 4.3 CONSEJOS DE RESOLUCIÓN DE PROBLEMAS -->
+        <div class="slide-view" data-index="14" data-title="4.3 Triage // Casos Oficiales de Resolución Ética Cisco" data-desc="Los 3 problemas reales del módulo 4.3: desinformación publicada, software pirata y quejas en foros" data-notes="Basado en PNGs 4.3 (c1.png–c10.png). Repasar exactamente los 3 casos de 4.3.1: 1) compartió info falsa -> eliminar publicación, 2) tentado a usar software pirata -> cuidar implicaciones legales y éticas, 3) quejas laborales en foro creyendo anonimato -> usar canales internos apropiados.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                MÓDULO 4.3 // TRIAGE ÉTICO CISCO
+              </span>
+              <span class="header-context">3 Casos Oficiales de Resolución Práctica de Problemas</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-wrench-adjustable-circle-fill"></i> CISCO 4.3.1</span>
+              <span class="slide-index-pill">15 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Problema 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="feat-pill feat-pill-purple">PROBLEMA 1 // 4.3.1</span>
+                  <h3 style="font-family:var(--font-display); font-size:19px; font-weight:800; color:#FFFFFF; margin-top:8px;">
+                    Publicación Falsa Sin Verificar
+                  </h3>
+                  <p style="font-size:14.5px; color:var(--text-body); line-height:1.4; margin-top:6px;">
+                    Un usuario descubre que, sin saberlo, compartió información falsa desde un sitio web sin comprobar su autenticidad, propagando desinformación.
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:6px; gap:5px;">
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-purple"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Riesgo Real:</strong> Cada minuto visible facilita capturas y reenvíos fuera de control.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-cyan"><i class="bi bi-funnel-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Prevención 4.1:</strong> Aplica los 6 filtros (fuente, autor, fecha y contraste) antes de compartir.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-amber"><i class="bi bi-megaphone-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Responsabilidad:</strong> Avisa brevemente a quien ya la recibió si el dato confundía.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-trash3-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Solución Oficial Cisco</div>
+                    <div class="exam-callout-text"><strong>Eliminar la publicación</strong> inmediatamente y evitar que siga circulando.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Problema 2 -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="feat-pill feat-pill-amber">PROBLEMA 2 // 4.3.1</span>
+                  <h3 style="font-family:var(--font-display); font-size:19px; font-weight:800; color:#FFFFFF; margin-top:8px;">
+                    Tentación de Software Pirateado
+                  </h3>
+                  <p style="font-size:14.5px; color:var(--text-body); line-height:1.4; margin-top:6px;">
+                    Un usuario está tentado a instalar software pirata porque es gratuito y rápido de descargar, ignorando licencias y seguridad.
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:6px; gap:5px;">
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-amber"><i class="bi bi-bug-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Amenaza Técnica:</strong> Cracks suelen traer troyanos, spyware y carecen de parches.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-amber"><i class="bi bi-bank2"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Impacto Legal/Académico:</strong> Expone tu PC y cuentas universitarias a pérdida o sanción.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-mint"><i class="bi bi-patch-check-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Alternativa Segura:</strong> Opta por licencias educativas oficiales o software libre verificado.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-shield-exclamation exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Solución Oficial Cisco</div>
+                    <div class="exam-callout-text"><strong>Cuidado con implicaciones legales y éticas</strong> (además de malware oculto).</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Problema 3 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="feat-pill feat-pill-cyan">PROBLEMA 3 // 4.3.1</span>
+                  <h3 style="font-family:var(--font-display); font-size:19px; font-weight:800; color:#FFFFFF; margin-top:8px;">
+                    Quejas Laborales en Foro Público
+                  </h3>
+                  <p style="font-size:14.5px; color:var(--text-body); line-height:1.4; margin-top:6px;">
+                    Un empleado publica críticas negativas sobre su empresa en un foro en línea creyendo que nadie podrá rastrear su identidad real.
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:6px; gap:5px;">
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-cyan"><i class="bi bi-eye-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Falso Anonimato:</strong> IP, redacción y capturas vinculan publicaciones a su autor.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-amber"><i class="bi bi-briefcase-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Efecto Profesional:</strong> Afecta tu reputación futura frente a empleadores y contratos.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 10px;">
+                      <span class="process-num num-mint"><i class="bi bi-chat-square-text-fill"></i></span>
+                      <div class="process-text" style="font-size:13.8px;"><strong>Vía Profesional:</strong> Acude a supervisión, Recursos Humanos o buzones éticos internos.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-building-check exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Solución Oficial Cisco</div>
+                    <div class="exam-callout-text"><strong>Utilizar los canales internos apropiados</strong> para cualquier inquietud laboral.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">4.3 Resolución de Problemas</span>
+              <span class="footer-chip">Ética &amp; Legalidad</span>
+            </div>
+            <div class="footer-meta">Siguiente: Cierre Módulo 4 &rarr; Salto al Módulo 5.0 (Resumen del Curso) &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 16: SÍNTESIS MÓDULO 4 Y TRANSICIÓN AL MÓDULO 5 -->
+        <div class="slide-view" data-index="15" data-title="Síntesis 4.0–4.3 // 5 Hábitos Inmediatos de Bienestar" data-desc="Consolidación práctica del Módulo 4 antes de entrar al Módulo 5 Resumen del Curso" data-notes="Cerrar formalmente el Módulo 4 fijando 5 hábitos concretos para la semana y abrir el Módulo 5.0 (Resumen Integral del Curso).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                CIERRE MÓDULO 4 // PUENTE AL 5
+              </span>
+              <span class="header-context">5 Hábitos de Bienestar Digital antes del Resumen Maestro</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-check-circle-fill"></i> MÓDULO 4 COMPLETO</span>
+              <span class="slide-index-pill">16 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Izquierda: 5 Hábitos -->
+              <div class="bento-card" style="border-color:var(--pop-mint);">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-mint"><i class="bi bi-list-check"></i> Tu Kit Diario de Bienestar Digital (Módulo 4)</span>
+                    <span class="feat-pill feat-pill-mint">APLICACIÓN HOY</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:6px; gap:5px;">
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">01</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Pausa Visual 20-20-20 &amp; Postura:</strong> Cuida ojos cada 20 min y alinea monitor y respaldo lumbar.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">02</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Higiene Nocturna &amp; Alertas:</strong> Pantallas fuera 60 min antes de dormir y 2 bloques diarios de avisos.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">03</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Filtro Crítico Triple:</strong> Exige <em>Fuente + Evidencia + Contexto</em> y separa opinión de hecho.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">04</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Clics Conscientes:</strong> No alimentes cámaras de eco por morbo; premia contenido veraz y plural.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">05</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Bienestar Flexible &amp; Legalidad:</strong> Cero software pirata, elimina bulos y actúa según tus valores.</div>
+                    </div>
+                    <div class="process-step" style="padding:6px 11px;">
+                      <span class="process-num num-mint">06</span>
+                      <div class="process-text" style="font-size:14px;"><strong>Sostenibilidad &amp; Vínculo Real:</strong> Desenchufa equipos sin uso, recicla RAEE y convive sin pantallas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-check2-circle exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Balance Integral 4.0–4.3:</strong> Cuidar mente, cuerpo, verdad informativa y ética fortalece tu seguridad técnica.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Apertura Módulo 5 -->
+              <div class="bento-card card-featured">
+                <div>
+                  <span class="feat-pill feat-pill-purple"><i class="bi bi-trophy-fill"></i> ÚLTIMO MÓDULO DEL PROGRAMA</span>
+                  <h2 style="font-family:var(--font-display); font-size:27px; font-weight:800; color:#FFFFFF; margin-top:12px; line-height:1.18;">
+                    Módulo 5: <span style="color:var(--cisco-cyan);">Resumen del Curso</span> (5.0)
+                  </h2>
+                  <p style="font-size:15.5px; color:var(--text-body); margin-top:8px; line-height:1.42;">
+                    Integramos los <strong>4 módulos completos</strong> en una visión unificada de ciberseguridad cotidiana: desde detener ingeniería social y cifrar tu Wi-Fi hasta dominar tu huella digital, privacidad y salud mental.
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px; gap:6px;">
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-purple">M1</span>
+                      <div class="process-text" style="font-size:14px;">Amenazas, phishing, huella digital y deepfakes.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-cyan">M2</span>
+                      <div class="process-text" style="font-size:14px;">Dispositivos, claves, 2FA, Dark Web y routers WPA3.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-amber">M3</span>
+                      <div class="process-text" style="font-size:14px;">Rastreo web, políticas T&amp;C, efecto dominó y CO<sub>2</sub>.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 11px;">
+                      <span class="process-num num-mint">M4</span>
+                      <div class="process-text" style="font-size:14px;">Salud integral, 6 filtros críticos y bienestar flexible.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:24px;">360°</span>
+                  <div class="stat-desc" style="font-size:14.5px;">
+                    <strong>Recta Final:</strong> Veremos el mapa maestro de los Módulos 1–4, un Triage Integrador y el Checkpoint Final.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Síntesis Módulo 4</span>
+              <span class="footer-chip">Inicio Módulo 5.0</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 5.0 // Mapa Maestro Módulos 1 y 2 &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 17: 5.0 RESUMEN INTEGRAL MÓDULOS 1 Y 2 -->
+        <div class="slide-view" data-index="16" data-title="5.0 Resumen del Curso // Mapa Maestro Módulos 1 y 2" data-desc="Repaso oficial 5.0: actores maliciosos, ingeniería social, DDoS, credential stuffing, dispositivos y redes" data-notes="Basado en PNGs oficiales 5.0 (c5.png, c15.png, c30.png). Repasar definiciones clave de Ingeniería Social (pretexto/cebo/phishing), Ataques DDoS, Relleno de Credenciales, Huella Digital de menores y Blindaje de Routers/VPN.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 5.0 // RESUMEN DEL CURSO
+              </span>
+              <span class="header-context">Mapa Integrador Parte 1: Amenazas (M1) y Blindaje (M2)</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-layers-fill"></i> CISCO 5.0 (M1–M2)</span>
+              <span class="slide-index-pill">17 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Módulo 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-shield-fill-exclamation"></i> Módulo 1: Actores y Amenazas</span>
+                    <span class="feat-pill feat-pill-purple">ALERTA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Ingeniería Social:</strong> Manipulación (phishing, pretexto, cebo) para robar credenciales y dinero.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>DDoS &amp; Malware:</strong> Saturación de tráfico en servidores; ransomware y spyware en equipos.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Relleno de Credenciales:</strong> Bots prueban claves filtradas explotando contraseñas repetidas.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-purple">4</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Huella &amp; Deepfakes:</strong> Cuidar la reputación digital y detectar audio o video sintético.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-purple">5</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Entorno Familiar:</strong> Controles parentales, supervisión en juegos y alerta contra grooming.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-shield-fill-exclamation exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Regla de Oro M1</div>
+                    <div class="exam-callout-text">Si sospechas compromiso o ransomware, desconecta el equipo de la red antes de actuar.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Módulo 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-router-fill"></i> Módulo 2: Protección de Lo Importante</span>
+                    <span class="feat-pill feat-pill-cyan">BLINDAJE</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Dispositivos &amp; Acceso:</strong> Antivirus/firewall, parches, Windows Hello, gestores de claves y 2FA real.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Privacidad &amp; Dark Web:</strong> Cifrado activo y monitoreo ante filtraciones vendidas en foros ocultos.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Red Doméstica Segura:</strong> Cifrado WPA3, clave única, firmware al día, sin gestión remota y red IoT.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Redes y PCs Públicas:</strong> Usar siempre VPN, evitar banca y cerrar sesión contra keyloggers.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">5</span>
+                      <div class="process-text" style="font-size:14.5px;"><strong>Respaldo &amp; SIM Swapping:</strong> Copias offline periódicas y app TOTP + PIN con tu operadora móvil.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-key-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Regla de Oro M2</div>
+                    <div class="exam-callout-text">Frase de contraseña única por servicio + 2FA por aplicación frenan la mayoría de intrusiones.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">5.0 Resumen Global</span>
+              <span class="footer-chip">Módulos 1 y 2</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 5.0 // Mapa Maestro Módulos 3 y 4 &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 18: 5.0 RESUMEN INTEGRAL MÓDULOS 3 Y 4 -->
+        <div class="slide-view" data-index="17" data-title="5.0 Resumen del Curso // Mapa Maestro Módulos 3 y 4" data-desc="Repaso oficial 5.0: datos financieros, políticas de privacidad, efecto dominó, bienestar y pensamiento crítico" data-notes="Basado en PNGs oficiales 5.0 (c45.png, c55.png, c65.png, c68.png). Consolidar protección financiera/políticas/efecto dominó (M3) junto a salud integral, algoritmos y bienestar flexible (M4).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 5.0 // RESUMEN DEL CURSO
+              </span>
+              <span class="header-context">Mapa Integrador Parte 2: Verificación (M3) y Bienestar (M4)</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-layers-fill"></i> CISCO 5.0 (M3–M4)</span>
+              <span class="slide-index-pill">18 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Módulo 3 -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-shield-check"></i> Módulo 3: Verificar Antes de Compartir</span>
+                    <span class="feat-pill feat-pill-amber">PRIVACIDAD</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text"><strong>Datos Financieros:</strong> Jamás enviar fotos de tarjetas o códigos PIN por correo o chat; auditar permisos y cuentas olvidadas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text"><strong>Rastreo Web &amp; Incógnito:</strong> Cookies, beacons 1x1 y fingerprinting; el modo incógnito solo oculta historial local, no al ISP.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Políticas y T&amp;C:</strong> Revisar qué datos recopilan apps, si los venden a terceros y evitar aceptar cláusulas abusivas a ciegas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">4</span>
+                      <div class="process-text"><strong>Efecto Dominó:</strong> Romper el bucle dopamínico de validación social y reducir el 4% CO<sub>2</sub> de tráfico innecesario.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">5</span>
+                      <div class="process-text"><strong>Resolución 3.3:</strong> Auditar permisos móviles (micrófono/ubicación) y cancelar apps que venden perfil comercial.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-incognito exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Regla de Oro M3</div>
+                    <div class="exam-callout-text">Si un servicio es gratuito, audita primero qué datos recopila, conserva o monetiza con terceros.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Módulo 4 -->
+              <div class="bento-card" style="border-color:var(--pop-mint);">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-mint"><i class="bi bi-heart-pulse-fill"></i> Módulo 4: Salud y Pensamiento Crítico</span>
+                    <span class="feat-pill feat-pill-mint">EQUILIBRIO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint">1</span>
+                      <div class="process-text"><strong>Cuerpo &amp; Planeta:</strong> Regla 20-20-20, postura ergonómica, freno a la luz azul nocturna y reciclaje de residuos electrónicos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">2</span>
+                      <div class="process-text"><strong>Hechos vs. Opiniones:</strong> Evaluar fuente, evidencia y contexto; usar Snopes/FactCheck antes de difundir noticias virales.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">3</span>
+                      <div class="process-text"><strong>Algoritmos &amp; Burbujas:</strong> Tus clics entrenan tu feed; evita cámaras de eco eligiendo fuentes plurales de calidad.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">4</span>
+                      <div class="process-text"><strong>Bienestar Flexible:</strong> Moldear activamente la tecnología con apps útiles y desconexión offline según tus valores.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">5</span>
+                      <div class="process-text"><strong>Resolución 4.3:</strong> Eliminar desinformación publicada, rechazar software pirata y usar canales internos laborales.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-heart-pulse-fill exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--pop-mint);">Regla de Oro M4</div>
+                    <div class="exam-callout-text">Tus clics entrenan tu feed y tus hábitos definen tu descanso: gestiona la tech con propósito.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">5.0 Resumen Global</span>
+              <span class="footer-chip">Módulos 3 y 4</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 4 // Simulador Maestro Triage 360° &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 19: DINÁMICA 4 // TRIAGE MAESTRO 360° -->
+        <div class="slide-view" data-index="18" data-title="Dinámica 4 // Simulador Final Triage Maestro 360°" data-desc="4 casos combinados que integran ciberseguridad de dispositivos, redes, privacidad, ética y bienestar" data-notes="Gran simulador integrador del Módulo 5: pide al grupo identificar qué módulos interactúan en cada incidente compuesto y cuál es el orden correcto de respuesta.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA FINAL // SIMULADOR 4
+              </span>
+              <span class="header-context">Triage Maestro 360°: Incidentes Combinados de Módulos 1–4</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-shield-fill-check"></i> RETO INTEGRADOR</span>
+              <span class="slide-index-pill">19 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-diagram-2-fill"></i> Selecciona Incidente Mixto:</span>
+                    <span class="feat-pill feat-pill-purple">4 CASOS 360°</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:9px; margin-top:10px;">
+                    <button class="case-select-btn master-case-btn is-active-case" onclick="selectMasterTriageCase(this, 'master1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-file-earmark-zip-fill" style="color:#F87171;"></i> Caso 1: App Crackeada + Clave Repetida</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:#F87171;">M1+M2+M4</span>
+                      </div>
+                      <div class="case-btn-desc">Software pirata con misma contraseña del portal universitario.</div>
+                    </button>
+
+                    <button class="case-select-btn master-case-btn" onclick="selectMasterTriageCase(this, 'master2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-cup-hot-fill" style="color:var(--warn-amber);"></i> Caso 2: Queja en Foro desde Wi-Fi Libre</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--warn-amber);">M1+M2+M4</span>
+                      </div>
+                      <div class="case-btn-desc">Crítica laboral en red sin VPN creyendo ser anónimo.</div>
+                    </button>
+
+                    <button class="case-select-btn master-case-btn" onclick="selectMasterTriageCase(this, 'master3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-sim-slash-fill" style="color:#F87171;"></i> Caso 3: SMS Bancario + "Sin Servicio"</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:#F87171;">M1+M2+M3</span>
+                      </div>
+                      <div class="case-btn-desc">Phishing previo combinado con secuestro súbito de línea SIM.</div>
+                    </button>
+
+                    <button class="case-select-btn master-case-btn" onclick="selectMasterTriageCase(this, 'master4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-moon-stars-fill" style="color:var(--cyber-purple-neon);"></i> Caso 4: 2:00 AM Reenviando Bulo Viral</span>
+                        <span style="font-size:12px; font-family:var(--font-mono); color:var(--cyber-purple-neon);">M3+M4</span>
+                      </div>
+                      <div class="case-btn-desc">Luz azul, bucle emocional, huella de CO<sub>2</sub> y desinformación.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-award-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Meta Final:</strong> Detectar todas las capas de riesgo (técnica, legal, social y salud) en un solo vistazo.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Diagnóstico -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-shield-lock-fill"></i> Resolución Integral Multi-Módulo</span>
+                    <span class="feat-pill feat-pill-coral" id="masterBadge">MÓDULO 1 + 2 + 4.3</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:18px 20px; margin-top:12px;">
+                    <h3 id="masterTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-bottom:12px;">
+                      Caso 1: Instalador Crackeado + Misma Clave en Portal Universitario
+                    </h3>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:#F87171; font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-bug-fill"></i> VECTORES DE RIESGO CRUZADOS:
+                    </div>
+                    <p id="masterVector" style="font-size:15.5px; color:var(--text-body); line-height:1.45; margin-bottom:14px;">
+                      Riesgo múltiple: Usar software pirateado (Problema 4.3.2) abre puertas traseras (Troyano/Spyware, Mód. 1) e implica sanciones legales/éticas, mientras reutilizar claves habilita Relleno de Credenciales (Mód. 2).
+                    </p>
+
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--pop-mint); font-weight:800; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                      <i class="bi bi-check2-circle"></i> PROTOCOLO DE RESPUESTA 360°:
+                    </div>
+                    <p id="masterResponse" style="font-size:15.5px; color:var(--text-body); line-height:1.45;">
+                      Triage Integral: Descarta software pirata, usa alternativas oficiales o libres, ejecuta Análisis Completo antivirus, activa gestor + 2FA por app TOTP y cambia claves reutilizadas.
+                    </p>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:10px;">
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-purple); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cyber-purple-neon); display:block; font-family:var(--font-mono); font-size:11.5px;">PASO 1 // CONTENER</strong>
+                      Aislar red o cuenta
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid var(--border-cyan); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--cisco-cyan); display:block; font-family:var(--font-mono); font-size:11.5px;">PASO 2 // CORREGIR</strong>
+                      Claves, 2FA o borrar post
+                    </div>
+                    <div style="background:var(--bg-nested); border:1px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:8px 10px; font-size:13px; color:var(--text-body);">
+                      <strong style="color:var(--pop-mint); display:block; font-family:var(--font-mono); font-size:11.5px;">PASO 3 // PREVENIR</strong>
+                      Hábito y verificación
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc" id="masterRule" style="font-size:15px;">
+                    <strong>Síntesis Maestra:</strong> Lo "gratis" pirata casi siempre se paga con tus credenciales, tus archivos o tu equipo convertido en zombi.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 4</span>
+              <span class="footer-chip">Triage 360° (M1–M4)</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint Final (Parte 1: Módulos 1–3) &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 20: CHECKPOINT FINAL PARTE 1 (M1-M3) -->
+        <div class="slide-view" data-index="19" data-title="Checkpoint Final // Repaso Global Módulos 1–3" data-desc="Evaluación integradora final sobre relleno de credenciales, ingeniería social y seguridad de red" data-notes="Primera parte del Checkpoint Integrador de Cierre (Módulo 5) repasando conceptos clave de los módulos 1, 2 y 3.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                CHECKPOINT FINAL // PARTE 1 (M1–M3)
+              </span>
+              <span class="header-context">Evaluación Integradora del Curso • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-trophy-fill"></i> EXAMEN GLOBAL</span>
+              <span class="slide-index-pill">20 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> FINAL 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Repaso Global M1–M2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Qué ataque automatizado explota que una persona reutilice la misma contraseña en varios sitios?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. El ataque DDoS busca tumbar la disponibilidad de un servidor saturándolo de tráfico.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Ataque de denegación de servicio distribuido (DDoS)</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q7-exp', '¡Correcto! El Relleno de Credenciales (Credential Stuffing) usa bots con pares filtrados en un portal para probarlos en bancos o correos.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Relleno de credenciales (Credential Stuffing)</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. El modo incógnito es una función local del navegador, no un vector de ataque contra claves repetidas.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Navegación privada o Modo Incógnito</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. Los web beacons 1x1 miden aperturas o rastreo publicitario, no prueban contraseñas masivamente.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Balizas web (Web Beacons) de seguimiento</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q7-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> FINAL 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Repaso Global M2–M3</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Qué acción NO protege tus datos bancarios al usar una red Wi-Fi gratuita en una cafetería?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. La VPN sí protege eficazmente tu tráfico cifrándolo de extremo a extremo.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Activar una Red Privada Virtual (VPN) confiable</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. Confirmar el SSID legítimo y exigir HTTPS sí previene redes gemelas maliciosas (Evil Twin).')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Verificar el nombre exacto de la red y exigir HTTPS</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q8-exp', '¡Exacto! El Modo Incógnito solo evita guardar historial local en tu equipo; no cifra tu tráfico ni oculta datos frente a la red Wi-Fi o al ISP.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Abrir simplemente una pestaña en Modo Incógnito</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. Desactivar la compartición de archivos y usar cortafuegos son defensas reales recomendadas por Cisco.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Desactivar el uso compartido de archivos y activar Firewall</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q8-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Checkpoint Final 1/2</span>
+              <span class="footer-chip">Módulos 1–3</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint Final (Parte 2: Módulos 4–5) &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 21: CHECKPOINT FINAL PARTE 2 (M4-M5) -->
+        <div class="slide-view" data-index="20" data-title="Checkpoint Final // Repaso Global Módulos 4 y 5" data-desc="Evaluación final oficial 4.2/4.3 sobre aprendizaje activo y manejo ético en foros" data-notes="Segunda y última parte del Checkpoint Integrador (basada en 4.2/c18.png y 4.3/c10.png).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                CHECKPOINT FINAL // PARTE 2 (M4–M5)
+              </span>
+              <span class="header-context">Último Reto del Programa • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-trophy-fill"></i> EXAMEN GLOBAL</span>
+              <span class="slide-index-pill">21 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 3 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> FINAL 3</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 4.2.6</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cómo podemos promover el aprendizaje y el crecimiento positivo con la tecnología digital?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q9-exp', 'Incorrecto. Los pequeños hábitos sostenibles acumulados son clave para transformar nuestro entorno digital.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Eliminando cualquier nuevo hábito digital</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q9-exp', 'Incorrecto. Evitar la desinformación es necesario, pero Cisco invita a dar un paso más allá mediante uso activo.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Limitándose pasivamente a evitar la desinformación</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q9-exp', '¡Correcto! Interactuar activamente con la tecnología para aprender, refinar criterio crítico y aportar positivamente.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Interactuando activamente con la tecnología</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q9-exp', 'Incorrecto. El uso excesivo sin intención provoca agotamiento digital.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Fomentando el uso excesivo sin límites de horario</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q9-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 4 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> FINAL 4</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Criterio Triage 4.3.1</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cuál es la conducta recomendada si tienes una inquietud seria sobre tu empresa o universidad?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q10-exp', 'Incorrecto. Tu identidad en foros públicos suele ser rastreable y puede acarrear graves consecuencias laborales.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Publicarla en un foro público confiando en el anonimato</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q10-exp', '¡Exacto! Cisco 4.3.1 indica abordar cualquier inquietud a través de los canales internos apropiados de la organización.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Abordarla mediante los canales internos apropiados</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q10-exp', 'Incorrecto. Difundir rumores no verificados agrava la desinformación y daña tu propia reputación.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Reenviar rumores emocionales sin verificar fuentes</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q10-exp', 'Incorrecto. Usar software no autorizado en equipos institucionales viola la ley y expone la red.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Instalar herramientas gratuitas piratas para solucionarlo</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q10-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Checkpoint Final 2/2</span>
+              <span class="footer-chip">Módulos 4 y 5</span>
+            </div>
+            <div class="footer-meta">Siguiente: Tu Plan Práctico de 7 Días Post-Curso &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 22: PROTOCOLO DE 7 DÍAS POST-CURSO -->
+        <div class="slide-view" data-index="21" data-title="Plan de Acción // Protocolo Personal de 7 Días" data-desc="Hoja de ejecución paso a paso para blindar dispositivos, red, privacidad y bienestar en casa" data-notes="Traducir todo el curso en 1 acción concreta por día durante la próxima semana para que los conocimientos se vuelvan hábitos permanentes.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                PLAN DE ACCIÓN // PRÓXIMOS 7 DÍAS
+              </span>
+              <span class="header-context">Convierte el Curso en Hábitos Reales en Una Semana</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-calendar2-check-fill"></i> HOJA DE EJECUCIÓN</span>
+              <span class="slide-index-pill">22 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Días 1 al 4 (Blindaje Técnico) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-shield-lock-fill"></i> Días 1 al 4: Blindaje Técnico</span>
+                    <span class="feat-pill feat-pill-cyan">DISPOSITIVOS &amp; RED</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">DÍA 1</span>
+                      <div class="process-text"><strong>Auditoría de Claves &amp; 2FA:</strong> Cambia contraseñas repetidas usando un gestor y activa 2FA por app TOTP en tu correo y banco.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">DÍA 2</span>
+                      <div class="process-text"><strong>Análisis Completo &amp; Parches:</strong> Ejecuta escaneo antivirus total, actualiza sistema/apps y borra instaladores dudosos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">DÍA 3</span>
+                      <div class="process-text"><strong>Router Fortaleza:</strong> Confirma cifrado WPA2/WPA3, cambia la clave admin predeterminada y revisa actualizaciones de firmware.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">DÍA 4</span>
+                      <div class="process-text"><strong>Higiene Web &amp; Permisos:</strong> Limpia cookies de terceros, revoca permisos innecesarios en tu smartphone y cierra cuentas viejas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-check-all exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Meta Técnica Mitad de Semana</div>
+                    <div class="exam-callout-text">Al completar el Día 4, tus cuentas, PC, teléfono y Wi-Fi cuentan con blindaje base activo.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Días 5 al 7 (Criterio y Bienestar) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-heart-pulse-fill"></i> Días 5 al 7: Criterio y Bienestar</span>
+                    <span class="feat-pill feat-pill-purple">MENTE &amp; PLANETA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">DÍA 5</span>
+                      <div class="process-text"><strong>Poda de Notificaciones:</strong> Silencia grupos y apps no esenciales; establece 2 bloques fijos diarios para revisar mensajes.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">DÍA 6</span>
+                      <div class="process-text"><strong>Dieta Informativa &amp; Ergonomía:</strong> Deja de seguir cuentas sensacionalistas, ajusta altura de pantalla y aplica regla 20-20-20.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">DÍA 7</span>
+                      <div class="process-text"><strong>Desconexión &amp; E-Waste:</strong> Disfruta horas sin pantalla en actividades físicas y separa cargadores o equipos viejos para reciclar.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">EXTRA</span>
+                      <div class="process-text"><strong>Auditoría Familiar:</strong> Ayuda a un familiar cercano a activar 2FA y distinguir noticias falsas en su teléfono.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-repeat exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--pop-mint);">Efecto Compuesto</div>
+                    <div class="exam-callout-text">No necesitas perfección en un día: 1 ajuste diario en 7 días reduce drásticamente tu superficie de riesgo.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Plan 7 Días</span>
+              <span class="footer-chip">Ejecución Práctica</span>
+            </div>
+            <div class="footer-meta">Siguiente: Reflexión Ciudadana y Cierre Académico &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 23: REFLEXIÓN FINAL Y PROYECCIÓN -->
+        <div class="slide-view" data-index="22" data-title="Proyección // Ciberseguridad Cotidiana y Ciudadanía Digital" data-desc="El valor de la conciencia digital para la universidad, familia y carrera profesional" data-notes="Conectar el aprendizaje completo de los 5 módulos con la vida universitaria en la UMSA, el entorno familiar y la empleabilidad.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                PROYECCIÓN // CIUDADANÍA DIGITAL
+              </span>
+              <span class="header-context">Impacto en Tu Vida Universitaria, Familiar y Profesional</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-compass-fill"></i> VISIÓN INTEGRAL</span>
+              <span class="slide-index-pill">23 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Col 1: Vida Universitaria -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-mortarboard-fill"></i> Entorno Universitario</span>
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Cero Instaladores Riesgosos:</strong> Evita cracks en proyectos académicos que ponen en riesgo tu tesis y red del campus.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Rigor Científico:</strong> Aplica el filtro <em>Fuente + Evidencia + Contexto</em> al investigar fuentes para trabajos y papers.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text"><strong>Colaboración Segura:</strong> Protege carpetas compartidas con permisos mínimos y respaldos externos de tu tesis.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-laptop exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Reputación</div>
+                    <div class="exam-callout-text">Tu huella digital positiva abre puertas a becas, pasantías e investigación.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 2: Entorno Familiar -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-house-heart-fill"></i> Hogar y Familia</span>
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Protección Activa:</strong> Configura el router doméstico, alerta a tus familiares sobre phishing bancario y estafas de IA.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Freno a Cadenas Falsas:</strong> Corta en grupos familiares el reenvío de falsos remedios médicos o alarmas virales.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Guía a Menores y Mayores:</strong> Configura controles parentales en juegos/chats y bloqueos de SIM ante estafas telefónicas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-people-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Multiplicador</div>
+                    <div class="exam-callout-text">Cada estudiante capacitado se convierte en referente de seguridad para su hogar.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 3: Futuro Profesional -->
+              <div class="bento-card" style="border-color:var(--pop-mint);">
+                <div>
+                  <span class="card-label label-mint"><i class="bi bi-briefcase-fill"></i> Carrera y Ética</span>
+                  <div class="process-pipeline" style="margin-top:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint">1</span>
+                      <div class="process-text"><strong>Higiene Corporativa:</strong> Proteger contraseñas, respetar canales internos y usar VPN es requisito en cualquier empleo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">2</span>
+                      <div class="process-text"><strong>Salud Sostenible:</strong> Evitar el agotamiento digital te permite mantener rendimiento, foco y criterio claro a largo plazo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">3</span>
+                      <div class="process-text"><strong>Criterio frente a IA:</strong> Verifica salidas automatizadas con fuentes primarias y nunca pegues claves ni datos confidenciales.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-shield-fill-check exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--pop-mint);">Mejora Continua</div>
+                    <div class="exam-callout-text">La tecnología evoluciona rápido: mantén viva tu formación en alfabetización y seguridad.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Ciudadanía Digital</span>
+              <span class="footer-chip">UMSA // Cisco NetAcad</span>
+            </div>
+            <div class="footer-meta">Siguiente: Clausura Oficial del Programa (Diapositiva Final) &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 24: CLAUSURA OFICIAL DEL PROGRAMA -->
+        <div class="slide-view" data-index="23" data-title="Clausura Oficial // Programa Completo (Módulos 1–5)" data-desc="Resumen final de las 3 sesiones, reconocimiento de cierre y espacio abierto de consultas" data-notes="Felicitar sinceramente a todo el curso por completar los 5 módulos en 3 sesiones. Invitarlos a repasar los cuestionarios oficiales en la plataforma NetAcad y abrir micrófono/chat para preguntas finales y despedida.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                SESIÓN 3 // CLAUSURA FINAL
+              </span>
+              <span class="header-context">Programa Completado: Módulos 1 al 5 • UMSA &amp; Cisco NetAcad</span>
+            </div>
+            <div class="header-right">
+              <div class="session-switcher">
+                <a href="sesion1.html" class="session-pill" title="Ir a Sesión 1">S1</a>
+                <a href="sesion2.html" class="session-pill" title="Ir a Sesión 2">S2</a>
+                <span class="session-pill active" title="Sesión Actual">S3</span>
+              </div>
+              <span class="header-telemetry"><i class="bi bi-flag-fill"></i> CURSO COMPLETADO</span>
+              <span class="slide-index-pill">24 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Recorrido Completo de los 5 Módulos -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-trophy-fill"></i> Mapa Completo Dominado (M1–M5)</span>
+                    <span class="feat-pill feat-pill-purple">3 SESIONES</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">M1</span>
+                      <div class="process-text"><strong>Actores Maliciosos:</strong> Amenazas, malware, phishing, protección infantil, huella digital y detección de deepfakes.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-cyan">M2</span>
+                      <div class="process-text"><strong>Protección Técnica:</strong> Windows Hello, 2FA, SIM Swapping, Dark Web, cifrado WPA3, firmware y VPN pública.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 12px;">
+                      <span class="process-num num-amber">M3</span>
+                      <div class="process-text"><strong>Verificar Antes de Compartir:</strong> Rastreo web, incógnito real, T&amp;C, bucle social y 4% CO<sub>2</sub>.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 12px;">
+                      <span class="process-num num-mint">M4</span>
+                      <div class="process-text"><strong>Salud, Verdad y Algoritmos:</strong> Regla 20-20-20, luz azul, hechos vs. opiniones, cámaras de eco y ética 4.3.</div>
+                    </div>
+                    <div class="process-step" style="padding:7px 12px;">
+                      <span class="process-num num-purple">M5</span>
+                      <div class="process-text"><strong>Integración 360°:</strong> Mapas globales M1–M4, simulador de incidentes cruzados y Protocolo de 7 Días.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-person-badge-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Asistente de Enseñanza Oficial:</strong> Alex Arturo Jamachi Condori • UMSA &amp; Cisco Networking Academy.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Cierre Académico + Preguntas -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-patch-check-fill"></i> Cierre en Plataforma NetAcad</span>
+                    <span class="feat-pill feat-pill-mint">ÚLTIMO PASO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint">01</span>
+                      <div class="process-text"><strong>Completa Tus Evaluaciones:</strong> Ingresa a Cisco NetAcad para responder los cuestionarios pendientes de los Módulos 4 y 5.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">02</span>
+                      <div class="process-text"><strong>Aplica Tu Plan de 7 Días:</strong> Ejecuta al menos un ajuste de seguridad o bienestar digital por día durante esta semana.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">03</span>
+                      <div class="process-text"><strong>Comparte Con Tu Entorno:</strong> Ayuda a tu familia y compañeros a detectar fraudes, enlaces falsos y noticias manipuladas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">04</span>
+                      <div class="process-text"><strong>Hábito Continuo:</strong> Revisa periódicamente privacidad, respaldos offline y equilibrio entre pantallas y vida real.</div>
+                    </div>
+                  </div>
+
+                  <div class="exam-callout callout-purple" style="margin-top:8px;">
+                    <i class="bi bi-calendar2-week-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                    <div class="exam-callout-content">
+                      <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Recordatorio Final</div>
+                      <div class="exam-callout-text">Todo el material interactivo (Sesiones 1, 2 y 3) queda disponible para repaso rápido desde S1 / S2 / S3.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:24px;"><i class="bi bi-chat-heart-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>¡Muchas Gracias por Tu Participación!</strong> Abrimos micrófono y chat para cualquier consulta final del curso.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Programa Finalizado</span>
+              <span class="footer-chip">UMSA // Cisco NetAcad</span>
+            </div>
+            <div class="footer-meta">Fin del Curso • Presiona [G] para Malla o [P] para HUD</div>
+          </footer>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- TACTICAL DOCK / BARRA DE CONTROL INFERIOR (TAMAÑO ORIGINAL INTACTO) -->
+    <nav class="tactical-dock" id="tacticalDock">
+      <button class="dock-btn" id="prevBtn" title="Anterior (Flecha Izquierda)" disabled>
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="dock-counter" id="dockCounter">
+        <span id="dockCurrSlide">01</span> / <span id="dockTotalSlide">24</span>
+      </div>
+
+      <button class="dock-btn" id="nextBtn" title="Siguiente (Flecha Derecha / Espacio)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <div class="dock-sep"></div>
+
+      <button class="dock-pill-btn" id="presenterBtn" title="Panel del Expositor / HUD (Tecla P)">
+        <i class="bi bi-display"></i>
+        <span>HUD [P]</span>
+      </button>
+
+      <button class="dock-pill-btn" id="gridBtn" title="Ver Cuadrícula de Diapositivas (Tecla G)">
+        <i class="bi bi-grid-3x3-gap"></i>
+        <span>Malla [G]</span>
+      </button>
+
+      <button class="dock-btn" id="fsBtn" title="Pantalla Completa (Tecla F)">
+        <i class="bi bi-fullscreen"></i>
+      </button>
+
+      <button class="dock-btn" id="helpBtn" title="Atajos de Teclado (Tecla ?)">
+        <i class="bi bi-question-circle"></i>
+      </button>
+    </nav>
+  </div>
+
+  <!-- MODAL: CUADRÍCULA DE DIAPOSITIVAS (TECLA G) -->
+  <div class="grid-drawer-modal" id="gridModal">
+    <div class="grid-header">
+      <div class="grid-title">
+        <i class="bi bi-grid-3x3-gap-fill" style="color:var(--cyber-purple-neon);"></i>
+        <span>24 Diapositivas // Conciencia sobre Seguridad y Protección Digital — Sesión 3 Final (Módulos 4 y 5)</span>
+      </div>
+      <button class="grid-close-btn" id="closeGridBtn"><i class="bi bi-x-lg"></i> Cerrar [ESC]</button>
+    </div>
+    <div class="grid-container" id="gridCardsContainer"></div>
+  </div>
+
+  <!-- DRAWER: HUD DEL EXPOSITOR (TECLA P) -->
+  <div class="presenter-hud-drawer" id="presenterHud">
+    <div class="hud-inner">
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-stopwatch-fill"></i> Control de Tiempo // Sesión 90 min
+        </div>
+        <div class="hud-timer-card">
+          <div class="hud-timer-label">Cronómetro de Clase</div>
+          <div class="hud-timer-digits" id="hudTimerDigits">00:00:00</div>
+          <div class="hud-timer-actions">
+            <button class="hud-mini-btn" id="hudTimerPauseBtn"><i class="bi bi-pause-fill"></i> Pausar</button>
+            <button class="hud-mini-btn" id="hudTimerResetBtn"><i class="bi bi-arrow-counterclockwise"></i> Reiniciar</button>
+            <button class="hud-mini-btn" id="closeHudBtn" style="margin-left:auto;"><i class="bi bi-x-lg"></i> Cerrar</button>
+          </div>
+          <div class="hud-clock-row">
+            <span>Hora Real:</span>
+            <span id="hudClockDigits" style="color:var(--cisco-cyan); font-weight:700;">--:--:--</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-mic-fill"></i> Notas Pedagógicas del Instructor
+        </div>
+        <div class="hud-notes-box" id="hudSpeakerNotes">
+          Cargando guía pedagógica...
+        </div>
+      </div>
+
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-skip-forward-fill"></i> Siguiente Diapositiva
+        </div>
+        <div class="hud-next-preview-card" id="hudNextPreviewCard">
+          <div class="hud-next-title" id="hudNextTitle">--</div>
+          <div class="hud-next-desc" id="hudNextDesc">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ATAJOS DE TECLADO (TECLA ?) -->
+  <div class="help-modal-overlay" id="helpModal">
+    <div class="help-modal-card">
+      <div class="help-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span class="header-badge badge-purple"><i class="bi bi-keyboard-fill"></i> ATAJOS</span>
+          <span style="font-family:var(--font-display); font-size:17px; font-weight:800; color:#FFFFFF;">Atajos de Control Táctico</span>
+        </div>
+        <button class="grid-close-btn" id="closeHelpBtn"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="help-shortcuts-grid">
+        <div class="help-shortcut-row"><span>Avanzar Diapositiva</span><kbd>Flecha Der / Espacio</kbd></div>
+        <div class="help-shortcut-row"><span>Retroceder Diapositiva</span><kbd>Flecha Izq</kbd></div>
+        <div class="help-shortcut-row"><span>Panel del Expositor (HUD)</span><kbd>Tecla P</kbd></div>
+        <div class="help-shortcut-row"><span>Malla de 24 Diapositivas</span><kbd>Tecla G</kbd></div>
+        <div class="help-shortcut-row"><span>Pantalla Completa</span><kbd>Tecla F</kbd></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts del Motor y Efectos -->
+  <script src="js/ambient-canvas.js"></script>
+  <script src="js/slides-engine.js"></script>
+</body>
+</html>

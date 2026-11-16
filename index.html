@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Cisco NetAcad // UMSA &bull; Diapositivas y Grabaciones</title>
+  <meta name="description" content="Portal oficial de presentaciones interactivas y grabaciones de clase para Conciencia Digital y Conciencia sobre Seguridad y Protección Digital — UMSA & Cisco Networking Academy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg-void: #05080E;
+      --bg-surface: #0B1220;
+      --bg-card: #101A2E;
+      --bg-nested: #09101D;
+      --border-color: #1F2E49;
+      --cisco-cyan: #00BCEB;
+      --cisco-gold: #FF9E1B;
+      --pop-mint: #34D399;
+      --cyber-purple: #8B5CF6;
+      --cyber-purple-neon: #C084FC;
+      --text-main: #F8FAFC;
+      --text-body: #CBD5E1;
+      --text-muted: #94A3B8;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(0, 188, 235, 0.14), transparent 38%),
+        radial-gradient(circle at 88% 15%, rgba(139, 92, 246, 0.15), transparent 40%),
+        linear-gradient(180deg, #070C17 0%, #05080E 100%);
+      color: var(--text-body);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0, 188, 235, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 188, 235, 0.035) 1px, transparent 1px);
+      background-size: 38px 38px;
+      z-index: 0;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 24px 18px 48px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    /* ================= HERO TOP BAR ================= */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(16, 26, 46, 0.96), rgba(9, 16, 29, 0.98));
+      border: 2px solid #243656;
+      border-radius: 18px;
+      padding: 24px 26px;
+      box-shadow: 6px 6px 0 #02050A, 0 20px 50px rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-bottom: 1.5px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .umsa-logo {
+      height: 54px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--cisco-cyan);
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      border: 1.5px solid var(--border-color);
+      background: var(--bg-nested);
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .pill-cyan {
+      border-color: rgba(0, 188, 235, 0.55);
+      color: var(--cisco-cyan);
+      background: rgba(0, 188, 235, 0.1);
+    }
+
+    .pill-gold {
+      border-color: rgba(255, 158, 27, 0.55);
+      color: var(--cisco-gold);
+      background: rgba(255, 158, 27, 0.1);
+    }
+
+    .pill-drive {
+      border-color: rgba(52, 211, 153, 0.6);
+      color: var(--pop-mint);
+      background: rgba(52, 211, 153, 0.12);
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .pill-drive:hover {
+      background: rgba(52, 211, 153, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .hero-main {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.12;
+      color: #FFFFFF;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, var(--cisco-cyan), var(--cyber-purple-neon), var(--cisco-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      margin-top: 10px;
+      font-size: 15.5px;
+      color: var(--text-body);
+      max-width: 68ch;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .stat-box {
+      background: var(--bg-nested);
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--cisco-cyan);
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ================= FILTER TABS ================= */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      appearance: none;
+      border: 1.5px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-body);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--cisco-cyan);
+      color: #FFFFFF;
+    }
+
+    .filter-btn.is-active {
+      background: linear-gradient(135deg, rgba(0, 188, 235, 0.22), rgba(139, 92, 246, 0.22));
+      border-color: var(--cisco-cyan);
+      color: #FFFFFF;
+      box-shadow: 0 0 18px rgba(0, 188, 235, 0.22);
+    }
+
+    .mobile-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 7px 12px;
+      border-radius: 9999px;
+    }
+
+    /* ================= COURSE SECTION ================= */
+    .course-section {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 6px 6px 0 #02050A;
+    }
+
+    .course-section.is-hidden {
+      display: none;
+    }
+
+    .course-section.course-cyan {
+      border-color: rgba(0, 188, 235, 0.45);
+    }
+
+    .course-section.course-purple {
+      border-color: rgba(139, 92, 246, 0.45);
+    }
+
+    .course-banner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 22px 24px;
+      border-bottom: 1.5px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-cyan .course-banner {
+      background: linear-gradient(125deg, rgba(0, 188, 235, 0.14) 0%, rgba(11, 18, 32, 0.95) 60%);
+    }
+
+    .course-purple .course-banner {
+      background: linear-gradient(125deg, rgba(139, 92, 246, 0.16) 0%, rgba(11, 18, 32, 0.95) 60%);
+    }
+
+    .course-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .course-code {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .course-cyan .course-code {
+      background: rgba(0, 188, 235, 0.2);
+      color: var(--cisco-cyan);
+      border: 1px solid rgba(0, 188, 235, 0.5);
+    }
+
+    .course-purple .course-code {
+      background: rgba(139, 92, 246, 0.22);
+      color: var(--cyber-purple-neon);
+      border: 1px solid rgba(192, 132, 252, 0.5);
+    }
+
+    .course-schedule {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .course-title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 2.8vw, 30px);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+
+    .course-desc {
+      margin-top: 6px;
+      font-size: 14.5px;
+      color: var(--text-body);
+      max-width: 68ch;
+    }
+
+    .course-badges {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .course-badges img {
+      height: 76px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+    }
+
+    /* ================= SESSIONS GRID ================= */
+    .sessions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px 24px 22px 24px;
+    }
+
+    .session-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .course-cyan .session-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cisco-cyan);
+      box-shadow: 0 10px 28px rgba(0, 188, 235, 0.14);
+    }
+
+    .course-purple .session-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--cyber-purple-neon);
+      box-shadow: 0 10px 28px rgba(139, 92, 246, 0.18);
+    }
+
+    .session-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .session-tag {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: var(--bg-nested);
+      border: 1px solid var(--border-color);
+      color: var(--cisco-gold);
+      text-transform: uppercase;
+    }
+
+    .session-slides-count {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .session-title {
+      font-family: var(--font-display);
+      font-size: 19px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.25;
+      margin-top: 8px;
+    }
+
+    .session-topics {
+      margin-top: 8px;
+      font-size: 13.8px;
+      color: var(--text-body);
+      line-height: 1.45;
+    }
+
+    .session-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--pop-mint);
+      margin-top: 10px;
+    }
+
+    .session-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(31, 46, 73, 0.8);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.14s ease, filter 0.14s ease, background 0.14s ease;
+      border: 1.5px solid transparent;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-slides-cyan {
+      background: var(--cisco-cyan);
+      color: #030712;
+      box-shadow: 3px 3px 0 #02050A;
+    }
+
+    .btn-slides-cyan:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .btn-slides-purple {
+      background: linear-gradient(135deg, #9333EA, #7C3AED);
+      color: #FFFFFF;
+      border-color: rgba(192, 132, 252, 0.65);
+      box-shadow: 3px 3px 0 #02050A;
+    }
+
+    .btn-slides-purple:hover {
+      filter: brightness(1.12);
+      transform: translateY(-1px);
+    }
+
+    .btn-video {
+      background: var(--bg-nested);
+      color: var(--text-main);
+      border-color: rgba(52, 211, 153, 0.45);
+      font-size: 13.5px;
+    }
+
+    .btn-video i {
+      color: var(--pop-mint);
+    }
+
+    .btn-video:hover {
+      background: rgba(52, 211, 153, 0.14);
+      border-color: var(--pop-mint);
+    }
+
+    .course-footer-bar {
+      padding: 12px 24px;
+      background: var(--bg-nested);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .folder-link {
+      color: var(--pop-mint);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .folder-link:hover {
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--text-muted);
+      padding-top: 6px;
+    }
+
+    /* ================= RESPONSIVE MOBILE & TABLET ================= */
+    @media (max-width: 980px) {
+      .hero-main {
+        grid-template-columns: 1fr;
+      }
+
+      .sessions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .course-banner {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-shell {
+        padding: 12px 12px 32px 12px;
+        gap: 18px;
+      }
+
+      .hero-card {
+        padding: 16px;
+        border-radius: 14px;
+      }
+
+      .umsa-logo {
+        height: 44px;
+      }
+
+      .sessions-grid {
+        grid-template-columns: 1fr;
+        padding: 14px;
+        gap: 12px;
+      }
+
+      .course-banner {
+        padding: 16px;
+      }
+
+      .course-badges img {
+        height: 58px;
+      }
+
+      .course-footer-bar {
+        padding: 12px 16px;
+      }
+
+      .mobile-hint {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <!-- HERO -->
+    <section class="hero-card">
+      <div class="hero-top">
+        <div class="brand-cluster">
+          <img src="Conciencia%20Digital/assets/umsa-logo.png" alt="Escudo UMSA" class="umsa-logo">
+          <div>
+            <div class="brand-eyebrow">UMSA // CISCO NETWORKING ACADEMY</div>
+            <div class="brand-sub">Facultad de Ciencias Puras y Naturales &bull; Carrera de Informática</div>
+          </div>
+        </div>
+        <div class="hero-pills">
+          <span class="pill pill-cyan"><i class="bi bi-person-badge-fill"></i> Instructor: Alex Arturo Jamachi Condori</span>
+          <a href="https://drive.google.com/drive/folders/1Vc9eO1_9I9WAX4K-pG5nUKMGZfIpYxFT?usp=sharing" target="_blank" rel="noopener noreferrer" class="pill pill-drive">
+            <i class="bi bi-google"></i> Carpeta Completa de Grabaciones
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-main">
+        <div>
+          <h1 class="hero-title">
+            Portal de Clases: <span>Diapositivas &amp; Grabaciones</span>
+          </h1>
+          <p class="hero-desc">
+            Accede desde computadora, tablet o celular a las 6 presentaciones interactivas (con quizzes, simuladores y navegación táctil) y repasa cada sesión con su grabación oficial alojada en Google Drive.
+          </p>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <div class="stat-num">2</div>
+            <div class="stat-label">Cursos</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num" style="color:var(--cisco-gold);">6</div>
+            <div class="stat-label">Diapositivas</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num" style="color:var(--pop-mint);">6</div>
+            <div class="stat-label">Grabaciones</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTRO DE CURSOS -->
+    <div class="filter-bar">
+      <div class="filter-tabs" role="tablist" aria-label="Filtrar por curso">
+        <button class="filter-btn is-active" data-filter="all">
+          <i class="bi bi-grid-fill"></i> Todos los Cursos (6 sesiones)
+        </button>
+        <button class="filter-btn" data-filter="digital">
+          <i class="bi bi-laptop"></i> Conciencia Digital (3)
+        </button>
+        <button class="filter-btn" data-filter="seguridad">
+          <i class="bi bi-shield-lock-fill"></i> Seguridad Digital (3)
+        </button>
+      </div>
+
+      <div class="mobile-hint">
+        <i class="bi bi-phone-fill" style="color:var(--cisco-cyan);"></i>
+        <span>En móvil: desliza &harr; para cambiar de diapositiva</span>
+      </div>
+    </div>
+
+    <!-- CURSO 1: CONCIENCIA DIGITAL -->
+    <section class="course-section course-cyan" data-course="digital">
+      <div class="course-banner">
+        <div>
+          <div class="course-meta-row">
+            <span class="course-code">Curso 1 &bull; DL-00-A01 / DL-00-101</span>
+            <span class="course-schedule"><i class="bi bi-calendar-event"></i> Jueves 20:30 &ndash; 22:00 (Virtual)</span>
+          </div>
+          <h2 class="course-title">Conciencia Digital (Digital Literacy)</h2>
+          <p class="course-desc">
+            Fundamentos informáticos, gestión de archivos, búsqueda booleana, propiedad intelectual, Inteligencia Artificial, netiqueta, identidad digital y certificación oficial Credly.
+          </p>
+        </div>
+        <div class="course-badges">
+          <img src="Conciencia%20Digital/assets/badge-conciencia-digital.png" alt="Insignia Conciencia Digital">
+          <img src="Conciencia%20Digital/assets/badge-digital-literacy.png" alt="Insignia Digital Literacy">
+        </div>
+      </div>
+
+      <div class="sessions-grid">
+        <!-- CD Sesión 1 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag">Sesión 1</span>
+              <span class="session-slides-count">22 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulos 1 y 2: Fundamentos y Productividad</h3>
+            <p class="session-topics">
+              Nivelación informática, hardware y periféricos, Explorador de Windows, gestión de archivos y creación de contraseñas seguras.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20Digital/sesion1.html" class="btn btn-slides-cyan">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/11_GtFuuFaKt-UZnoA4H3AlGRg-7Vk8Dr/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (182.6 MB)
+            </a>
+          </div>
+        </article>
+
+        <!-- CD Sesión 2 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag">Sesión 2</span>
+              <span class="session-slides-count">24 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulos 3 y 4: Búsqueda, IA y Netiqueta</h3>
+            <p class="session-topics">
+              Operadores booleanos, URLs y cookies, Creative Commons y plagio, modelos LLM y alucinaciones, reglas de netiqueta y Green Computing.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20Digital/sesion2.html" class="btn btn-slides-cyan">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/106lhhpxI2_vtCIsQSIQw5Klbd6u6OKyi/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (1.36 GB)
+            </a>
+          </div>
+        </article>
+
+        <!-- CD Sesión 3 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag" style="color:var(--pop-mint);">Sesión 3 (Final)</span>
+              <span class="session-slides-count">24 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulos 5 y 6: Ciudadanía y Troubleshooting</h3>
+            <p class="session-topics">
+              Identidad digital, spear phishing y malware, recuperación ante ataques, resolución sistemática de fallas y cierre del curso.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20Digital/sesion3.html" class="btn btn-slides-cyan">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/1OTI2rBpvxqFgdrzlaI7i3U-cuHSS8M8m/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (214.8 MB)
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="course-footer-bar">
+        <span><i class="bi bi-folder2-open"></i> Carpeta de grabaciones: <strong>Conciencia Digital</strong></span>
+        <a href="https://drive.google.com/drive/folders/155IfEFhl6nG8emwCeIqJ34cMvl583lIe" target="_blank" rel="noopener noreferrer" class="folder-link">
+          Abrir carpeta en Google Drive <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- CURSO 2: CONCIENCIA SOBRE SEGURIDAD Y PROTECCIÓN DIGITAL -->
+    <section class="course-section course-purple" data-course="seguridad">
+      <div class="course-banner">
+        <div>
+          <div class="course-meta-row">
+            <span class="course-code">Curso 2 &bull; DL-00-D01</span>
+            <span class="course-schedule"><i class="bi bi-calendar-event"></i> Viernes 17:30 &ndash; 19:00 (Virtual)</span>
+          </div>
+          <h2 class="course-title">Conciencia sobre Seguridad y Protección Digital</h2>
+          <p class="course-desc">
+            Ciberdefensa personal ciudadana, identificación de malware y phishing, seguridad en endpoints y redes Wi-Fi, anti-rastreo, bienestar digital y triage ético integral.
+          </p>
+        </div>
+        <div class="course-badges">
+          <img src="Conciencia%20de%20Seguridad%20y%20Protecci%C3%B3n%20Digital/assets/badge-seguridad-proteccion.png" alt="Insignia Seguridad y Protección Digital">
+        </div>
+      </div>
+
+      <div class="sessions-grid">
+        <!-- Seg Sesión 1 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag">Sesión 1</span>
+              <span class="session-slides-count">20 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulo 1: Amenazas, Huella y Deepfakes</h3>
+            <p class="session-topics">
+              Actores malintencionados, ransomware y spyware, huella digital imborrable, lupa forense de deepfakes y simulador interactivo EmailPal.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20de%20Seguridad%20y%20Protecci%C3%B3n%20Digital/sesion1.html" class="btn btn-slides-purple">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/1tI1rC_uR9uOSiMeafDOa3H3ZJv4g9dqA/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (313.5 MB)
+            </a>
+          </div>
+        </article>
+
+        <!-- Seg Sesión 2 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag">Sesión 2</span>
+              <span class="session-slides-count">24 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulos 2 y 3: Endpoints, Wi-Fi y Rastreo</h3>
+            <p class="session-topics">
+              Blindaje de PC y móvil, SIM Swapping y 2FA, routers WPA3 y VPN, cookies, píxeles espía, fingerprinting y auditoría de términos de servicio.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20de%20Seguridad%20y%20Protecci%C3%B3n%20Digital/sesion2.html" class="btn btn-slides-purple">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/1ELjPyht5llFwRx0l1HE3Iwdyk66EtrXw/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (305.8 MB)
+            </a>
+          </div>
+        </article>
+
+        <!-- Seg Sesión 3 -->
+        <article class="session-card">
+          <div>
+            <div class="session-top">
+              <span class="session-tag" style="color:var(--pop-mint);">Sesión 3 (Final)</span>
+              <span class="session-slides-count">24 diapositivas</span>
+            </div>
+            <h3 class="session-title">Módulos 4 y 5: Bienestar y Triage 360&deg;</h3>
+            <p class="session-topics">
+              Ergonomía 20-20-20 y sueño, verificación de noticias vs opinión, cámaras de eco algorítmicas, resolución ética Cisco y cierre del curso.
+            </p>
+            <div class="session-status">
+              <i class="bi bi-check-circle-fill"></i> Diapositiva y grabación disponibles
+            </div>
+          </div>
+          <div class="session-actions">
+            <a href="Conciencia%20de%20Seguridad%20y%20Protecci%C3%B3n%20Digital/sesion3.html" class="btn btn-slides-purple">
+              <i class="bi bi-easel2-fill"></i> Abrir Diapositivas
+            </a>
+            <a href="https://drive.google.com/file/d/1b-pJ-N3v85dbzojluEG4f3e2ugaIrhzh/view" target="_blank" rel="noopener noreferrer" class="btn btn-video">
+              <i class="bi bi-play-circle-fill"></i> Ver Grabación (291 MB)
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="course-footer-bar">
+        <span><i class="bi bi-folder2-open"></i> Carpeta de grabaciones: <strong>Conciencia de Seguridad y Protección Digital</strong></span>
+        <a href="https://drive.google.com/drive/folders/18fz0Ler8BzEyAb-QT_uUIE7JmUQjuZke" target="_blank" rel="noopener noreferrer" class="folder-link">
+          Abrir carpeta en Google Drive <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      UMSA &bull; Cisco Networking Academy &bull; En cada presentación puedes volver a este menú tocando el icono <i class="bi bi-house-door-fill" style="color:var(--cisco-gold);"></i> en la barra inferior.
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const sections = document.querySelectorAll('.course-section');
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-filter');
+          buttons.forEach((b) => b.classList.toggle('is-active', b === btn));
+          sections.forEach((sec) => {
+            const match = target === 'all' || sec.getAttribute('data-course') === target;
+            sec.classList.toggle('is-hidden', !match);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

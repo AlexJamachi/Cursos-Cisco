@@ -1,0 +1,584 @@
+/* =====================================================================
+   CISCO NETACAD & UMSA // CONCIENCIA DIGITAL - SLIDES BASE & STAGE
+   Style: Neo-Brutalist Pop + High-Tech Virtual Classroom
+   ===================================================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-void);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--cisco-blue);
+  color: #FFFFFF;
+}
+
+/* ================= VIEWPORT ================= */
+.slides-viewport {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle at center, #0F1728 0%, #05080E 100%);
+  overflow: hidden;
+}
+
+/* Ambient Canvas */
+#ambient-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* Tactical Vignette & Grid Lines */
+.viewport-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: 
+    radial-gradient(ellipse at center, transparent 35%, rgba(5, 8, 14, 0.88) 90%),
+    linear-gradient(rgba(0, 188, 235, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 188, 235, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+}
+
+.viewport-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(0, 188, 235, 0.015) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ================= DEDICATED STAGE CONTAINER & DOCK ZONE ================= */
+.stage-container {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+  padding: 4px 10px 1px 10px;
+}
+
+.dock-zone {
+  height: 54px;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 50;
+  padding-bottom: 4px;
+  pointer-events: auto;
+}
+
+/* ================= 16:9 SLIDE STAGE (NEO-BRUTALIST HARD BORDER) ================= */
+.slide-stage {
+  width: 1260px;
+  height: 680px;
+  min-width: 1260px;
+  min-height: 680px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  border: var(--border-w-thick) solid #24354D;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-canvas);
+  box-shadow: 
+    var(--shadow-hard-lg),
+    0 25px 80px rgba(0, 0, 0, 0.9),
+    0 0 60px rgba(0, 188, 235, 0.15);
+  transform-origin: center center;
+  flex-shrink: 0;
+  transition: transform 0.15s ease-out;
+}
+
+/* Neo-brutalist stage corners */
+.slide-stage::before {
+  display: none;
+  content: "UMSA // CISCO NETWORKING ACADEMY";
+  position: absolute;
+  bottom: 8px;
+  right: 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-subtle);
+  opacity: 0.6;
+  letter-spacing: 0.12em;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Progress Bar (Neo-Brutalist Top Ribbon) */
+.slide-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--cisco-orange), var(--cisco-cyan), var(--pop-mint));
+  box-shadow: 0 0 12px rgba(0, 188, 235, 0.7);
+  z-index: 40;
+  transition: width 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Transition flash */
+.transition-flash {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 188, 235, 0.08);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 30;
+  transition: opacity 0.3s ease;
+}
+
+.slide-stage.is-transitioning .transition-flash {
+  opacity: 1;
+}
+
+/* ================= SLIDE VIEW ================= */
+.slide-view {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 22px 12px 22px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform-origin: center center;
+  transform: translateX(60px) scale(0.97);
+  transition: transform 480ms cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 480ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+/* Active State */
+.slide-view.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0) scale(1);
+  z-index: 5;
+  pointer-events: all;
+}
+
+/* Exit to Left (forward) */
+.slide-view.is-exit-left {
+  opacity: 0;
+  visibility: visible;
+  transform: translateX(-70px) scale(0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Exit to Right (backward) */
+.slide-view.is-exit-right {
+  opacity: 0;
+  visibility: visible;
+  transform: translateX(70px) scale(0.95);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Instant setup states */
+.slide-view.is-enter-from-right {
+  opacity: 0 !important;
+  visibility: visible !important;
+  transform: translateX(60px) scale(0.97) !important;
+  transition: none !important;
+}
+
+.slide-view.is-enter-from-left {
+  opacity: 0 !important;
+  visibility: visible !important;
+  transform: translateX(-60px) scale(0.97) !important;
+  transition: none !important;
+}
+
+/* Slide Content Stagger Animation */
+.slide-view.is-active .slide-body > * {
+  animation: slideElemEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.slide-view.is-active .bento-card:nth-child(1) { animation-delay: 0.03s; }
+.slide-view.is-active .bento-card:nth-child(2) { animation-delay: 0.06s; }
+.slide-view.is-active .bento-card:nth-child(3) { animation-delay: 0.09s; }
+.slide-view.is-active .bento-card:nth-child(4) { animation-delay: 0.12s; }
+
+@keyframes slideElemEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= SLIDE HEADER ================= */
+.slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 2.5px solid var(--border-color);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: rgba(0, 188, 235, 0.16);
+  border: 2px solid var(--border-cyan);
+  color: var(--cisco-cyan);
+  box-shadow: var(--shadow-hard-xs);
+}
+
+.header-badge.badge-orange {
+  background: rgba(255, 158, 27, 0.16);
+  border-color: var(--border-orange);
+  color: var(--cisco-gold);
+}
+
+.header-badge.badge-mint {
+  background: rgba(52, 211, 153, 0.16);
+  border-color: var(--border-mint);
+  color: var(--pop-mint);
+}
+
+.header-badge.badge-purple {
+  background: rgba(192, 132, 252, 0.16);
+  border-color: var(--border-purple);
+  color: var(--pop-purple);
+}
+
+.header-context {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.header-telemetry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-body);
+  box-shadow: var(--shadow-hard-xs);
+}
+
+.status-pip {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cisco-cyan);
+  box-shadow: 0 0 10px var(--cisco-cyan);
+  display: inline-block;
+  animation: pip-pulse 2s infinite ease-in-out;
+}
+
+.status-pip.pip-orange {
+  background: var(--cisco-gold);
+  box-shadow: 0 0 10px var(--cisco-gold);
+}
+
+.status-pip.pip-mint {
+  background: var(--pop-mint);
+  box-shadow: 0 0 10px var(--pop-mint);
+}
+
+@keyframes pip-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.4); opacity: 0.4; }
+}
+
+.slide-index-pill {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background: var(--cisco-navy);
+  border: 2px solid var(--cisco-cyan);
+  padding: 5px 11px;
+  border-radius: var(--radius-sm);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-hard-xs);
+}
+
+/* ================= SLIDE BODY (EXPANDS TO FILL 100% OF SPACE) ================= */
+.slide-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin: 4px 0;
+  padding: 0 6px 6px 0;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* ================= SLIDE FOOTER ================= */
+.slide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2.5px solid var(--border-color);
+  padding-top: 5px;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.footer-tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-chip {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  padding: 3px 10px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-body);
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ================= RESPONSIVE MOBILE & TABLET PORTRAIT VIEW ================= */
+@media (max-width: 900px) {
+  html, body {
+    height: auto !important;
+    min-height: 100dvh;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    user-select: text;
+  }
+
+  .slides-viewport {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100dvh !important;
+    overflow: visible !important;
+    justify-content: flex-start !important;
+    padding: 8px 8px 80px 8px !important;
+  }
+
+  #ambient-canvas,
+  .viewport-overlay {
+    position: fixed;
+  }
+
+  .stage-container {
+    flex: none !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+
+  .slide-stage {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+    border-width: 2px !important;
+    border-radius: 14px !important;
+  }
+
+  .slide-view {
+    display: none !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 14px 12px 16px 12px !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .slide-view.is-active {
+    display: flex !important;
+    gap: 10px;
+  }
+
+  .slide-header {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    gap: 6px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .header-left {
+    flex: 1 1 100% !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .header-badge {
+    font-size: 11.5px !important;
+    padding: 4px 9px !important;
+    white-space: normal !important;
+  }
+
+  .header-context {
+    flex: 1 1 100%;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-size: 12.5px !important;
+    line-height: 1.3;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    white-space: normal !important;
+  }
+
+  .header-telemetry {
+    font-size: 11.5px !important;
+    padding: 4px 9px !important;
+    white-space: normal !important;
+  }
+
+  .slide-index-pill {
+    font-size: 12.5px !important;
+    padding: 4px 10px !important;
+  }
+
+  .slide-body {
+    flex: none !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 4px 0 !important;
+    margin: 2px 0 !important;
+  }
+
+  .slide-footer {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    gap: 8px !important;
+    padding-top: 8px !important;
+    font-size: 12px !important;
+  }
+
+  .footer-tags {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .footer-chip {
+    font-size: 11.5px !important;
+  }
+
+  .footer-meta {
+    font-size: 12px !important;
+  }
+}

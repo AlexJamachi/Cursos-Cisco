@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco NetAcad & UMSA // Conciencia sobre Seguridad y Protección Digital - Módulo 1</title>
+  
+  <!-- Tipografías Oficiales Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Iconos Vectoriales Bootstrap Icons (0 Emojis) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Hojas de Estilo del Sistema -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/slides-base.css">
+  <link rel="stylesheet" href="css/slides-bento.css">
+  <link rel="stylesheet" href="css/presenter-hud.css">
+</head>
+<body>
+
+  <!-- Canvas Ambiental de Fondo (Grid Táctico de Ciberdefensa) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <div class="app-container">
+    <div class="stage-container" id="stageContainer">
+      <div class="slide-stage" id="slideStage">
+        <div class="top-progress-bar" id="slideProgress"></div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 01: CARÁTULA PRINCIPAL // MÓDULO 1                          -->
+        <!-- ================================================================= -->
+        <div class="slide-view is-active" data-index="0" data-title="Carátula // Conciencia sobre Seguridad Digital" data-desc="Presentación institucional, bienvenida para nuevos cursantes y arranque de Módulo 1" data-notes="Bienvenida a los estudiantes a la primera sesión de Conciencia sobre Seguridad y Protección Digital. Aclarar que no se requieren conocimientos previos de programación. Presentarse cordialmente como Asistente de Enseñanza Alex Jamachi. Explicar que el curso busca proteger su vida digital cotidiana en la UMSA y su entorno profesional.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                UMSA // CISCO NETWORKING ACADEMY
+              </span>
+              <span class="header-context">Programa Oficial de Alfabetización y Protección Digital</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-calendar-event"></i> VIERNES | 17:30 – 19:00 VIRTUAL</span>
+              <span class="slide-index-pill">01 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Tarjeta Principal de Bienvenida -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-shield-lock-fill"></i> MÓDULO 1 OFICIAL</span>
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-shield-check"></i> CIBERDEFENSA PERSONAL</span>
+                  </div>
+
+                  <h1 style="font-family: var(--font-display); font-size: 34px; font-weight: 800; color: #FFFFFF; line-height: 1.15; margin-top: 10px; margin-bottom: 8px;">
+                    CONCIENCIA SOBRE <span style="background: linear-gradient(135deg, #FFFFFF 10%, var(--cyber-purple-neon) 50%, var(--cisco-cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SEGURIDAD Y PROTECCIÓN DIGITAL</span>
+                  </h1>
+
+                  <p style="font-size: 15.5px; color: var(--text-body); line-height: 1.45; margin-bottom: 10px;">
+                    Desarrollo de competencias de ciberdefensa ciudadana, reconocimiento proactivo de actores malintencionados, prevención de fraudes y blindaje de la identidad en línea para estudiantes de todas las áreas de la UMSA.
+                  </p>
+
+                  <div class="exam-callout callout-purple" style="margin-bottom: 10px; padding: 12px 16px;">
+                    <i class="bi bi-lightning-charge-fill exam-callout-icon" style="color:var(--cyber-purple-neon); font-size:24px;"></i>
+                    <div class="exam-callout-content">
+                      <div class="exam-callout-title" style="color:var(--cyber-purple-neon); font-size:15px;">Sesión Modular Intensiva de Hoy:</div>
+                      <div class="exam-callout-text" style="font-size:14.5px; line-height:1.42;">Módulo 1: <em>¡Existen actores malintencionados – manténgase alerta!</em> Identificación de ciberataques, prevención de fraudes bancarios, huella digital permanente, detección forense de deepfakes y simulador EmailPal.</div>
+                    </div>
+                  </div>
+
+                  <!-- Datos de Asistencia Docente y Horarios -->
+                  <div style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap:12px; margin-bottom:6px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Asistente de Enseñanza Oficial</div>
+                      <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--cyber-purple-neon); margin-top:3px;">Alex Arturo Jamachi Condori</div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:2px;">Universidad Mayor de San Andrés • Carrera de Informática</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Horario y Modalidad</div>
+                      <div style="font-family:var(--font-display); font-size:17px; font-weight:800; color:var(--warn-amber); margin-top:3px;">Viernes 17:30 – 19:00</div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:2px;">Sesión Virtual en Vivo</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:26px;"><i class="bi bi-universal-access"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">
+                    <strong>Sin Requisitos Previos:</strong> Diseñado especialmente para cursantes nuevos de todas las facultades. Partimos desde los conceptos más intuitivos y cotidianos de seguridad.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Lateral de Identidad Institucional -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:12px; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <img src="assets/umsa-logo.png" alt="UMSA Logo" style="height:48px; width:auto; object-fit:contain;">
+                    <div>
+                      <div style="font-family:var(--font-display); font-size:15px; font-weight:800; color:#FFFFFF;">UNIVERSIDAD MAYOR DE SAN ANDRÉS</div>
+                      <div style="font-size:13px; color:var(--text-muted);">Facultad de Ciencias Puras y Naturales • Carrera de Informática</div>
+                    </div>
+                  </div>
+
+                  <!-- Insignia Oficial y Banner -->
+                  <div style="margin-top:12px; text-align:center; background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:12px 14px;">
+                    <div style="font-family:var(--font-mono); font-size:12px; color:var(--cyber-purple-neon); text-transform:uppercase; font-weight:800; margin-bottom:6px;">
+                      <i class="bi bi-award-fill"></i> Insignia Oficial del Programa
+                    </div>
+                    <img src="assets/badge-seguridad-proteccion.png" alt="Insignia Cisco Seguridad y Proteccion" style="height:105px; width:auto; margin:0 auto; display:block; filter: drop-shadow(0 0 16px rgba(139,92,246,0.55));">
+                    <div style="font-family:var(--font-display); font-size:15.5px; font-weight:800; color:#FFFFFF; margin-top:6px;">
+                      Seguridad y Protección Digital
+                    </div>
+                    <div style="font-family:var(--font-mono); font-size:12.5px; color:var(--cyber-purple-neon); font-weight:700;">
+                      Código Credly: DL-00-D01
+                    </div>
+                  </div>
+
+                  <div style="margin-top:10px; background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                    <div style="font-family:var(--font-display); font-size:14px; font-weight:800; color:var(--cisco-cyan);">
+                      <i class="bi bi-globe-americas"></i> Formación Respaldada
+                    </div>
+                    <div style="font-size:13px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Contenido curricular oficial de Cisco Networking Academy articulado con la Carrera de Informática de la UMSA.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan" style="padding: 10px 14px;">
+                  <i class="bi bi-controller exam-callout-icon" style="color:var(--cisco-cyan); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text" style="font-size:13.5px; line-height:1.4;">
+                      <strong>Clase 100% Dinámica:</strong> 4 dinámicas interactivas distribuidas + 3 checkpoints de evaluación en tiempo real.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Cisco NetAcad 2026</span>
+              <span class="footer-chip">Módulo 1: Actores Malintencionados</span>
+              <span class="footer-chip">UMSA Informática</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Hoja de Ruta Modular &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 02: HOJA DE RUTA // MÓDULO 1 COMPLETO                       -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="1" data-title="Hoja de Ruta // Módulo 1 Completo" data-desc="Estructura de 4 pilares: Evaluación de Riesgos, Protección Familiar, Deepfakes y Solución de Incidentes" data-notes="Mostrar la estructura del Módulo 1. Resaltar que las actividades interactivas están distribuidas a lo largo de toda la sesión para mantener la atención activa de los estudiantes.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                ESTRUCTURA MODULAR // SESIÓN 1
+              </span>
+              <span class="header-context">Módulo 1: ¡Existen actores malintencionados – manténgase alerta!</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-signpost-split-fill"></i> RUTA DE APRENDIZAJE</span>
+              <span class="slide-index-pill">02 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Columna Izquierda: Los 4 Submódulos -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-list-check"></i> Hoja de Ruta de la Sesión de Hoy</span>
+                  <div class="process-pipeline" style="margin-top:8px; gap:9px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1.0</span>
+                      <div class="process-text">
+                        <strong>Evaluación de Riesgos y Amenazas:</strong> Pérdida de datos, robo de identidad, taxonomía malware (ransomware, troyanos, spyware) y tácticas de phishing.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1.1</span>
+                      <div class="process-text">
+                        <strong>Protegiendo el Hoy y el Mañana:</strong> Seguridad de menores en foros y salas de juego, efectos del anonimato, controles parentales y huella digital imborrable.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">1.2</span>
+                      <div class="process-text">
+                        <strong>Falsificaciones y Filtros (Deepfakes):</strong> Inteligencia Artificial generativa antagónica (GANs), clonación de voz, redes sociales y desinformación.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">1.3</span>
+                      <div class="process-text">
+                        <strong>Resolución Práctica de Problemas:</strong> Simulador de bandeja de entrada "EmailPal" y el protocolo de rescate en 4 pasos si fuiste víctima de un ciberataque.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-clock-history"></i></span>
+                  <div class="stat-desc">
+                    <strong>Duración:</strong> 90 minutos de clase virtual intensiva con pausas activas y ejercicios prácticos guiados en vivo.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Columna Derecha: Metodología Dinámica y Participativa -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-award"></i> Enfoque Pedagógico para Todas las Carreras</span>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:15.5px;"><i class="bi bi-puzzle-fill"></i> Aprendizaje Basado en Escenarios Reales</div>
+                    <p style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.45;">
+                      No nos limitaremos a teoría abstracta. Analizaremos casos concretos que le suceden a diario a estudiantes universitarios: mensajes bancarios falsos, suplantaciones de voz en WhatsApp y secuestro de tesis.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-joystick"></i> Dinámicas Distribuidas en Tiempo Real</div>
+                    <p style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.45;">
+                      A lo largo de la clase activaremos <strong>4 simuladores en vivo</strong> (Clasificador de amenazas, Auditor de huella, Lupa forense de deepfakes y Simulador EmailPal) y <strong>3 checkpoints oficiales</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--warn-amber); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber); font-size:14px;">Preparación Directa para el Examen:</div>
+                    <div class="exam-callout-text">Todas las preguntas de checkpoint son tomadas de las evaluaciones oficiales de Cisco NetAcad.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Planificación Modular</span>
+              <span class="footer-chip">Sesión 1 de 3</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.0 Anatomía de Amenazas &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 03: 1.0 ANATOMÍA DE AMENAZAS // PÉRDIDA DE DATOS Y ROBO    -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="2" data-title="1.0 Anatomía de Amenazas // Pérdida de Datos y Robo" data-desc="Diferencias críticas entre pérdida de información y robo de identidad, y sus 3 consecuencias" data-notes="Iniciar el submódulo 1.0. Explicar con mucha claridad que la pérdida de datos y el robo de identidad son los dos impactos más inmediatos. Resaltar la pregunta de examen: La pérdida de datos es el impacto más inmediato de una amenaza a la seguridad.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.0 // EVALUACIÓN DE RIESGOS
+              </span>
+              <span class="header-context">Observe las amenazas y considere los daños potenciales</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-shield-slash-fill"></i> ANÁLISIS DE IMPACTO</span>
+              <span class="slide-index-pill">03 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pérdida de Datos vs Robo de Identidad -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-file-earmark-x-fill"></i> Las Dos Grandes Amenazas Inmediatas</span>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:16px;"><i class="bi bi-database-fill-slash"></i> 1. Pérdida de Datos (Impacto Inmediato)</div>
+                    <p style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.45;">
+                      Ocurre por malware, secuestro con ransomware, hackeo de servidores o corrupción accidental de archivos. Para una empresa representa la pérdida de bases de datos de clientes; para un estudiante universitario, la destrucción de su tesis, proyectos o fotografías familiares irreemplazables.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:16px;"><i class="bi bi-person-bounding-box"></i> 2. Robo de Identidad (Impacto Prolongado)</div>
+                    <p style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.45;">
+                      Los delincuentes obtienen números de carnet/cédula, nombres completos, credenciales bancarias o firmas digitales para solicitar préstamos a tu nombre, cometer fraudes fiscales o suplantarte en plataformas académicas.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:14.5px;"><i class="bi bi-arrow-left-right"></i> Comparativa en Tiempo de Respuesta:</div>
+                    <div style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      La <strong>pérdida de datos</strong> se detecta en el instante del ataque; el <strong>robo de identidad</strong> puede operar en silencio durante meses antes de que la víctima reciba la primera notificación de deuda judicial.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla Oficial Cisco:</strong> La pérdida de datos es considerada por NetAcad como la consecuencia más inmediata y crítica de una brecha digital.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Las 3 Consecuencias Críticas de Cisco -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-diagram-3-fill"></i> Las 3 Consecuencias Críticas según Cisco</span>
+                  
+                  <div class="process-pipeline" style="margin-top:8px; gap:9px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text">
+                        <strong>Pérdida Financiera:</strong> Pagos extorsivos exigidos por criminales, costos de peritaje informático, sanciones legales por fuga de datos y robo directo de fondos en cuentas bancarias.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Daño a la Reputación:</strong> Ruptura de la confianza de clientes, compañeros o docentes. Una vez que tu cuenta o correo se usa para enviar spam malicioso, tu credibilidad se desploma.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text">
+                        <strong>Pérdida de Productividad:</strong> Computadoras bloqueadas, servidores inoperables e imposibilidad total de emitir notas, facturas, documentos oficiales o rendir exámenes.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:14.5px;"><i class="bi bi-shield-check"></i> La Defensa Fundamental:</div>
+                    <div style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Mantener la <strong>Regla 3-2-1 de Copias de Seguridad</strong>: 3 copias de tus datos importantes, en 2 soportes distintos (disco y nube), con 1 copia fuera de tu casa.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial Cisco NetAcad (Quiz 1.0.2):</div>
+                    <div class="exam-callout-text">¿Cuál es la consecuencia más inmediata de una amenaza a la seguridad? &rarr; <strong>La pérdida de datos</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.0 Evaluación de Riesgos</span>
+              <span class="footer-chip">Pérdida vs Robo</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.0 Taxonomía del Malware &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 04: 1.0 TAXONOMÍA MALWARE // VIRUS, TROYANOS Y RANSOMWARE  -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="3" data-title="1.0 Taxonomía Malware // Virus, Troyanos y Ransomware" data-desc="Clasificación exhaustiva de software malicioso: características, vectores de ataque y defensas" data-notes="Explicar las diferencias técnicas fundamentales entre tipos de malware. Pregunta de examen recurrente: El Caballo de Troya (Troyano) se disfraza de programa legítimo para engañar al usuario e infectar el sistema.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.0 // MALWARE PROFUNDO
+              </span>
+              <span class="header-context">Taxonomía y Comportamiento del Software Malicioso</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-bug-fill"></i> CLASIFICACIÓN TÉCNICA</span>
+              <span class="slide-index-pill">04 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Destructivos vs Extorsión -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-virus"></i> Malware de Daño y Extorsión Directa</span>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--pop-coral); font-size:15.5px;"><i class="bi bi-lock-fill"></i> Ransomware (Secuestro Criptográfico)</strong>
+                      <span class="feat-pill feat-pill-coral" style="font-size:11px; padding:3px 8px;">EXTORSIÓN</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Cifra los archivos del disco duro (.docx, .pdf, fotos) con claves complejas y exige un rescate monetario (en Bitcoin o criptomonedas) para liberarlos. Casos notorios han paralizado hospitales y ministerios.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-radioactive"></i> Virus Informático</strong>
+                      <span class="feat-pill feat-pill-amber" style="font-size:11px; padding:3px 8px;">AUTO-RÉPLICA</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Código malicioso que se adhiere a un archivo ejecutable legítimo (.exe o scripts). Requiere que el usuario lo abra o ejecute para propagarse y dañar el sistema operativo o borrar datos.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--cyber-purple-neon); font-size:15.5px;"><i class="bi bi-bezier2"></i> Gusano (Worm)</strong>
+                      <span class="feat-pill feat-pill-purple" style="font-size:11px; padding:3px 8px;">RED AUTÓNOMA</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      A diferencia del virus, no necesita un programa huésped ni intervención humana para propagarse: salta de una computadora a otra a través de vulnerabilidades en la red de internet o Wi-Fi.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--pop-coral); font-size:24px;"><i class="bi bi-x-octagon-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla de Oro Cisco:</strong> Nunca se debe pagar el rescate de un ransomware; no hay garantía de descifrado y financia a organizaciones delictivas.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Espías vs Camuflaje -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-eye-slash-fill"></i> Malware de Espionaje e Intrusión</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--cisco-cyan); font-size:15.5px;"><i class="bi bi-shield-shaded"></i> Caballo de Troya (Troyano)</strong>
+                      <span class="feat-pill feat-pill-cyan" style="font-size:11px; padding:3px 8px;">DISFRAZ</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Se disfraza de software útil o inofensivo (un conversor a PDF gratuito, un juego crackeado o un reproductor multimedia). Al instalarlo, abre una puerta trasera secreta (<em>backdoor</em>) para que el atacante controle la PC.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--pop-mint); font-size:15.5px;"><i class="bi bi-incognito"></i> Spyware (Software Espía)</strong>
+                      <span class="feat-pill feat-pill-mint" style="font-size:11px; padding:3px 8px;">SIGILO</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Se ejecuta silenciosamente en segundo plano recopilando contraseñas mediante <em>keyloggers</em> (registro de pulsaciones del teclado), historial web y credenciales bancarias.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <strong style="color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-badge-ad-fill"></i> Adware (Publicidad Invasiva)</strong>
+                      <span class="feat-pill feat-pill-amber" style="font-size:11px; padding:3px 8px;">INTRUSIVO</span>
+                    </div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Bombardea la pantalla con ventanas emergentes constantes y redirige tu navegador a sitios dudosos, ralentizando tu equipo y consumiendo memoria RAM y batería.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-diamond-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial NetAcad (Quiz 1.0.4):</div>
+                    <div class="exam-callout-text">¿Qué tipo de malware se disfraza de aplicación legítima? &rarr; <strong>El Caballo de Troya (Troyano)</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.0 Malware</span>
+              <span class="footer-chip">Virus vs Troyanos vs Ransomware</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.0 Tácticas Avanzadas de Ciberataque &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 05: 1.0 TÁCTICAS AVANZADAS // PHISHING, ZERO-DAY Y DDOS     -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="4" data-title="1.0 Tácticas Avanzadas // Phishing, Zero-Day y DDoS" data-desc="Tácticas de engaño humano y ataques de infraestructura digital según el currículo Cisco" data-notes="Explicar que la ciberseguridad no es solo software, sino psicología humana. Phishing aprovecha la confianza o el miedo. Explicar qué significa Zero-Day: vulnerabilidad descubierta antes de que el desarrollador cree el parche.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.0 // VECTORES DE ATAQUE
+              </span>
+              <span class="header-context">Ingeniería Social, Explotación de Fallas y Colapso de Servicios</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-radar"></i> VECTORES ACTIVOS</span>
+              <span class="slide-index-pill">05 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Phishing y Credential Stuffing -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-envelope-exclamation-fill"></i> Ataques a la Identidad y Credenciales</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15.5px;"><i class="bi bi-fish"></i> Phishing (Suplantación Engañosa)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Táctica de ingeniería social donde el atacante finge ser una entidad confiable (un banco, Netflix, MercadoLibre o la universidad) mediante correos o enlaces falsos para manipular a la víctima y robarle claves o números de tarjeta.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-crosshair2"></i> Spear Phishing & Whaling</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Ataques altamente personalizados dirigidos a una persona en específico (ej. directores, contadores o docentes), redactados con datos personales obtenidos previamente de sus redes sociales.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:15.5px;"><i class="bi bi-key-fill"></i> Relleno de Credenciales (Credential Stuffing)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Bots automatizados que prueban millones de pares de usuario y contraseña filtrados en una brecha previa para intentar ingresar a otras cuentas donde el usuario reutilizó la misma clave.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-shield-lock-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla Básica:</strong> Ningún banco ni servicio institucional te pedirá jamás tu contraseña ni tu código de seguridad por correo ni mensaje de texto.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Zero-Day, DDoS y Man-in-the-Middle -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-cpu-fill"></i> Ataques a Software y Servidores</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:15.5px;"><i class="bi bi-clock-fill"></i> Ataque Zero-Day (Día Cero)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Ataque que explota una vulnerabilidad en un software o sistema operativo que aún es desconocida para el fabricante o para la cual todavía <strong>no existe un parche de seguridad oficial disponible</strong>.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:15.5px;"><i class="bi bi-hdd-network-fill"></i> Ataque DDoS (Denegación de Servicio Distribuido)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Miles de computadoras infectadas (<em>botnets</em>) saturan simultáneamente un servidor con millones de peticiones falsas por segundo, provocando la caída completa de portales web o sistemas bancarios.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-wifi-off"></i> Man-in-the-Middle (Hombre en el Medio)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      El atacante intercepta la comunicación entre tu teléfono y un sitio web en redes Wi-Fi públicas abiertas sin contraseña, espiando todo el tráfico sin cifrar.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial Cisco NetAcad (Quiz 1.0.6):</div>
+                    <div class="exam-callout-text">¿Cómo se llama un ataque que aprovecha una falla antes de que exista parche? &rarr; <strong>Ataque Zero-Day (Día Cero)</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.0 Tácticas Avanzadas</span>
+              <span class="footer-chip">Phishing & Zero-Day</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Dinámica 1 // Clasificador de Amenazas &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 06: DINÁMICA 1 // CLASIFICADOR TÁCTICO DE AMENAZAS          -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="5" data-title="Dinámica 1 // Clasificador Táctico de Amenazas" data-desc="Simulador interactivo: Diagnostica 4 casos reales y despliega el protocolo de defensa Cisco" data-notes="Primera pausa activa de dinamismo. Pedir a un estudiante que lea uno de los 4 casos y entre toda la clase seleccionen qué tipo de malware o ciberataque es. Al hacer clic en cada caso, el panel derecho muestra el protocolo oficial de contingencia.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 1
+              </span>
+              <span class="header-context">Laboratorio Práctico: Clasificador Táctico de Incidentes Reales</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-joystick"></i> ACTIVIDAD PARTICIPATIVA</span>
+              <span class="slide-index-pill">06 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Panel de Casos Seleccionables (Llenado Completo) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-cursor-fill"></i> Selecciona un Incidente para Diagnosticar:</span>
+                    <span class="feat-pill feat-pill-purple">4 CASOS REALES</span>
+                  </div>
+
+                  <div class="analogy-box" style="margin-top:8px; padding:10px 14px;">
+                    <i class="bi bi-shield-shaded analogy-icon" style="font-size:24px; color:var(--cyber-purple-neon);"></i>
+                    <div class="analogy-content">
+                      <div class="analogy-title" style="font-size:15px;">Simulador de Triaje de Ciberseguridad</div>
+                      <div class="analogy-text" style="font-size:14px; line-height:1.4;">
+                        Como futuros profesionales, deben diagnosticar amenazas antes de que causen daños irreparables. Haz clic en cualquiera de los 4 casos para desplegar el peritaje en tiempo real.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="threat-grid">
+                    <div class="threat-item-card is-active-threat" onclick="selectThreatCase(this, 'RANSOMWARE', 'Caso 1: Bloqueo de Tesis y Nota de Rescate', 'Al encender la computadora, todos los documentos .docx y .pdf cambiaron a extensión .locked. En el escritorio aparece una nota con un temporizador que exige pagar 400 USD en Bitcoin para descifrar la información.', 'Protocolo Cisco: Aislar el equipo desconectándolo de Internet de inmediato para que el cifrado no alcance a carpetas de Google Drive ni discos de red. Restaurar desde una copia de seguridad externa previa.')">
+                      <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-weight:800; font-size:15px; color:var(--pop-coral);"><i class="bi bi-lock-fill"></i> Caso 1: Archivos .locked</div>
+                        <span class="feat-pill feat-pill-coral" style="font-size:10.5px; padding:2px 7px;">EXTORSIÓN</span>
+                      </div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.35;">
+                        Secuestro masivo de tesis con cifrado y temporizador en Bitcoin.
+                      </div>
+                      <div style="font-size:12px; color:var(--cyber-purple-neon); font-weight:700; margin-top:2px;">
+                        <i class="bi bi-play-circle-fill"></i> Clic para diagnosticar &rarr;
+                      </div>
+                    </div>
+
+                    <div class="threat-item-card" onclick="selectThreatCase(this, 'PHISHING BANCARIO', 'Caso 2: Mensaje de Urgencia por Supuesto Bloqueo', 'Llega un correo de 'seguridad@bancorapido-alerta.com' informando que tu tarjeta fue bloqueada y debes confirmar tu clave secreta y fecha de vencimiento en un enlace para evitar el cierre definitivo de tu cuenta.', 'Protocolo Cisco: Típica ingeniería social. Los bancos NUNCA piden claves por correo ni enlaces directos. Jamás ingreses credenciales; abre tu app bancaria oficial o llama por teléfono al número de la tarjeta.')">
+                      <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-weight:800; font-size:15px; color:var(--warn-amber);"><i class="bi bi-envelope-exclamation-fill"></i> Caso 2: Alerta Bancaria</div>
+                        <span class="feat-pill feat-pill-amber" style="font-size:10.5px; padding:2px 7px;">SUPLANTACIÓN</span>
+                      </div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.35;">
+                        Correo de urgencia por falso bloqueo de cuenta bancaria.
+                      </div>
+                      <div style="font-size:12px; color:var(--cyber-purple-neon); font-weight:700; margin-top:2px;">
+                        <i class="bi bi-play-circle-fill"></i> Clic para diagnosticar &rarr;
+                      </div>
+                    </div>
+
+                    <div class="threat-item-card" onclick="selectThreatCase(this, 'CABALLO DE TROYA', 'Caso 3: Conversor Gratuito de Archivos Infectado', 'Descargas un programa gratuito de un sitio no oficial para convertir audios de YouTube a MP3. El conversor funciona, pero minutos después tu antivirus se desactiva solo y se abren puertos remotos.', 'Protocolo Cisco: Se disfrazó de software útil para que el usuario le concediera permisos de administrador. Desinstalar de inmediato, reiniciar en modo seguro y realizar un escaneo profundo con Windows Defender.')">
+                      <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-weight:800; font-size:15px; color:var(--cisco-cyan);"><i class="bi bi-shield-shaded"></i> Caso 3: Conversor MP3</div>
+                        <span class="feat-pill feat-pill-cyan" style="font-size:10.5px; padding:2px 7px;">BACKDOOR</span>
+                      </div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.35;">
+                        Programa aparentemente útil que abre puertas traseras secretas.
+                      </div>
+                      <div style="font-size:12px; color:var(--cyber-purple-neon); font-weight:700; margin-top:2px;">
+                        <i class="bi bi-play-circle-fill"></i> Clic para diagnosticar &rarr;
+                      </div>
+                    </div>
+
+                    <div class="threat-item-card" onclick="selectThreatCase(this, 'SPYWARE & ADWARE', 'Caso 4: Publicidad Continua y Lentitud Extrema', 'Aparecen ventanas emergentes de publicidad invasiva incluso cuando el navegador web está cerrado, y la laptop tarda 10 minutos en abrir carpetas mientras la batería se descarga a gran velocidad.', 'Protocolo Cisco: Un adware empaquetado vino con descargas no deseadas y puede estar acompañado de spyware monitoreando tus pulsaciones de teclado. Usar un limpiador de malware confiable y revisar extensiones del navegador.')">
+                      <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <div style="font-weight:800; font-size:15px; color:var(--pop-mint);"><i class="bi bi-badge-ad-fill"></i> Caso 4: Pop-ups Masivos</div>
+                        <span class="feat-pill feat-pill-mint" style="font-size:10.5px; padding:2px 7px;">INTRUSIVO</span>
+                      </div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.35;">
+                        Publicidad invasiva continua y lentitud crítica del sistema.
+                      </div>
+                      <div style="font-size:12px; color:var(--cyber-purple-neon); font-weight:700; margin-top:2px;">
+                        <i class="bi bi-play-circle-fill"></i> Clic para diagnosticar &rarr;
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-chat-dots-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Interacción en Vivo:</strong> ¿Alguna vez viste un caso similar en tu computadora o en la de un familiar? ¡Participa en el chat de la sesión!
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel de Diagnóstico Cisco (Llenado Completo) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-clipboard2-pulse-fill"></i> Diagnóstico Técnico Cisco</span>
+                    <span class="feat-pill feat-pill-purple" id="threatDetailBadge">RANSOMWARE</span>
+                  </div>
+
+                  <div style="margin-top:8px; background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:14px 16px;">
+                    <h3 id="threatDetailTitle" style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-bottom:8px;">
+                      Caso 1: Bloqueo de Tesis y Nota de Rescate
+                    </h3>
+                    
+                    <div style="font-size:13px; font-family:var(--font-mono); color:var(--pop-coral); text-transform:uppercase; font-weight:800;">
+                      <i class="bi bi-search"></i> Evidencia Técnica Encontrada:
+                    </div>
+                    <p id="threatDetailDesc" style="font-size:14.5px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Al encender la computadora, todos los documentos .docx y .pdf cambiaron a extensión .locked. En el escritorio aparece una nota con un temporizador que exige pagar 400 USD en Bitcoin para descifrar la información.
+                    </p>
+
+                    <div style="font-size:13px; font-family:var(--font-mono); color:var(--pop-mint); text-transform:uppercase; font-weight:800; margin-top:10px;">
+                      <i class="bi bi-shield-check"></i> Protocolo de Respuesta Recomendado por Cisco:
+                    </div>
+                    <p id="threatDetailAdvice" style="font-size:14.5px; color:var(--text-body); margin-top:3px; line-height:1.45;">
+                      Protocolo Cisco: Aislar el equipo desconectándolo de Internet de inmediato para que el cifrado no alcance a carpetas de Google Drive ni discos de red. Restaurar desde una copia de seguridad externa previa.
+                    </p>
+                  </div>
+
+                  <div style="margin-top:10px; background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                    <div style="font-size:13px; font-weight:800; color:var(--warn-amber); text-transform:uppercase;">
+                      <i class="bi bi-exclamation-triangle-fill"></i> Medida Preventiva Permanente:
+                    </div>
+                    <div style="font-size:13.5px; color:var(--text-body); margin-top:2px; line-height:1.4;">
+                      No abrir archivos adjuntos comprimidos (.zip o .rar) provenientes de remitentes desconocidos y mantener activada la protección contra ransomware en Windows Defender.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-lightbulb-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">
+                      <strong>Principio de Defensa:</strong> En ciberseguridad, el primer paso ante cualquier anomalía sospechosa siempre es <em>cortar la conexión de red</em>.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 1</span>
+              <span class="footer-chip">Diagnóstico de Incidentes</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Checkpoint Cisco 1.0 &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 07: CHECKPOINT CISCO // AUTOEVALUACIÓN EN VIVO 1.0          -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="6" data-title="Checkpoint Cisco // Autoevaluación en Vivo 1.0" data-desc="Evaluación formativa en tiempo real sobre conceptos clave del submódulo 1.0" data-notes="Invitar a los estudiantes a votar en el chat por la opción correcta (A, B, C o D). Hacer clic en la opción elegida para revelar si es correcta y mostrar la justificación oficial de Cisco NetAcad.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 1.0
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">07 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.0.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16.5px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Cuál de las siguientes es la consecuencia más inmediata y alarmante de una amenaza a la seguridad digital?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', '¡Incorrecto! Las amenazas generan pérdidas y gastos financieros, no estabilidad económica.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Aumento de la estabilidad financiera</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q1-exp', '¡CORRECTO! Cisco establece que el impacto más inmediato y alarmante de una amenaza digital es la PÉRDIDA DE DATOS, pues interrumpe las operaciones en el momento exacto del ataque.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Pérdida de datos</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', '¡Incorrecto! Al contrario, las brechas de seguridad destruyen la confianza del cliente y dañan la reputación.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Mejora de la reputación institucional</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', '¡Incorrecto! Los sistemas atacados se vuelven inoperables, reduciendo drásticamente la productividad.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Incremento en la productividad operativa</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q1-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.0.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16.5px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Qué tipo de malware bloquea o cifra los archivos de la víctima y le exige un pago monetario para recuperarlos?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', '¡Incorrecto! El Adware satura con anuncios emergentes pero no secuestra archivos cifrados ni exige rescate.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Adware</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q2-exp', '¡CORRECTO! El RANSOMWARE (de ransom = rescate) secuestra los archivos cifrándolos y extorsiona a la víctima exigiendo un pago para entregarle la clave de descifrado.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Ransomware</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', '¡Incorrecto! Los troyanos se disfrazan de software legítimo para infiltrarse, pero no todos son ransomware.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Caballo de Troya</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', '¡Incorrecto! El Spyware recopila información y espía en secreto sin avisar ni pedir rescates explícitos.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Spyware</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q2-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Autoevaluación Cisco 1.0</span>
+              <span class="footer-chip">NetAcad Practice</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.1 Protegiendo el Hoy y el Mañana &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 08: 1.1 PROTEGIENDO EL HOY Y EL MAÑANA                      -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="7" data-title="1.1 Protección Familiar // Niños y Menores en Línea" data-desc="Peligros potenciales en plataformas de juegos, salas de chat, ciberacoso y anonimato" data-notes="Entrar al tema 1.1. Los menores crecen rodeados de tecnología. Destacar los riesgos de interactuar con extraños en juegos como Roblox, Discord o Minecraft, donde el anonimato propicia conductas dañinas.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.1 // PROTEGIENDO EL HOY Y EL MAÑANA
+              </span>
+              <span class="header-context">Seguridad de Menores y Entorno Familiar en Internet</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-people-fill"></i> PROTECCIÓN FAMILIAR</span>
+              <span class="slide-index-pill">08 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- La Realidad de los Menores en Línea -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-controller"></i> Creciendo en un Ecosistema Hiperconectado</span>
+                  
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:4px;">
+                    Desde edades muy tempranas, niños y adolescentes utilizan tabletas, consolas y teléfonos para entretenimiento, tareas escolares y socialización digital. Si bien abre enormes oportunidades educativas, también expone a riesgos críticos.
+                  </p>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15px;"><i class="bi bi-exclamation-octagon-fill"></i> ¿Por qué las salas de chat y foros de juegos son tan riesgosos?</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Cisco subraya que plataformas como <strong>Discord, Roblox, Minecraft o foros de juegos multijugador</strong> permiten que los menores <em>interactúen directamente con desconocidos</em> que ocultan su identidad real tras avatares ficticios.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:14.5px;"><i class="bi bi-mask"></i> El Efecto Desinhibidor del Anonimato</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Al estar ocultos tras una pantalla, muchas personas se envalentonan para insultar, difamar o manipular, mostrando conductas violentas o abusivas que jamás se atreverían a cometer cara a cara.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:14px;"><i class="bi bi-shield-check"></i> Regla de Protección Inmediata en el Hogar:</div>
+                    <div style="font-size:13.5px; color:var(--text-body); margin-top:2px; line-height:1.4;">
+                      Enseñar a los menores a <strong>nunca compartir</strong>: nombre completo, colegio de asistencia, dirección de su casa, números de teléfono ni fotografías personales en chats de juegos.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-chat-heart-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Cultura Digital Positiva:</strong> Enseñar que detrás de cada usuario hay una persona real y que la amabilidad digital es la mejor defensa.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Riesgos Concretos -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-shield-exclamation"></i> Los 3 Grandes Peligros Identificados por Cisco</span>
+                  
+                  <div class="process-pipeline" style="margin-top:8px; gap:9px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text">
+                        <strong>Ciberacoso (Cyberbullying):</strong> Hostigamiento sistemático, burlas públicas, creación de perfiles falsos para humillar y exclusión deliberada en grupos de mensajería escolar de WhatsApp o Telegram.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Exposición a Contenido Inapropiado:</strong> Violencia gráfica explícita, retos virales que atentan contra la salud, estafas con microtransacciones de videojuegos y material para adultos.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text">
+                        <strong>Depredadores Digitales (Grooming Online):</strong> Adultos manipuladores con perfiles falsos que fingen afinidad con el menor para ganarse su confianza y solicitar fotografías privadas o encuentros.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:14.5px;"><i class="bi bi-bell-fill"></i> Señales de Alerta Temprana para Padres y Hermanos:</div>
+                    <div style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Aislamiento repentino tras usar el dispositivo, esconder la pantalla cuando entra un familiar, alteraciones del sueño o caída brusca del rendimiento escolar.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-circle-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial NetAcad (Quiz 1.1.2):</div>
+                    <div class="exam-callout-text">¿Por qué las salas de chat y juegos son riesgosas? &rarr; <strong>Permiten que los niños interactúen con extraños</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.1 Protección Familiar</span>
+              <span class="footer-chip">Seguridad de Menores</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.1 Ecosistema de Protección Parental &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 09: 1.1 ECOSISTEMA DE PROTECCIÓN PARENTAL                   -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="8" data-title="1.1 Ecosistema Parental // Herramientas y Diálogo" data-desc="Controles parentales (Qustodio, Net Nanny, Family Link) y la regla de oro del diálogo abierto" data-notes="Explicar que la tecnología sola no basta. Las apps como Qustodio o Family Link ayudan, pero la comunicación abierta y enseñar a los menores a tratar a los demás con amabilidad es el factor decisivo.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.1 // MEDIDAS DE PREVENCIÓN
+              </span>
+              <span class="header-context">Controles Parentales, Límites de Pantalla y Diálogo Familiar</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-shield-check"></i> ECOSISTEMA SEGURO</span>
+              <span class="slide-index-pill">09 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Controles Técnicos -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-sliders"></i> Aplicaciones de Control Parental Destacadas por Cisco</span>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:15.5px;"><i class="bi bi-app-indicator"></i> Herramientas Integradas del Sistema</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Tanto Android (Google Family Link) como Apple iOS (Screen Time) y Windows (Family Safety) ofrecen funciones nativas para restringir descargas, filtrar búsquedas web y bloquear apps por edad.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15.5px;"><i class="bi bi-shield-lock-fill"></i> Software Especializado: Qustodio & Net Nanny</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Cisco destaca estas aplicaciones avanzadas para supervisar la actividad web en tiempo real, filtrar categorías peligrosas, bloquear pornografía y recibir alertas de lenguaje agresivo.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:15.5px;"><i class="bi bi-clock-history"></i> Gestión del Tiempo de Pantalla (Screen Time)</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      El uso nocturno prolongado altera los ciclos de sueño y genera fatiga visual. Establecer horarios de apagado automático nocturno protege la salud mental y física del menor.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:8px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:13.5px;"><i class="bi bi-star-fill"></i> Recurso Recomendado por Cisco:</div>
+                    <div style="font-size:13px; color:var(--text-body); margin-top:2px;">
+                      <strong>Common Sense Media</strong>: Portal web oficial con recomendaciones y clasificaciones pedagógicas por edad de apps, juegos y películas.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-toggle-on"></i></span>
+                  <div class="stat-desc">
+                    <strong>Equilibrio Digital:</strong> Los límites técnicos protegen, pero deben acompañarse siempre de actividades fuera de línea (deporte, lectura y juego familiar).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Diálogo y Comunicación -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-chat-quote-fill"></i> La Regla de Oro: Discusiones Abiertas</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:15.5px;"><i class="bi bi-key-fill"></i> La Tecnología por sí Sola No Basta</div>
+                    <p style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.45;">
+                      Cisco subraya enfáticamente que ningún filtro de software es infalible. Los niños aprenden rápidamente a evadir bloqueos; <strong>la comunicación abierta y el clima de confianza</strong> son los factores determinantes para su seguridad.
+                    </p>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px; gap:9px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text">
+                        <strong>Conversaciones Adecuadas a la Edad:</strong> Hablar con calma sobre privacidad y explicar por qué nunca se debe compartir información íntima en Internet.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Fomentar la Confianza sin Castigos:</strong> Asegurarle al menor que si ve algo extraño o se siente incómodo, puede acudir a los padres sin temor a que le quiten el teléfono.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text">
+                        <strong>Tratar a los Demás con Amabilidad:</strong> Enseñar que el acoso en línea deja cicatrices reales y que está bien bloquear a quien los haga sentir mal.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-heart-pulse-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pilar Pedagógico Cisco:</div>
+                    <div class="exam-callout-text">Un menor que confía en sus padres acudirá a ellos antes de caer en una trampa de grooming o extorsión.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.1 Prevención Familiar</span>
+              <span class="footer-chip">Controles & Diálogo</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.1 Huella Digital Imborrable &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 10: 1.1 HUELLA DIGITAL // LA MEMORIA ETERNA DE INTERNET     -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="9" data-title="1.1 Huella Digital // La Memoria Eterna de Internet" data-desc="Permanencia de datos en la web: capturas de pantalla, archivos temporales y reputación" data-notes="Subrayar la permanencia de la información en línea. Pregunta de examen Cisco: ¿Por qué debes pensar antes de publicar? Porque lo que se sube a internet puede permanecer en línea de forma permanente. Enseñar la técnica de buscarse a uno mismo en Google.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.1 // IDENTIDAD Y RASTROS
+              </span>
+              <span class="header-context">La Huella Digital y su Permanencia Indeleble en la Web</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-fingerprint"></i> RASTRO INDELEBLE</span>
+              <span class="slide-index-pill">10 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Permanencia y Riesgos -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-camera-fill"></i> La Huella Digital Nunca Desaparece por Completo</span>
+                  
+                  <div class="analogy-box" style="margin-top:8px; padding:12px 16px;">
+                    <i class="bi bi-brush-fill analogy-icon" style="font-size:26px; color:var(--warn-amber);"></i>
+                    <div class="analogy-content">
+                      <div class="analogy-title" style="color:var(--warn-amber); font-size:16px;">La Metáfora del Tatuaje Digital</div>
+                      <div class="analogy-text" style="font-size:14.5px; line-height:1.45;">
+                        Lo que subes a Internet no es como escribir con tiza en una pizarra que se borra al instante. <strong>Es como un tatuaje digital</strong> que queda registrado para siempre en servidores de todo el mundo.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15px;"><i class="bi bi-camera-reels"></i> Capturas de Pantalla y Servidores Espejo</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Aunque borres una foto o comentario impulsivo a los 30 segundos, cualquier persona pudo haber tomado una <strong>captura de pantalla (screenshot)</strong> o un bot pudo guardarlo en archivos públicos (Wayback Machine).
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:10px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:15px;"><i class="bi bi-briefcase-fill"></i> Impacto en Admisiones Universitarias y Empleo</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Más del 70% de las empresas y comités de becas auditan las redes sociales públicas de los postulantes antes de contratarlos o premiarlos. Comentarios de odio o conductas inapropiadas destruyen carreras profesionales.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-search"></i></span>
+                  <div class="stat-desc">
+                    <strong>Ejercicio del Efecto Espejo:</strong> Escribe tu nombre entre comillas en Google (<code>"Tu Nombre"</code>) cada 6 meses para monitorear qué datos tuyos son públicos.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Construcción Positiva (Optimizada para Cero Desborde) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-award-fill"></i> Construyendo una Huella Digital Positiva</span>
+                    <span class="feat-pill feat-pill-cyan">REPUTACIÓN PROFESIONAL</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text" style="font-size:14px; line-height:1.35;">
+                        <strong>Publicar Logros Académicos:</strong> Comparte certificados de cursos aprobados (Cisco NetAcad, UMSA) y proyectos de investigación o talleres.
+                      </div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text" style="font-size:14px; line-height:1.35;">
+                        <strong>Curar Portafolios y LinkedIn:</strong> Mantén tu biografía profesional al día con habilidades técnicas y proyectos verificables.
+                      </div>
+                    </div>
+                    <div class="process-step" style="padding:8px 12px;">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text" style="font-size:14px; line-height:1.35;">
+                        <strong>Blindar Redes Personales:</strong> Configura Facebook, TikTok e Instagram en privado para amigos de confianza comprobada.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:7px 12px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:14px;"><i class="bi bi-signpost-fill"></i> La Regla del Cartel Público:</div>
+                    <div style="font-size:13.5px; color:var(--text-body); margin-top:2px; line-height:1.35;">
+                      Antes de publicar, pregúntate: <em>¿Sentirías vergüenza si lo pegaran en la cartelera del atrio central de la UMSA?</em> Si es sí, <strong>no lo publiques</strong>.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan" style="padding:8px 14px; margin-top:6px;">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:13px;">Pregunta Oficial Cisco NetAcad (Quiz 1.1.4):</div>
+                    <div class="exam-callout-text" style="font-size:13.5px; line-height:1.35;">¿Por qué prestar atención a lo que publicas en línea? &rarr; <strong>Porque la información puede permanecer en línea de forma permanente</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.1 Huella Digital</span>
+              <span class="footer-chip">Reputación y Permanencia</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Dinámica 2 // Auditor de Huella Digital &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 11: DINÁMICA 2 // AUDITOR INTERACTIVO DE HUELLA DIGITAL     -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="10" data-title="Dinámica 2 // Auditor Interactivo de Huella Digital" data-desc="Auditoría en vivo: Evalúa hábitos digitales cotidianos y calcula tu nivel de exposición" data-notes="Segunda pausa activa interactiva. Pedir a los estudiantes que reflexionen con honestidad cuántos de estos 5 hábitos realizan. Al marcar cada hábito, el termómetro de exposición en la derecha sube en tiempo real y cambia el diagnóstico.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 2
+              </span>
+              <span class="header-context">Auditoría de Huella Digital y Termómetro de Exposición Personal</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-speedometer2"></i> MEDIDOR EN TIEMPO REAL</span>
+              <span class="slide-index-pill">11 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Lista de Hábitos Evaluables -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-ui-checks"></i> Haz clic en los hábitos que reconoces en tu vida digital:</span>
+                    <span class="feat-pill feat-pill-purple">5 HÁBITOS CLAVE</span>
+                  </div>
+
+                  <div class="footprint-habits-list">
+                    <div class="footprint-habit-toggle" onclick="toggleHabit(this, 20)">
+                      <i class="bi bi-square habit-check-icon" style="font-size:18px;"></i>
+                      <span><strong>1. Búsqueda personal:</strong> Hace más de un año no buscas tu nombre completo en Google.</span>
+                    </div>
+
+                    <div class="footprint-habit-toggle" onclick="toggleHabit(this, 20)">
+                      <i class="bi bi-square habit-check-icon" style="font-size:18px;"></i>
+                      <span><strong>2. Geolocalización en vivo:</strong> Publicas historias en Instagram o TikTok mostrando la ubicación exacta mientras sigues allí.</span>
+                    </div>
+
+                    <div class="footprint-habit-toggle" onclick="toggleHabit(this, 20)">
+                      <i class="bi bi-square habit-check-icon" style="font-size:18px;"></i>
+                      <span><strong>3. Reutilización de fotos:</strong> Usas la misma foto de perfil en foros abiertos de juegos y en tu CV universitario.</span>
+                    </div>
+
+                    <div class="footprint-habit-toggle" onclick="toggleHabit(this, 20)">
+                      <i class="bi bi-square habit-check-icon" style="font-size:18px;"></i>
+                      <span><strong>4. Aceptación de amistades:</strong> Aceptas solicitudes de desconocidos en Facebook solo porque tienen amigos en común.</span>
+                    </div>
+
+                    <div class="footprint-habit-toggle" onclick="toggleHabit(this, 20)">
+                      <i class="bi bi-square habit-check-icon" style="font-size:18px;"></i>
+                      <span><strong>5. Perfil 100% público:</strong> Dejas tus historias, fotos y listas de amigos visibles para cualquier persona en Internet.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-shield-exclamation"></i></span>
+                  <div class="stat-desc">
+                    <strong>Reflexión Rápida:</strong> Cada hábito marcado facilita que atacantes armen un perfil de ingeniería social sobre ti.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Termómetro de Riesgo -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-speedometer"></i> Nivel de Exposición de tu Huella</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:14px 16px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <span style="font-family:var(--font-mono); font-size:13px; color:var(--text-muted); text-transform:uppercase;">Índice de Riesgo:</span>
+                      <strong id="footprintRiskVerdict" style="font-family:var(--font-display); font-size:18px; color:var(--pop-mint);">
+                        RIESGO BAJO (SEGURO)
+                      </strong>
+                    </div>
+
+                    <div class="footprint-meter-track">
+                      <div class="footprint-meter-fill" id="footprintMeterFill" style="width: 20%;"></div>
+                    </div>
+
+                    <p id="footprintRiskDesc" style="font-size:14.5px; color:var(--text-body); margin-top:10px; line-height:1.45;">
+                      Tu nivel de exposición actual es mínimo. Mantienes buenos filtros de privacidad y no regalas información a actores malintencionados.
+                    </p>
+                  </div>
+
+                  <div style="margin-top:10px; background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 14px;">
+                    <div style="font-size:14px; font-weight:800; color:var(--cisco-cyan); margin-bottom:4px;">
+                      <i class="bi bi-shield-lock"></i> Acción de Blindaje Rápido:
+                    </div>
+                    <ul style="list-style:none; font-size:13.5px; color:var(--text-body); display:flex; flex-direction:column; gap:5px;">
+                      <li><i class="bi bi-check2" style="color:var(--pop-mint);"></i> Pon tu cuenta de Instagram y TikTok en modo privado.</li>
+                      <li><i class="bi bi-check2" style="color:var(--pop-mint);"></i> Nunca publiques fotos con el uniforme escolar o logo de trabajo.</li>
+                      <li><i class="bi bi-check2" style="color:var(--pop-mint);"></i> Publica fotos de viajes <em>después</em> de haber regresado a casa.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-patch-check-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">
+                      <strong>Cisco NetAcad Recomienda:</strong> Revisa la configuración de privacidad de tus redes cada 3 meses.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 2</span>
+              <span class="footer-chip">Auditor de Huella</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Checkpoint Cisco 1.1 &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 12: CHECKPOINT CISCO // AUTOEVALUACIÓN EN VIVO 1.1          -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="11" data-title="Checkpoint Cisco // Autoevaluación en Vivo 1.1" data-desc="Evaluación formativa del submódulo 1.1: riesgos en foros y permanencia de huella digital" data-notes="Preguntas tomadas directamente de las capturas de examen NetAcad del submódulo 1.1. Resolver participativamente con los alumnos para fijar los dos conceptos medulares.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 1.1
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">12 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 3 -->
+              <div class="bento-card card-purple quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.1.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Por qué las salas de chat y plataformas de juegos en línea son especialmente riesgosas para los niños y adolescentes?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', '¡Incorrecto! No todos los usuarios tienen malas intenciones, pero la falta de verificación facilita el engaño.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Porque todos los usuarios que entran tienen malas intenciones</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q3-exp', '¡CORRECTO! Cisco destaca que estos espacios son riesgosos porque permiten que los menores interactúen con extraños que ocultan su identidad real.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Porque permiten interactuar con desconocidos con intenciones ocultas</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', '¡Incorrecto! La tecnología por sí sola no es suficiente si no hay supervisión y comunicación.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Porque no cuentan con controles parentales de ningún tipo</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', '¡Incorrecto! Se puede jugar y aprender sanamente si se educa al menor en límites y privacidad.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Porque impiden el aprendizaje y desarrollo educativo</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q3-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 4 -->
+              <div class="bento-card card-cyan quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.1.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Por qué es fundamental prestar especial atención a las fotos, comentarios y datos que publicas en Internet?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', '¡Incorrecto! Al contrario, las publicaciones en Internet se propagan y quedan archivadas por años.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Porque las plataformas borran todo el contenido cada 30 días</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', '¡Incorrecto! Subir fotos no daña la memoria física de los servidores.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Porque sobrecarga el almacenamiento de los servidores web</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q4-exp', '¡CORRECTO! Cisco NetAcad enfatiza que lo que se comparte en la web puede permanecer en línea de forma permanente mediante capturas o copias de seguridad.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Porque la información puede permanecer en línea de forma permanente</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', '¡Incorrecto! Solo tus amigos ven tus historias si configuras la privacidad adecuadamente.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Porque solo los desarrolladores de la app pueden ver tus fotos</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q4-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Autoevaluación Cisco 1.1</span>
+              <span class="footer-chip">NetAcad Practice</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.2 Deepfakes y Falsificaciones con IA &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 13: 1.2 DEEPFAKES // INTELIGENCIA ARTIFICIAL Y FALSOS       -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="12" data-title="1.2 Deepfakes // Inteligencia Artificial y Falsificaciones" data-desc="Concepto de deepfakes, redes generativas antagónicas (GANs) y erosión de la verdad" data-notes="Entrar al submódulo 1.2. El concepto de deepfake combina 'deep learning' y 'fake'. Explicar cómo funcionan las GANs: una red que falsifica (Generador) y una red que audita (Discriminador) compitiendo entre sí.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.2 // FALSIFICACIONES Y FILTROS
+              </span>
+              <span class="header-context">Deepfakes: Inteligencia Artificial, GANs y la Búsqueda de la Realidad</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-robot"></i> IA GENERATIVA</span>
+              <span class="slide-index-pill">13 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- ¿Qué es un Deepfake? -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-person-bounding-box"></i> ¿Qué son Exactamente los Deepfakes?</span>
+                  
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:4px;">
+                    Son imágenes, grabaciones de video o audios <strong>completamente fabricados pero sumamente convincentes</strong>, creados mediante algoritmos avanzados de Inteligencia Artificial (aprendizaje profundo o <em>Deep Learning</em>).
+                  </p>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15px;"><i class="bi bi-exclamation-triangle-fill"></i> El Gran Peligro Social</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Hacen parecer que una persona dijo o hizo algo que en realidad <em>nunca dijo ni hizo</em>, con una fidelidad visual y sonora que engaña tanto a ojos humanos como a filtros automáticos.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:14.5px;"><i class="bi bi-eye-slash-fill"></i> La Erosión de la Verdad y la Confianza</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Cisco alerta que el mayor daño no es solo que la gente crea videos falsos, sino que empiece a <strong>dudar de grabaciones reales y evidencias genuinas</strong> alegando que son "deepfakes".
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-shield-x"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla de Oro en 2026:</strong> El antiguo refrán <em>"ver para creer"</em> ya no es una norma segura en el entorno digital moderno.
+                  </div>
+                </div>
+              </div>
+
+              <!-- El Motor: GANs -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-gear-wide-connected"></i> El Motor: Redes Generativas Antagónicas (GANs)</span>
+                  
+                  <div class="analogy-box" style="margin-top:8px; padding:10px 14px;">
+                    <i class="bi bi-cpu analogy-icon" style="font-size:26px; color:var(--cisco-cyan);"></i>
+                    <div class="analogy-content">
+                      <div class="analogy-title" style="color:var(--cisco-cyan); font-size:15px;">El Duelo entre Falsificador y Detective</div>
+                      <div class="analogy-text" style="font-size:14px; line-height:1.42;">
+                        Una GAN consta de dos redes neuronales que compiten entre sí millones de veces: el <strong>Generador</strong> crea copias y el <strong>Discriminador</strong> busca errores.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:9px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text">
+                        <strong>Red Generadora (El Falsificador):</strong> Produce rostros o audios intentando engañar a la otra red con detalles cada vez más finos.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Red Discriminadora (El Detective):</strong> Compara el resultado con rostros reales y rechaza las falsificaciones imperfectas.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text">
+                        <strong>Perfección Mutua:</strong> A través de millones de iteraciones de competencia, el generador aprende a crear clones visuales indistinguibles.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:8px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:13.5px;"><i class="bi bi-check-circle-fill"></i> Usos Positivos Legítimos:</div>
+                    <div style="font-size:13px; color:var(--text-body); margin-top:2px;">
+                      Doblaje cinematográfico multilingüe adaptando labios, recreación histórica educativa y terapias de recuperación de voz para pacientes con ELA.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-circle-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial NetAcad (Quiz 1.2.2):</div>
+                    <div class="exam-callout-text">¿Qué arquitectura de IA crea deepfakes mediante competencia? &rarr; <strong>Redes Generativas Antagónicas (GANs)</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.2 Deepfakes</span>
+              <span class="footer-chip">Arquitectura GANs</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.2 Suplantación de Voz y Fraude &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 14: 1.2 EL LADO OSCURO // SUPLANTACIÓN DE VOZ Y ELECCIONES -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="13" data-title="1.2 El Lado Oscuro // Suplantación de Voz y Elecciones" data-desc="Vishing con IA, falsos secuestros familiares, manipulación electoral y pánico social" data-notes="Explicar las aplicaciones criminales más destructivas. La clonación de voz solo requiere 3 a 5 segundos de audio extraído de TikTok o WhatsApp. Enseñar la técnica de supervivencia: la 'palabra clave secreta' familiar.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.2 // AMENAZAS CON IA
+              </span>
+              <span class="header-context">Clonación de Voz (Voice Cloning), Vishing y Manipulación Social</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-mic-fill"></i> CLONACIÓN DE VOZ</span>
+              <span class="slide-index-pill">14 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Clonación de Voz en Estafas Familiares -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-mic-mute-fill"></i> Clonación de Voz (Voice Cloning / Vishing IA)</span>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15px;"><i class="bi bi-telephone-inbound-fill"></i> La Llamada del Falso Secuestro o Accidente</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Llaman a una madre o abuelo con la <strong>voz exacta de su hijo o nieto</strong> pidiendo una transferencia bancaria urgente por un falso accidente o detención policial. El impacto emocional nubla el juicio crítico y la víctima transfiere sin verificar.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15px;"><i class="bi bi-soundwave"></i> ¿Cómo consiguen la muestra de voz?</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Bastan <strong>3 a 5 segundos de audio limpio</strong> extraídos de un video público de TikTok, una historia de Instagram o un saludo de contestador telefónico para que la IA replique el timbre y tono exactos.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-mint); font-size:14.5px;"><i class="bi bi-shield-check"></i> Contramedida Inmediata: La Palabra Clave Familiar</div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Acuerda hoy con tu familia una <strong>palabra secreta de seguridad</strong> que no esté en chats. Ante cualquier llamada desesperada pidiendo dinero, exige esa palabra antes de transferir un centavo.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-exclamation-octagon-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Protocolo de Emergencia:</strong> Cuelga la llamada de inmediato y llama directamente al número habitual de tu familiar para verificar su estado.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Manipulación Social y Elecciones -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-megaphone-fill"></i> Desinformación Electoral y Disturbio Social</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:15px;"><i class="bi bi-box-seam-fill"></i> Interferencia en Procesos Electorales</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Videos y audios falsos de candidatos anunciando retiros de candidatura, acuerdos secretos o actos de corrupción horas antes de una votación para alterar los resultados antes de que haya tiempo de desmentirlos.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15px;"><i class="bi bi-graph-down-arrow"></i> Desplomes Bursátiles y Pánico Económico</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Declaraciones falsas generadas con la imagen de CEOs de grandes corporaciones anunciando quiebras o explosiones en plantas energéticas han provocado desplomes millonarios en bolsas de valores en minutos.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:14.5px;"><i class="bi bi-shield-lock-fill"></i> Daño a la Reputación Personal y Académica</div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Creación de montajes difamatorios o pornografía no consentida dirigida a hostigar a compañeros de clase, colegas o figuras públicas.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-circle-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial NetAcad (Quiz 1.2.4):</div>
+                    <div class="exam-callout-text">¿Cuál es una de las mayores amenazas sociales de los deepfakes? &rarr; <strong>La difusión de desinformación masiva e interferencia política</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.2 Amenazas IA</span>
+              <span class="footer-chip">Clonación de Voz & Desinformación</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Dinámica 3 // Detector Forense de Deepfakes &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 15: DINÁMICA 3 // DETECTOR FORENSE DE DEEPFAKES             -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="14" data-title="Dinámica 3 // Detector Forense de Deepfakes" data-desc="Laboratorio pericial: Analiza micro-señales visuales (parpadeo, desfase labial, artefactos)" data-notes="Tercera pausa activa interactiva. Demostrar cómo los peritos informáticos detectan deepfakes analizando 3 anomalías biométricas: tasa de parpadeo anormal, desincronización fonética labial y artefactos borrosos en el contorno del rostro.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO // SIMULADOR 3
+              </span>
+              <span class="header-context">Laboratorio Pericial: Lupa Forense de Detección de Deepfakes</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-search-heart"></i> PERITAJE BIOMÉTRICO</span>
+              <span class="slide-index-pill">15 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Selector de Lentes Forenses -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-binoculars-fill"></i> Selecciona un Lente de Inspección:</span>
+                    <span class="feat-pill feat-pill-purple">3 MICROS-SEÑALES</span>
+                  </div>
+
+                  <div class="deepfake-lenses-grid">
+                    <div class="deepfake-lens-btn is-active-lens" onclick="setDeepfakeLens(this, 'blink')">
+                      <div>
+                        <div style="font-weight:800; font-size:16px; color:var(--cyber-purple-neon);"><i class="bi bi-eye"></i> Lente 1: Tasa de Parpadeo y Ojos</div>
+                        <div style="font-size:14px; color:var(--text-muted); margin-top:3px;">Parpadeo ausente, rígido o reflejos de luz incoherentes con la habitación.</div>
+                      </div>
+                      <i class="bi bi-chevron-right" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    </div>
+
+                    <div class="deepfake-lens-btn" onclick="setDeepfakeLens(this, 'lipsync')">
+                      <div>
+                        <div style="font-weight:800; font-size:16px; color:var(--warn-amber);"><i class="bi bi-chat-left-dots-fill"></i> Lente 2: Sincronización Labial</div>
+                        <div style="font-size:14px; color:var(--text-muted); margin-top:3px;">Desfase entre sonido dental (B, P, M) y forma anatómica de la boca.</div>
+                      </div>
+                      <i class="bi bi-chevron-right" style="color:var(--warn-amber); font-size:20px;"></i>
+                    </div>
+
+                    <div class="deepfake-lens-btn" onclick="setDeepfakeLens(this, 'artifacts')">
+                      <div>
+                        <div style="font-weight:800; font-size:16px; color:var(--pop-mint);"><i class="bi bi-bounding-box-circles"></i> Lente 3: Artefactos en Bordes</div>
+                        <div style="font-size:14px; color:var(--text-muted); margin-top:3px;">Bordes borrosos en cuello, hebras de cabello flotantes y joyas titilantes.</div>
+                      </div>
+                      <i class="bi bi-chevron-right" style="color:var(--pop-mint); font-size:20px;"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Consejo Práctico:</strong> Cuando sospeches de una videollamada, pídele a la persona que gire rápidamente el rostro de perfil o pase su mano frente a la cara.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Resultado del Peritaje -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-journal-medical"></i> Resultado del Peritaje Forense</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:14px 16px; margin-top:8px;">
+                    <div style="font-family:var(--font-mono); font-size:13px; color:var(--cisco-cyan); text-transform:uppercase; font-weight:800;">
+                      <i class="bi bi-cpu-fill"></i> Diagnóstico de la Micro-Señal:
+                    </div>
+                    <h3 id="deepfakeLensTitle" style="font-family:var(--font-display); font-size:17.5px; font-weight:800; color:#FFFFFF; margin-top:4px;">
+                      Lente 1: Tasa de Parpadeo y Movimiento Ocular
+                    </h3>
+                    <p id="deepfakeLensDesc" style="font-size:14.5px; color:var(--text-body); margin-top:6px; line-height:1.45;">
+                      Los algoritmos de IA tradicionales entrenan con fotos estáticas donde los ojos casi siempre están abiertos. Por ello, los deepfakes parpadean con frecuencia anormalmente baja o con movimientos rígidos.
+                    </p>
+
+                    <div style="background:rgba(245, 158, 11, 0.12); border:1.5px solid var(--warn-amber); border-radius:var(--radius-sm); padding:10px 14px; margin-top:12px;">
+                      <div style="font-size:13px; font-weight:800; color:var(--warn-amber); text-transform:uppercase;">
+                        <i class="bi bi-exclamation-triangle-fill"></i> Señal de Alerta Pericial:
+                      </div>
+                      <div id="deepfakeLensSignal" style="font-size:14px; color:#FFFFFF; margin-top:3px; line-height:1.4;">
+                        La persona habla durante 30 segundos sin pestañear una sola vez o el iris tiene reflejos de luz incoherentes con la habitación.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-shield-check exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">
+                      <strong>Herramientas Automatizadas:</strong> Proyectos como Deepware Scanner y peritajes de Cisco verifican la consistencia espectral del audio y video.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 3</span>
+              <span class="footer-chip">Lupa Forense Deepfakes</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.2 Filtros y Greenwashing &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 16: 1.2 FILTROS & REDES // PRESIÓN SOCIAL Y GREENWASHING    -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="15" data-title="1.2 Filtros & Redes // Presión Social y Greenwashing" data-desc="Distorsión de la realidad en redes sociales, salud mental y fraude de Greenwashing corporativo" data-notes="Explicar cómo los filtros de Instagram y TikTok distorsionan la autoimagen y aumentan la ansiedad. Luego conectar con el concepto empresarial evaluado por Cisco: Greenwashing (cuando empresas mienten sobre su impacto ecológico).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.2 // DISTORSIÓN DE LA REALIDAD
+              </span>
+              <span class="header-context">Filtros en Redes Sociales, Salud Mental y Fraude de Greenwashing</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-brush"></i> DISTORSIÓN REAL</span>
+              <span class="slide-index-pill">16 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- La Ilusión de la Perfección en Instagram -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-instagram"></i> La Ilusión Curada de las Redes Sociales</span>
+                  
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:4px;">
+                    Plataformas como Instagram y TikTok están diseñadas para amplificar un atractivo visual hiper-estilizado: viajes idílicos, rostros perfectos y vidas que parecen libres de problemas.
+                  </p>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15px;"><i class="bi bi-magic"></i> Filtros de Belleza y Dismorfia Digital</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Los filtros de retoque modifican facciones en tiempo real afinando la nariz, agrandando ojos y borrando poros. Cuando los jóvenes comparan su reflejo real en el espejo contra fotos editadas, surgen problemas de ansiedad, depresión y baja autoestima.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cyber-purple-neon); font-size:14.5px;"><i class="bi bi-shield-slash"></i> La Trampa de la Vida Perfecta</div>
+                    <p style="font-size:14px; color:var(--text-body); margin-top:3px; line-height:1.42;">
+                      Nadie publica sus fracasos, deudas o días tristes. Comparar tu vida completa (con sus días buenos y malos) contra el 1% más brillante y seleccionado de otra persona es una fórmula segura de insatisfacción.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-heart-pulse-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Higiene Mental:</strong> Haz limpieza periódica de cuentas: deja de seguir perfiles que te provoquen inseguridad o frustración con tu realidad.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Greenwashing Corporativo -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-tree-fill"></i> Greenwashing: Engaño Ambiental Corporativo</span>
+
+                  <div class="analogy-box" style="margin-top:8px; padding:10px 14px;">
+                    <i class="bi bi-recycle analogy-icon" style="font-size:26px; color:var(--pop-mint);"></i>
+                    <div class="analogy-content">
+                      <div class="analogy-title" style="color:var(--pop-mint); font-size:15px;">El 'Lavado Verde' de Imagen</div>
+                      <div class="analogy-text" style="font-size:14px; line-height:1.42;">
+                        Práctica desleal donde una empresa gasta más dinero en publicidad ecológica engañosa que en reducir realmente su contaminación.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:9px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">01</span>
+                      <div class="process-text">
+                        <strong>Afirmaciones Vagas sin Pruebas:</strong> Usar palabras como "eco-friendly", "natural" o "100% verde" sin mostrar certificados auditables independientes.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Distracción Selectiva:</strong> Promocionar que una botella usa 10% menos plástico mientras la empresa sigue vertiendo desechos tóxicos al río.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">03</span>
+                      <div class="process-text">
+                        <strong>Sellos Falsos Autogenerados:</strong> Diseñar logotipos que imitan sellos de certificación ambiental oficial para confundir al comprador.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-question-circle-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial NetAcad (Quiz 1.2.5):</div>
+                    <div class="exam-callout-text">¿Qué término describe cuando una empresa exagera o miente sobre su compromiso ecológico? &rarr; <strong>Greenwashing</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.2 Filtros & Redes</span>
+              <span class="footer-chip">Greenwashing & Salud Mental</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Checkpoint Cisco 1.2 &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 17: CHECKPOINT CISCO // AUTOEVALUACIÓN EN VIVO 1.2          -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="16" data-title="Checkpoint Cisco // Autoevaluación en Vivo 1.2" data-desc="Evaluación formativa del submódulo 1.2: peligros de deepfakes y uso positivo de IA" data-notes="Checkpoint oficial del submódulo 1.2. Motivar a los alumnos a responder en el chat. Al hacer clic se muestra la explicación técnica del banco oficial de reactivos NetAcad.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 1.2
+              </span>
+              <span class="header-context">Preguntas Oficiales de Cisco NetAcad • Participa en Vivo</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">17 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 5 -->
+              <div class="bento-card card-purple quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.2.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Qué hace que los deepfakes generados con Inteligencia Artificial sean especialmente peligrosos para la sociedad?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', '¡Incorrecto! Los deepfakes son archivos de video o audio estándar (.mp4, .wav) y no saturan el ancho de banda por sí mismos.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Porque sobrecargan el ancho de banda de las conexiones domiciliarias</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q5-exp', '¡CORRECTO! Cisco subraya que el mayor riesgo es que hacen parecer de forma convincente que personas reales dijeron o hicieron cosas que jamás ocurrieron en la realidad.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Hacen parecer que alguien dijo o hizo algo que en realidad nunca ocurrió</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', '¡Incorrecto! Los deepfakes pueden ser creados por cualquier persona con herramientas accesibles de código abierto.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Porque solo pueden ser producidos por agencias gubernamentales</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', '¡Incorrecto! La tecnología en sí es neutra; el peligro surge del uso malintencionado para difamar o estafar.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Porque eliminan permanentemente los datos del teléfono de la víctima</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q5-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 6 -->
+              <div class="bento-card card-cyan quiz-widget">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 1.2.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.4;">
+                    ¿Cuál de las siguientes opciones describe un uso POSITIVO y legítimo de la tecnología de generación de deepfakes?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', '¡Incorrecto! Falsificar identidades en llamadas para solicitar dinero es un delito grave de vishing.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Suplantar a familiares en llamadas bancarias de emergencia</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', '¡Incorrecto! La desinformación electoral socava la democracia.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Crear declaraciones falsas de políticos antes de una votación</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q6-exp', '¡CORRECTO! Cisco resalta que las GANs se usan positivamente en educación histórica, accesibilidad de voz para pacientes y doblaje cinematográfico natural.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Recreación histórica educativa y doblaje de voz accesible para pacientes</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', '¡Incorrecto! Eludir cámaras de seguridad con máscaras deepfake es una técnica intrusiva de ciberataque.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Burlar los sistemas de reconocimiento facial de los cajeros automáticos</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q6-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:18px;"></i>
+                    <span style="font-size:14px; font-weight:600;">Haz clic en una opción para comprobar tu respuesta con el criterio oficial de Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Autoevaluación Cisco 1.2</span>
+              <span class="footer-chip">NetAcad Practice</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Dinámica 4 // Simulador EmailPal &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 18: DINÁMICA 4 // SIMULADOR OFICIAL CISCO EMAILPAL          -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="17" data-title="Dinámica 4 // Simulador de Bandeja EmailPal" data-desc="Simulador interactivo del ejercicio oficial 1.3.2 de Cisco NetAcad: Triage de Phishing y Spam" data-notes="Momento cúspide de interacción práctica. Replicar el ejercicio oficial 1.3.2 de NetAcad. Los estudiantes deben revisar cada correo de la bandeja de entrada y decidir: si reportar phishing, mover a spam o rescatar de spam el correo del taller legítimo.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                EJERCICIO OFICIAL 1.3.2 // EMAILPAL
+              </span>
+              <span class="header-context">Simulador de Bandeja de Entrada "EmailPal" (Detección en Vivo)</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-inbox-fill"></i> TRIAGE DE CORREOS</span>
+              <span class="slide-index-pill">18 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Lista de Correos en la Bandeja -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-envelope-paper-fill"></i> Bandeja de Entrada // EmailPal 2026:</span>
+                    <span class="feat-pill feat-pill-purple">SELECCIONA UN MENSAJE</span>
+                  </div>
+
+                  <div class="emailpal-inbox">
+                    <div class="email-row-item is-selected" onclick="selectEmailItem(this, 'email1')">
+                      <div>
+                        <div style="font-weight:800; font-size:14.5px; color:var(--pop-coral);"><i class="bi bi-cash-coin"></i> rewards@lotterywinners-global.xyz</div>
+                        <div style="font-size:14px; color:#FFFFFF; margin-top:2px;">¡Felicidades! Ganaste 50,000 USD en la Lotería</div>
+                      </div>
+                      <span class="feat-pill feat-pill-coral" style="font-size:11px;">SOSPECHOSO</span>
+                    </div>
+
+                    <div class="email-row-item" onclick="selectEmailItem(this, 'email2')">
+                      <div>
+                        <div style="font-weight:800; font-size:14.5px; color:var(--warn-amber);"><i class="bi bi-bank2"></i> security@yourbankalerts-urgent.com</div>
+                        <div style="font-size:14px; color:#FFFFFF; margin-top:2px;">URGENTE: Tu cuenta bancaria ha sido bloqueada</div>
+                      </div>
+                      <span class="feat-pill feat-pill-amber" style="font-size:11px;">ALERTA</span>
+                    </div>
+
+                    <div class="email-row-item" onclick="selectEmailItem(this, 'email3')">
+                      <div>
+                        <div style="font-weight:800; font-size:14.5px; color:var(--pop-mint);"><i class="bi bi-journal-bookmark-fill"></i> info@taller-escrituracreativa.org</div>
+                        <div style="font-size:14px; color:#FFFFFF; margin-top:2px;">Confirmación de inscripción: Taller de Escritura (En Spam)</div>
+                      </div>
+                      <span class="feat-pill feat-pill-mint" style="font-size:11px;">LEGÍTIMO</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:24px;"><i class="bi bi-shield-lock-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla Cisco NetAcad:</strong> Revisa siempre el dominio real después del <code>@</code> y la carpeta de spam para rescatar correos legítimos que cayeron por error.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visor de Correo y Acciones de Triage -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-envelope-open-fill"></i> Lectura & Decisión de Seguridad</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:12px 16px; margin-top:8px;">
+                    <div style="font-size:12.5px; font-family:var(--font-mono); color:var(--text-muted);">DE: <strong id="emailViewFrom" style="color:var(--cyber-purple-neon); font-size:14px;">rewards@lotterywinners-global.xyz</strong></div>
+                    <div style="font-size:14.5px; font-weight:800; color:#FFFFFF; margin-top:4px;">ASUNTO: <span id="emailViewSubject">¡Felicidades! Ganaste 50,000 USD en la Lotería Internacional</span></div>
+                    <p id="emailViewBody" style="font-size:14.5px; color:var(--text-body); margin-top:8px; line-height:1.45; border-top:1px solid var(--border-color); padding-top:8px;">
+                      Estimado ganador, tu cuenta fue seleccionada en nuestro sorteo. Para reclamar tus fondos, haz clic en el enlace adjunto y llena tus datos bancarios y número de seguridad social en las próximas 2 horas.
+                    </p>
+                  </div>
+
+                  <!-- Botones de Acción Táctica -->
+                  <div style="display:flex; gap:10px; margin-top:10px;">
+                    <button class="email-action-btn action-phishing" onclick="triageEmail('phishing')">
+                      <i class="bi bi-shield-x"></i> Reportar como Phishing
+                    </button>
+                    <button class="email-action-btn action-spam" onclick="triageEmail('spam')">
+                      <i class="bi bi-trash3-fill"></i> Mover a Spam
+                    </button>
+                    <button class="email-action-btn action-inbox" onclick="triageEmail('inbox')">
+                      <i class="bi bi-inbox-arrow-down-fill"></i> Mover a Bandeja de Entrada
+                    </button>
+                  </div>
+
+                  <!-- Caja de Retroalimentación Inmediata -->
+                  <div class="quiz-explanation" id="emailTriageFeedback" style="margin-top:10px;"></div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-patch-check-fill exam-callout-icon" style="color:var(--cyber-purple-neon); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Ejercicio oficial de NetAcad 1.3: Aprender a discriminar correos trampa de mensajes legítimos que cayeron en spam.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">EmailPal Cisco</span>
+              <span class="footer-chip">Ejercicio Práctico</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: 1.3 Primeros Auxilios ante un Ciberataque &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 19: 1.3 PRIMEROS AUXILIOS // QUÉ HACER SI FUISTE VÍCTIMA    -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="18" data-title="1.3 Primeros Auxilios // Qué Hacer si Fuiste Víctima" data-desc="Protocolo de respuesta ante incidentes en 4 pasos y resolución del problema 3 de Cisco" data-notes="Submódulo 1.3. Enseñar con claridad qué pasos seguir si una persona o empresa sufre un hackeo. Paso 1: Desconectar el cable de red o apagar el Wi-Fi de inmediato. Paso 2: Cambiar claves desde un equipo limpio. Explicar cómo reconocer sitios web falsos.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                TEMA 1.3 // RESOLUCIÓN DE PROBLEMAS
+              </span>
+              <span class="header-context">Primeros Auxilios Digitales: Protocolo de Respuesta en 4 Pasos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-life-preserver"></i> PLAN DE CONTINGENCIA</span>
+              <span class="slide-index-pill">19 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Los 4 Pasos de Rescate -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-shield-fill-check"></i> El Protocolo de Rescate en 4 Pasos</span>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:9px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">01</span>
+                      <div class="process-text">
+                        <strong>Aislar y Desconectar:</strong> Desconecta el cable Ethernet o apaga el Wi-Fi del equipo inmediatamente para evitar que el malware se propague a otros dispositivos de tu casa o empresa.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">02</span>
+                      <div class="process-text">
+                        <strong>Cambiar Claves desde Equipo Limpio:</strong> Ingresa desde tu celular o una computadora segura y cambia las contraseñas de tu correo principal, banco y redes. Cierra sesiones activas.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">03</span>
+                      <div class="process-text">
+                        <strong>Notificar a Entidades y Contactos:</strong> Avisa a tu banco para congelar tarjetas vulneradas y advierte a tus contactos para que no abran enlaces sospechosos enviados a tu nombre.
+                      </div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">04</span>
+                      <div class="process-text">
+                        <strong>Escanear y Restaurar:</strong> Ejecuta un antivirus actualizado (Windows Defender / Malwarebytes) en modo seguro y restaura archivos limpios desde tus copias de respaldo.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-wifi-off"></i></span>
+                  <div class="stat-desc">
+                    <strong>Regla #1 Inmediata:</strong> Quitar la conexión a Internet detiene el comando y control del atacante y frena la fuga de datos en el acto.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Casos Prácticos NetAcad 1.3 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-tools"></i> Problemas Reales del Módulo 1.3 de Cisco</span>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--warn-amber); font-size:15px;"><i class="bi bi-cart-x-fill"></i> Caso A: Tiendas Web Falsas con Precios Irreales</div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Sitios fraudulentos que ofrecen zapatillas o iPhones con 90% de descuento. Cisco recomienda revisar: dominio dudoso (.xyz, .top), ausencia de candado HTTPS y falta de datos fiscales o teléfono real.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--pop-coral); font-size:15px;"><i class="bi bi-shield-slash-fill"></i> Caso B: Descargas con Programas No Deseados (PUPs)</div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Al instalar un programa gratuito, se colaron barras de búsqueda extrañas. Solución: Ir a "Panel de Control &rarr; Programas y Características" y desinstalar extensiones dudosas añadidas recientemente.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="font-weight:800; color:var(--cisco-cyan); font-size:15px;"><i class="bi bi-chat-dots-fill"></i> Caso C: Mensaje Inesperado de Código de Seguridad</div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:3px; line-height:1.4;">
+                      Si te llega un SMS con código OTP de Google o WhatsApp sin haberlo pedido, alguien está intentando acceder. Jamás compartas ese código con nadie.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--cisco-cyan); font-size:24px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan); font-size:14px;">Pregunta Oficial Cisco NetAcad:</div>
+                    <div class="exam-callout-text">¿Qué acción prioritaria debes tomar si crees que tu PC fue comprometida? &rarr; <strong>Desconectarla de Internet inmediatamente</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">1.3 Resolución</span>
+              <span class="footer-chip">Rescate en 4 Pasos</span>
+            </div>
+            <div class="footer-meta">
+              <span>Siguiente: Cierre de Sesión y Próxima Clase &rarr;</span>
+            </div>
+          </footer>
+        </div>
+
+        <!-- ================================================================= -->
+        <!-- SLIDE 20: CIERRE DE SESIÓN // PREGUNTAS Y PRÓXIMO ENCUENTRO       -->
+        <!-- ================================================================= -->
+        <div class="slide-view" data-index="19" data-title="Cierre de Sesión // Preguntas y Contacto" data-desc="Resumen de logros alcanzados en el Módulo 1, espacio de dudas y anuncio de la Sesión 2" data-notes="Felicitar a los estudiantes por completar el Módulo 1. Abrir micrófono para preguntas y dudas. Recordarles ingresar a NetAcad para realizar las lecturas y su cuestionario de autoevaluación. Anunciar la próxima clase de viernes con el Módulo 2.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                SESIÓN 1 COMPLETADA // CIERRE
+              </span>
+              <span class="header-context">Resumen de Logros, Espacio de Dudas y Próxima Sesión</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-check2-all"></i> MÓDULO 1 FINALIZADO</span>
+              <span class="slide-index-pill">20 / 20</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Logros del Módulo 1 (Llenado Completo del Espacio) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-trophy-fill"></i> Sesión 1 Superada con Éxito</span>
+                    <span class="feat-pill feat-pill-purple">COMPETENCIAS NETACAD</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:6px; line-height:1.3;">
+                    Resumen de Habilidades Defensivas Dominadas Hoy:
+                  </h3>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px; display:flex; flex-direction:column; gap:6px;">
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-shield-check" style="color:var(--pop-mint);"></i> <strong>Evaluación de Amenazas:</strong> Diferenciación entre pérdida de datos y robo de identidad.</div>
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-bug-fill" style="color:var(--pop-mint);"></i> <strong>Taxonomía Malware:</strong> Identificación de Ransomware, Troyanos, Spyware, Virus y Gusanos.</div>
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-people-fill" style="color:var(--pop-mint);"></i> <strong>Protección Familiar:</strong> Controles parentales, límites de pantalla y combate al cyberbullying.</div>
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-fingerprint" style="color:var(--pop-mint);"></i> <strong>Huella Digital Indeleble:</strong> Curación de perfil público y auditoría con Google espejo.</div>
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-camera-video-fill" style="color:var(--pop-mint);"></i> <strong>Peritaje de Deepfakes:</strong> Detección de parpadeo rígido, fonemas labiales y artefactos GAN.</div>
+                    <div style="font-size:14px; color:var(--text-body); line-height:1.35;"><i class="bi bi-envelope-shield" style="color:var(--pop-mint);"></i> <strong>Triage con EmailPal:</strong> Clasificación rápida de correos legítimos frente a Phishing bancario.</div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple" style="padding:10px 14px; margin-top:8px;">
+                  <span class="stat-num" style="font-size:22px; color:var(--warn-amber);"><i class="bi bi-mic-fill"></i></span>
+                  <div class="stat-desc">
+                    <strong>Espacio para Preguntas y Dudas en Vivo:</strong> Puedes activar tu micrófono o escribir tus dudas en el chat de la sesión virtual para resolverlas en comunidad.
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint" style="padding:8px 14px; margin-top:6px;">
+                  <i class="bi bi-chat-heart-fill exam-callout-icon" style="color:var(--pop-mint); font-size:22px;"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text" style="font-size:13.5px; line-height:1.35;"><strong>Plataforma NetAcad:</strong> Ingresa esta semana para revisar los módulos interactivos y completar tu cuestionario formativo del Módulo 1.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Anuncio de la Próxima Clase y Misiones (Llenado Completo del Espacio) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-calendar2-week-fill"></i> Hoja de Ruta // Próxima Sesión</span>
+                    <span class="feat-pill feat-pill-cyan">SESIÓN 2 DE 3</span>
+                  </div>
+                  
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--cisco-cyan); border-radius:var(--radius-sm); padding:10px 14px; margin-top:8px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                      <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF;">
+                        Módulo 2: Proteja lo que es importante para usted
+                      </div>
+                      <span style="font-family:var(--font-mono); font-size:12.5px; color:var(--cisco-cyan); font-weight:800;">VIERNES • 17:30 - 19:00</span>
+                    </div>
+                    <p style="font-size:13.5px; color:var(--text-body); margin-top:4px; line-height:1.4;">
+                      Cifrado de datos y copias de seguridad 3-2-1, contraseñas blindadas de alta entropía, configuración y seguridad en routers Wi-Fi caseros y navegación web privada.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:9px 13px; margin-top:8px;">
+                    <div style="font-family:var(--font-mono); font-size:12px; color:var(--warn-amber); text-transform:uppercase; font-weight:800; margin-bottom:4px;">
+                      <i class="bi bi-lightning-charge-fill"></i> 3 Misiones de Ciberseguridad para esta Semana:
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--text-body); line-height:1.35;">
+                      <div><i class="bi bi-1-circle-fill" style="color:var(--cisco-cyan);"></i> <strong>Auditoría de Huella:</strong> Búscate en Google con comillas ("Tu Nombre") y verifica qué información personal es pública.</div>
+                      <div><i class="bi bi-2-circle-fill" style="color:var(--warn-amber);"></i> <strong>Blindaje 2FA:</strong> Activa autenticación en 2 pasos en tu correo institucional/Gmail y WhatsApp.</div>
+                      <div><i class="bi bi-3-circle-fill" style="color:var(--pop-mint);"></i> <strong>Código Secreto Familiar:</strong> Acuerda una palabra clave familiar para neutralizar fraudes de voz clonada por IA.</div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:8px; background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:8px 14px; display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                      <div style="font-family:var(--font-mono); font-size:11.5px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Asistente de Enseñanza Oficial</div>
+                      <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:var(--cyber-purple-neon); margin-top:2px;">Alex Arturo Jamachi Condori</div>
+                      <div style="font-size:12px; color:var(--text-muted);">UMSA • Carrera de Informática • Cisco Networking Academy</div>
+                    </div>
+                    <i class="bi bi-shield-check" style="color:var(--cyber-purple-neon); font-size:28px;"></i>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan" style="padding:8px 14px; margin-top:6px;">
+                  <span class="stat-num" style="font-size:20px; color:var(--cisco-cyan);"><i class="bi bi-award-fill"></i></span>
+                  <div class="stat-desc" style="font-size:13px; line-height:1.35;">
+                    <strong>Insignia Cisco NetAcad:</strong> Al aprobar los 5 módulos obtendrás tu credencial digital internacional verificable en la plataforma Credly para tu CV y LinkedIn.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Cierre de Sesión</span>
+              <span class="footer-chip">Módulo 1 Completado</span>
+              <span class="footer-chip">Próxima: Sesión 2</span>
+            </div>
+            <div class="footer-meta">
+              <span>¡Muchas gracias por su participación activa y compromiso!</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de Control Inferior (Dock Táctico Flotante Corregido) -->
+    <nav class="tactical-dock" id="tacticalDock">
+      <button class="dock-btn" id="prevBtn" title="Anterior (Flecha Izquierda / Shift+Espacio)">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      
+      <div class="dock-counter" id="dockCounter">
+        <span id="dockCurrSlide">01</span> / <span id="dockTotalSlide">20</span>
+      </div>
+      
+      <button class="dock-btn" id="nextBtn" title="Siguiente (Flecha Derecha / Espacio)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <div class="dock-sep"></div>
+
+      <button class="dock-pill-btn" id="presenterBtn" title="Panel del Expositor / HUD (Tecla P)">
+        <i class="bi bi-display"></i>
+        <span>HUD [P]</span>
+      </button>
+
+      <button class="dock-pill-btn" id="gridBtn" title="Ver Cuadrícula de Diapositivas (Tecla G)">
+        <i class="bi bi-grid-3x3-gap"></i>
+        <span>Malla [G]</span>
+      </button>
+
+      <button class="dock-btn" id="fsBtn" title="Pantalla Completa (Tecla F)">
+        <i class="bi bi-fullscreen"></i>
+      </button>
+
+      <button class="dock-btn" id="helpBtn" title="Atajos de Teclado (Tecla ?)">
+        <i class="bi bi-question-circle"></i>
+      </button>
+    </nav>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: CUADRÍCULA DE TODAS LAS DIAPOSITIVAS (TECLA G)             -->
+  <!-- ================================================================= -->
+  <div class="modal-backdrop" id="gridModal">
+    <div class="grid-modal-content">
+      <div class="grid-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span class="header-badge badge-purple"><i class="bi bi-grid-3x3-gap-fill"></i> MALLA GENERAL</span>
+          <span style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF;">
+            20 Diapositivas // Conciencia sobre Seguridad y Protección Digital - Módulo 1
+          </span>
+        </div>
+        <button class="modal-close-btn" id="closeGridBtn">&times;</button>
+      </div>
+      <div class="grid-cards-container" id="gridCardsContainer"></div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: HUD DEL EXPOSITOR (TECLA P)                                -->
+  <!-- ================================================================= -->
+  <div class="presenter-hud" id="presenterHud">
+    <div class="hud-header">
+      <div class="hud-title">
+        <i class="bi bi-shield-shaded" style="color:var(--cyber-purple-neon);"></i>
+        <span>HUD DEL EXPOSITOR // ASISTENTE DE ENSEÑANZA: ALEX JAMACHI</span>
+      </div>
+      <div class="hud-telemetry">
+        <div class="hud-stat-pill">
+          <i class="bi bi-clock-fill" style="color:var(--cisco-cyan);"></i>
+          <span id="hudClock">--:--:--</span>
+        </div>
+        <div class="hud-stat-pill">
+          <i class="bi bi-stopwatch-fill" style="color:var(--warn-amber);"></i>
+          <span id="hudTimer">00:00</span>
+        </div>
+        <button class="hud-action-btn" id="resetTimerBtn" title="Reiniciar Cronómetro"><i class="bi bi-arrow-counterclockwise"></i></button>
+        <button class="hud-action-btn" id="closeHudBtn" title="Cerrar HUD">&times;</button>
+      </div>
+    </div>
+
+    <div class="hud-body">
+      <div class="hud-col">
+        <div class="hud-col-title"><i class="bi bi-card-text"></i> DIAPOSITIVA ACTUAL</div>
+        <div class="hud-slide-name" id="hudSlideTitle">Carátula // Conciencia sobre Seguridad Digital</div>
+        <div class="hud-slide-desc" id="hudSlideDesc">Presentación institucional y bienvenida</div>
+        
+        <div class="hud-notes-box" id="hudSlideNotes">
+          Bienvenida a los estudiantes. Aclarar que el curso no requiere conocimientos de programación y parte desde cero.
+        </div>
+      </div>
+
+      <div class="hud-col">
+        <div class="hud-col-title"><i class="bi bi-arrow-right-circle"></i> VISTA PREVIA SIGUIENTE</div>
+        <div class="hud-next-preview" id="hudNextPreview">
+          <div style="font-weight:800; color:var(--cyber-purple-neon);" id="hudNextTitle">Siguiente diapositiva</div>
+          <div style="font-size:12.5px; color:var(--text-muted); margin-top:3px;" id="hudNextDesc">Descripción breve</div>
+        </div>
+
+        <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
+          <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted);">Progreso del Módulo:</div>
+          <div style="font-family:var(--font-mono); font-size:13px; font-weight:800; color:var(--cisco-cyan);" id="hudProgressText">1 / 20 (5%)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- MODAL: AYUDA Y ATAJOS DE TECLADO (TECLA ?)                        -->
+  <!-- ================================================================= -->
+  <div class="modal-backdrop" id="helpModal">
+    <div class="help-modal-content">
+      <div class="grid-modal-header">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span class="header-badge badge-purple"><i class="bi bi-keyboard-fill"></i> ATAJOS DE TECLADO</span>
+          <span style="font-family:var(--font-display); font-size:16px; font-weight:800; color:#FFFFFF;">Navegación Rápida</span>
+        </div>
+        <button class="modal-close-btn" id="closeHelpBtn">&times;</button>
+      </div>
+      <div style="margin-top:12px; display:flex; flex-direction:column; gap:10px; font-size:14px;">
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+          <span>Avanzar Diapositiva</span>
+          <kbd style="background:var(--bg-nested); padding:3px 10px; border-radius:4px; font-family:var(--font-mono); border:1px solid var(--border-color);">Flecha Derecha / Espacio</kbd>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+          <span>Retroceder Diapositiva</span>
+          <kbd style="background:var(--bg-nested); padding:3px 10px; border-radius:4px; font-family:var(--font-mono); border:1px solid var(--border-color);">Flecha Izquierda / Shift+Espacio</kbd>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+          <span>HUD del Expositor (Notas y Cronómetro)</span>
+          <kbd style="background:var(--bg-nested); padding:3px 10px; border-radius:4px; font-family:var(--font-mono); border:1px solid var(--border-color);">Tecla P</kbd>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+          <span>Cuadrícula / Malla de Diapositivas</span>
+          <kbd style="background:var(--bg-nested); padding:3px 10px; border-radius:4px; font-family:var(--font-mono); border:1px solid var(--border-color);">Tecla G</kbd>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-color); padding-bottom:6px;">
+          <span>Pantalla Completa</span>
+          <kbd style="background:var(--bg-nested); padding:3px 10px; border-radius:4px; font-family:var(--font-mono); border:1px solid var(--border-color);">Tecla F</kbd>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts del Motor y Efectos -->
+  <script src="js/ambient-canvas.js"></script>
+  <script src="js/slides-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Build scripts, raw NetAcad captures, archives & cache
+__pycache__/
+*.pyc
+*.pyo
+*.zip
+*.py
+*.bat
+*.txt
+_audit_*
+*/Contenido/
+Contenido/
+.DS_Store
+Thumbs.db

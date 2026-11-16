@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cisco NetAcad &amp; UMSA // Conciencia sobre Seguridad y Protección Digital - Sesión 2 (Módulos 2 y 3)</title>
+
+  <!-- Tipografías Oficiales Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Iconos Vectoriales Bootstrap Icons (0 Emojis) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Hojas de Estilo del Sistema -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/slides-base.css">
+  <link rel="stylesheet" href="css/slides-bento.css">
+  <link rel="stylesheet" href="css/presenter-hud.css">
+</head>
+<body>
+
+  <!-- Canvas Ambiental de Fondo (Grid Táctico de Ciberdefensa) -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <div class="app-container">
+    <div class="stage-container" id="stageContainer">
+      <div class="slide-stage" id="slideStage">
+        <div class="top-progress-bar" id="slideProgress" style="width: 4.16%;"></div>
+        <!-- SLIDE 01: CARÁTULA PRINCIPAL // SESIÓN 2 -->
+        <div class="slide-view is-active" data-index="0" data-title="Carátula // Sesión 2: Módulos 2 y 3" data-desc="Protección de Dispositivos, Redes Seguras, Rastreo Web y Verificación Digital" data-notes="Dar la bienvenida cálida a todos los estudiantes, especialmente a quienes se conectan hoy por primera vez. Aclarar que el Módulo 2 y Módulo 3 se pueden comprender perfectamente sin haber estado en la Sesión 1 y sin saber programar. Presentarse como Asistente de Enseñanza Oficial Alex Arturo Jamachi Condori.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                UMSA // CISCO NETWORKING ACADEMY
+              </span>
+              <span class="header-context">Conciencia sobre Seguridad y Protección Digital</span>
+            </div>
+            <div class="header-right">
+              <div class="session-switcher">
+                <a href="sesion1.html" class="session-pill" title="Ir a Sesión 1 (Módulo 1)">S1</a>
+                <span class="session-pill active" title="Sesión Actual (Módulos 2 y 3)">S2</span>
+                <a href="sesion3.html" class="session-pill" title="Ir a Sesión 3 (Módulos 4 y 5)">S3</a>
+              </div>
+              <span class="header-telemetry"><i class="bi bi-calendar-event"></i> VIERNES | 17:30 – 19:00</span>
+              <span class="slide-index-pill">01 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-layout">
+              <!-- Tarjeta Principal Izquierda -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-shield-lock-fill"></i> SESIÓN 2 DE 3</span>
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-layers-fill"></i> MÓDULOS 2 &amp; 3 OFICIALES</span>
+                  </div>
+
+                  <h1 style="font-family: var(--font-display); font-size: 35px; font-weight: 800; color: #FFFFFF; line-height: 1.15; margin-top: 12px; margin-bottom: 10px;">
+                    BLINDAJE DIGITAL Y <span style="background: linear-gradient(135deg, #FFFFFF 10%, var(--cyber-purple-neon) 50%, var(--cisco-cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">VERIFICACIÓN CRÍTICA</span>
+                  </h1>
+
+                  <p style="font-size: 16px; color: var(--text-body); line-height: 1.48; margin-bottom: 12px;">
+                    Aprende a proteger computadoras, teléfonos y redes Wi-Fi domésticas (<strong>Módulo 2</strong>), mientras dominas la defensa contra el rastreo invisible, contratos abusivos y desinformación viral (<strong>Módulo 3</strong>).
+                  </p>
+
+                  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-bottom:10px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:12px 15px;">
+                      <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:var(--cyber-purple-neon); display:flex; align-items:center; gap:8px;">
+                        <i class="bi bi-hdd-network-fill"></i> Módulo 2 Oficial
+                      </div>
+                      <div style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.4;">
+                        <strong>Proteja lo que es importante:</strong> 2FA, Windows Hello, SIM Swapping, Dark Web, Routers WPA3 y VPN.
+                      </div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-cyan); border-radius:var(--radius-sm); padding:12px 15px;">
+                      <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:var(--cisco-cyan); display:flex; align-items:center; gap:8px;">
+                        <i class="bi bi-check2-circle"></i> Módulo 3 Oficial
+                      </div>
+                      <div style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.4;">
+                        <strong>Verifique antes de compartir:</strong> Cookies, Beacons, Fingerprinting, T&amp;C, Eco-huella y Validación Social.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:12px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Asistente de Enseñanza Oficial</div>
+                      <div style="font-family:var(--font-display); font-size:18px; font-weight:800; color:var(--cyber-purple-neon); margin-top:2px;">Alex Arturo Jamachi Condori</div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:2px;">UMSA • Carrera de Informática</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px;">
+                      <div style="font-family:var(--font-mono); font-size:12px; color:var(--text-muted); text-transform:uppercase; font-weight:700;">Duración Total</div>
+                      <div style="font-family:var(--font-display); font-size:18px; font-weight:800; color:var(--warn-amber); margin-top:2px;">90 Minutos Activos</div>
+                      <div style="font-size:13.5px; color:var(--text-body); margin-top:2px;">4 Dinámicas + 4 Checkpoints</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:26px;"><i class="bi bi-people-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>Bienvenidos Cursantes Nuevos:</strong> Incluye nivelación rápida en 1 minuto del Módulo 1. Cero conocimientos técnicos previos requeridos.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tarjeta Lateral Derecha -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:12px; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <img src="assets/umsa-logo.png" alt="UMSA Logo" style="height:50px; width:auto; object-fit:contain;">
+                    <div>
+                      <div style="font-family:var(--font-display); font-size:15.5px; font-weight:800; color:#FFFFFF;">UNIVERSIDAD MAYOR DE SAN ANDRÉS</div>
+                      <div style="font-size:13.5px; color:var(--text-muted);">Facultad de Ciencias Puras y Naturales</div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:12px; background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:14px 16px; text-align:center;">
+                    <div style="width:68px; height:68px; margin:0 auto 8px auto; border-radius:50%; background:rgba(139,92,246,0.18); border:2px solid var(--cyber-purple); display:flex; align-items:center; justify-content:center; box-shadow:0 0 22px rgba(139,92,246,0.4);">
+                      <i class="bi bi-shield-fill-check" style="font-size:34px; color:var(--cyber-purple-neon);"></i>
+                    </div>
+                    <div style="font-family:var(--font-display); font-size:17.5px; font-weight:800; color:#FFFFFF;">
+                      Arquitectura de Clase Interactiva
+                    </div>
+                    <div style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.42;">
+                      Dinámicas tácticas distribuidas en cada submódulo para practicar en vivo desde el chat.
+                    </div>
+                  </div>
+
+                  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; display:flex; align-items:center; gap:12px;">
+                      <i class="bi bi-laptop" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                      <div style="font-size:14.5px; color:var(--text-body);"><strong>4 Simuladores Tácticos</strong> de casos reales</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--border-color); border-radius:var(--radius-sm); padding:10px 14px; display:flex; align-items:center; gap:12px;">
+                      <i class="bi bi-patch-question-fill" style="color:var(--warn-amber); font-size:20px;"></i>
+                      <div style="font-size:14.5px; color:var(--text-body);"><strong>8 Preguntas NetAcad</strong> con retroalimentación</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-broadcast exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Participación Activa</div>
+                    <div class="exam-callout-text">Vota A, B, C o D en el chat durante cada Checkpoint para ganar dominio práctico.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Cisco NetAcad // Seguridad Digital</span>
+              <span class="footer-chip">Sesión 2: Módulos 2 &amp; 3</span>
+              <span class="footer-chip">UMSA Informática</span>
+            </div>
+            <div class="footer-meta">Siguiente: Recap Módulo 1 y Hoja de Ruta &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 02: HOJA DE RUTA Y NIVELACIÓN -->
+        <div class="slide-view" data-index="1" data-title="Hoja de Ruta // Nivelación y Agenda (90 min)" data-desc="Resumen en 1 minuto del Módulo 1 para estudiantes nuevos y mapa de la Sesión 2" data-notes="Explicar en 1 minuto los 4 pilares del Módulo 1 para que quienes ingresaron hoy por primera vez comprendan el punto de partida. Luego detallar los tiempos de los 4 bloques de la clase de hoy.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                AGENDA Y NIVELACIÓN // 90 MINUTOS
+              </span>
+              <span class="header-context">Puente desde Módulo 1 hacia Defensa Activa y Verificación</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-compass-fill"></i> MAPA DE SESIÓN</span>
+              <span class="slide-index-pill">02 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Recap Express Módulo 1 para Nuevos -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-lightning-fill"></i> Nivelación Express (Módulo 1)</span>
+                    <span class="feat-pill feat-pill-amber">PARA NUEVOS</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.38; margin-top:4px;">
+                    Si hoy es tu primera sesión, estos <strong>4 conceptos</strong> conectan con la clase de hoy:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">01</span>
+                      <div class="process-text"><strong>Malware &amp; Phishing:</strong> Programas maliciosos (Ransomware, Troyanos) y correos falsos para robar claves.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">02</span>
+                      <div class="process-text"><strong>Huella Digital:</strong> Todo lo publicado permanece en la web mediante capturas y archivos espejo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">03</span>
+                      <div class="process-text"><strong>Deepfakes con IA:</strong> Videos/audios clonados; detectables en parpadeo, labios y bordes.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">04</span>
+                      <div class="process-text"><strong>De Amenaza a Defensa:</strong> Tras el diagnóstico (Módulo 1), hoy toca <strong>blindarnos y verificar</strong>.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-arrow-repeat exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Regla de Continuidad</div>
+                    <div class="exam-callout-text">Módulos autocontenidos: hoy dominarás herramientas reales para PC, móvil y web.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Los 4 Bloques de la Sesión 2 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-map-fill"></i> Los 4 Bloques de Hoy (90 Min)</span>
+                    <span class="feat-pill feat-pill-purple">RITMO DISTRIBUIDO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:7px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">2.0</span>
+                      <div class="process-text"><strong>Endpoints &amp; Claves (22 min):</strong> Antivirus, Windows Hello, Gestores, 2FA, SIM Swapping + <em>Dinámica 1 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2.1–2.3</span>
+                      <div class="process-text"><strong>Privacidad &amp; Routers (23 min):</strong> Vigilancia, Dark Web, WPA3, Firmware, Wi-Fi Público + <em>Dinámica 2 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3.0</span>
+                      <div class="process-text"><strong>Rastreo &amp; Higiene (22 min):</strong> Cookies, Beacons, Fingerprinting y Modo Incógnito + <em>Dinámica 3 &amp; Quiz</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">3.1–3.3</span>
+                      <div class="process-text"><strong>Políticas &amp; Efecto Dominó (23 min):</strong> T&amp;C, CO<sub>2</sub> (4%), Validación Social y Verificación + <em>Dinámica 4 &amp; Quiz</em>.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan);">4+4</span>
+                  <div class="stat-desc">
+                    <strong>Dinamismo Constante:</strong> Alternamos teoría visual con Simuladores Tácticos y Checkpoints NetAcad.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Nivelación Express</span>
+              <span class="footer-chip">Cronograma 90 min</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 2.0 // Dispositivos y Contraseñas &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 03: 2.0 FUNDAMENTOS DE PROTECCIÓN Y CONTRASEÑAS -->
+        <div class="slide-view" data-index="2" data-title="2.0 Blindaje // Dispositivos y Gestión de Contraseñas" data-desc="Software de seguridad, parches, gestores de contraseñas, 2FA y restablecimiento inmediato" data-notes="Basado en Transcript 25 (2.0.1). Destacar las dos caras del gestor de contraseñas: evita repetir claves, pero si olvidas o te roban la contraseña maestra comprometes todo. Subrayar la importancia del 2FA.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 2.0 // GUÍA DE PROTECCIÓN DIGITAL
+              </span>
+              <span class="header-context">Software Defensivo, Contraseñas Maestras y Autenticación 2FA</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-shield-check"></i> CISCO 2.0.1</span>
+              <span class="slide-index-pill">03 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Columna Izquierda: Blindaje del Sistema -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-pc-display"></i> Bases de Defensa del Dispositivo</span>
+                    <span class="feat-pill feat-pill-purple">HIGIENE DIARIA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-bug-fill"></i></span>
+                      <div class="process-text"><strong>Suite de Seguridad Activa:</strong> Mantén Antivirus, Cortafuegos (Firewall) y herramientas Antimalware actualizados en PC, móvil y tablet.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-arrow-clockwise"></i></span>
+                      <div class="process-text"><strong>Actualizaciones de SO y Apps:</strong> Los parches oficiales cierran vulnerabilidades críticas antes de que los atacantes las exploten.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-cloud-download-fill"></i></span>
+                      <div class="process-text"><strong>Cero Fuentes Desconocidas:</strong> Evita descargar software pirata o instaladores de portales dudosos que ocultan código para robar datos.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analogy-box" style="border-color:var(--cyber-purple);">
+                  <i class="bi bi-chat-square-quote-fill analogy-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div>
+                    <div class="analogy-title" style="color:var(--cyber-purple-neon);">Cuidado con lo que Publicas</div>
+                    <div class="analogy-text">No reveles tu dirección exacta, número telefónico ni datos financieros en redes sociales o foros; los estafadores los usan para Phishing dirigido.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Columna Derecha: Contraseñas, Gestores y 2FA -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-key-fill"></i> Contraseñas, Gestores y 2FA</span>
+                    <span class="feat-pill feat-pill-cyan">DOBLE CAPA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Claves Fuertes y Únicas:</strong> Combina mayúsculas, minúsculas, números y símbolos distintos en cada sitio para evitar efecto dominó si un portal cae.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Gestor de Contraseñas (Pros y Riesgo):</strong> Genera y guarda claves complejas bajo 1 <em>contraseña maestra</em>; cuidado: si la pierdes o te la roban, pierdes acceso a todas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Autenticación de Dos Factores (2FA):</strong> Exige una segunda verificación (código o biometría) además de la contraseña, bloqueando intrusos aunque filtren tu clave.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text"><strong>Restablecimiento Inmediato:</strong> Ante actividad inusual, cambia la clave al instante por una totalmente distinta a la anterior.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-patch-check-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Pregunta Clave Cisco 2.0.2</div>
+                    <div class="exam-callout-text">Combinación ganadora: <strong>Software actualizado + Contraseñas fuertes únicas + Autenticación 2FA</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">2.0.1 Fundamentos</span>
+              <span class="footer-chip">Gestores &amp; 2FA</span>
+            </div>
+            <div class="footer-meta">Siguiente: 2.0 PC vs Móviles &amp; SIM Swapping &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 04: 2.0 PC VS MÓVILES, WINDOWS HELLO Y SIM SWAPPING -->
+        <div class="slide-view" data-index="3" data-title="2.0 Blindaje // PC vs Móviles, PIN Hardware y SIM Swapping" data-desc="Diferencias defensivas entre computadoras y smartphones, Windows Hello y amenazas móviles" data-notes="Basado en Transcript 26 y PNGs 2.0.4. Explicar por qué el móvil depende de tiendas oficiales y seguridad integrada vs antivirus/firewall de PC, cómo funciona el PIN local de Windows Hello y el peligro del SIM Swapping.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 2.0 // ARQUITECTURA DE ENDPOINTS
+              </span>
+              <span class="header-context">Computadoras vs. Teléfonos Inteligentes y Amenazas Físicas/Móviles</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-phone-fill"></i> CISCO 2.0.3 – 2.0.4</span>
+              <span class="slide-index-pill">04 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Col 1: Computadoras -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-laptop-fill"></i> Computadoras (PC / Mac)</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">A</span>
+                      <div class="process-text"><strong>Antivirus y Cortafuegos:</strong> Analizan archivos locales y monitorean todo el tráfico de red entrante/saliente.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">B</span>
+                      <div class="process-text"><strong>Seguridad de Windows:</strong> Ejecuta periódicamente el <em>Análisis Completo</em> para inspeccionar todo el disco duro.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">C</span>
+                      <div class="process-text"><strong>PIN de Windows Hello:</strong> A diferencia de una clave web, está vinculado al hardware del equipo (menos vulnerable a ataques remotos).</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-lock-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Hábito Obligatorio</div>
+                    <div class="exam-callout-text">Bloquea tu equipo (<code>Win + L</code>) siempre que te levantes, aunque sea por un segundo.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 2: Móviles -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-phone-vibrate-fill"></i> Dispositivos Móviles</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">A</span>
+                      <div class="process-text"><strong>Defensa Integrada:</strong> iOS y Android usan sandboxing nativo más que antivirus de terceros, respaldados por la red del operador.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">B</span>
+                      <div class="process-text"><strong>Tiendas Verificadas:</strong> Google Play y App Store auditan apps para filtrar malware antes de la descarga.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">C</span>
+                      <div class="process-text"><strong>Bloqueo Fuerte y Remoto:</strong> Activa biometría/PIN y <em>"Encontrar mi dispositivo"</em> para ubicar o borrar remotamente en caso de robo.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-geo-alt-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cisco-cyan);">Mayor Portabilidad</div>
+                    <div class="exam-callout-text">Por su alto riesgo de extravío o hurto físico, el bloqueo biométrico y borrado remoto son vitales.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 3: SIM Swapping -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-sim-fill"></i> Amenaza: SIM Swapping</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    El <strong>Intercambio de SIM</strong> ocurre cuando un delincuente engaña a tu operador móvil para transferir tu número telefónico a otro chip en su poder.
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">!</span>
+                      <div class="process-text"><strong>Impacto Directo:</strong> Intercepta tus llamadas y códigos 2FA enviados por SMS para vaciar cuentas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-shield-check"></i></span>
+                      <div class="process-text"><strong>Defensa Real:</strong> Migra el 2FA desde SMS hacia apps autenticadoras (TOTP) y solicita PIN de portabilidad a tu operadora.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:22px;"><i class="bi bi-exclamation-triangle-fill"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">
+                    <strong>Alerta Roja:</strong> Si tu celular pierde señal súbitamente ("Sin Servicio"), llama de inmediato a tu operadora.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Windows Hello &amp; Análisis</span>
+              <span class="footer-chip">SIM Swapping</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 1 // Simulador Táctico de Dispositivos &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 05: DINÁMICA 1 // SIMULADOR TÁCTICO DE ENDPOINTS -->
+        <div class="slide-view" data-index="4" data-title="Dinámica 1 // Simulador Táctico de Dispositivos" data-desc="Resolución interactiva en vivo de 4 incidentes de hardware, SIM Swapping y credenciales" data-notes="Dinámica participativa 1: Pedir al chat que elija qué caso analizar primero (1 a 4) y qué medida aplicarían antes de hacer clic para mostrar el protocolo oficial Cisco en el panel derecho.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO 1 // SIMULADOR DE ENDPOINTS
+              </span>
+              <span class="header-context">Laboratorio Táctico: Diagnóstico y Respuesta en Dispositivos Personales</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-joystick"></i> INTERACTIVO</span>
+              <span class="slide-index-pill">05 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector Izquierdo -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-cursor-fill"></i> Selecciona un Incidente</span>
+                    <span class="feat-pill feat-pill-purple">4 CASOS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                    <button class="endpoint-case-btn is-active-case" onclick="selectEndpointCase(this, 'case1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-phone-fill" style="color:var(--cyber-purple-neon);"></i> Caso 1: Smartphone Extraviado</span>
+                        <span class="feat-pill feat-pill-purple" style="font-size:11.5px; padding:3px 8px;">FÍSICO</span>
+                      </div>
+                      <div class="case-btn-desc">Olvido en transporte público con sesiones abiertas.</div>
+                    </button>
+
+                    <button class="endpoint-case-btn" onclick="selectEndpointCase(this, 'case2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-laptop" style="color:var(--warn-amber);"></i> Caso 2: Laptop sin Parches</span>
+                        <span class="feat-pill feat-pill-amber" style="font-size:11.5px; padding:3px 8px;">ZERO-DAY</span>
+                      </div>
+                      <div class="case-btn-desc">Actualizaciones pospuestas durante meses y sin análisis.</div>
+                    </button>
+
+                    <button class="endpoint-case-btn" onclick="selectEndpointCase(this, 'case3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-sim-fill" style="color:var(--pop-coral);"></i> Caso 3: Ataque SIM Swapping</span>
+                        <span class="feat-pill feat-pill-coral" style="font-size:11.5px; padding:3px 8px;">CRÍTICO</span>
+                      </div>
+                      <div class="case-btn-desc">El teléfono marca "Sin Servicio" y llegan alertas bancarias.</div>
+                    </button>
+
+                    <button class="endpoint-case-btn" onclick="selectEndpointCase(this, 'case4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-key-fill" style="color:var(--cisco-cyan);"></i> Caso 4: Clave Repetida en .TXT</span>
+                        <span class="feat-pill feat-pill-cyan" style="font-size:11.5px; padding:3px 8px;">HIGIENE</span>
+                      </div>
+                      <div class="case-btn-desc">Misma contraseña en 15 sitios anotada en el escritorio.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-chat-dots-fill exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Debate en Chat:</strong> ¿Qué harías primero en el Caso 3 si pierdes señal de golpe?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Diagnóstico Derecho -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <span class="card-label label-cyan" style="margin-bottom:0;"><i class="bi bi-terminal-fill"></i> Consola de Respuesta Cisco</span>
+                    <span class="feat-pill feat-pill-purple" id="endpointDetailsBadge">INCIDENTE CRÍTICO // HARDWARE</span>
+                  </div>
+
+                  <h3 id="endpointDetailsTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-top:12px;">
+                    Caso 1: Smartphone Extraviado en Transporte Público
+                  </h3>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(239,68,68,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:12px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:#F87171; text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-exclamation-octagon-fill"></i> Vector de Riesgo Detectado:
+                    </div>
+                    <div id="endpointDetailsThreat" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      Pérdida física del dispositivo sin cifrado de hardware ni bloqueo robusto. Riesgo inminente de acceso a cuentas de correo institucional, tokens bancarios y archivos privados.
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:var(--pop-mint); text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-shield-fill-check"></i> Protocolo de Acción Recomendado:
+                    </div>
+                    <div id="endpointDetailsProtocol" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      1. Activar inmediatamente el bloqueo y borrado remoto mediante "Encontrar mi dispositivo" (Google Find Hub / Apple iCloud) desde otro equipo.<br>
+                      2. Notificar de urgencia a la operadora telefónica para bloquear el código IMEI y suspender la tarjeta SIM.<br>
+                      3. Revocar sesiones activas y cambiar contraseñas maestras desde una PC segura.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-lightbulb-fill"></i></span>
+                  <div class="stat-desc" id="endpointDetailsRule" style="font-size:14.5px;">
+                    El 80% de las brechas por pérdida de dispositivos se mitigan si el terminal cuenta con cifrado nativo, PIN alfanumérico fuerte y borrado remoto preventivo.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 1 // Endpoints</span>
+              <span class="footer-chip">Respuesta a Incidentes</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint 2.0 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 06: CHECKPOINT 1 // AUTOEVALUACIÓN 2.0 -->
+        <div class="slide-view" data-index="5" data-title="Checkpoint Cisco // Autoevaluación en Vivo 2.0" data-desc="Preguntas oficiales Cisco NetAcad 2.0 sobre prácticas combinadas y seguridad móvil" data-notes="Dar 30 segundos por pregunta para que el chat vote A, B, C o D. Hacer clic en la opción más votada para revelar la explicación oficial de Cisco.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 2.0
+              </span>
+              <span class="header-context">Preguntas Oficiales Cisco NetAcad • Vota en el Chat</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">06 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 2.0.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:10px; line-height:1.35;">
+                    ¿Qué combinación de prácticas puede mejorar significativamente su seguridad digital cotidiana?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Las redes Wi-Fi públicas sin cifrado y las claves simples son la puerta de entrada preferida de los atacantes.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Usar Wi-Fi público abierto y contraseñas fáciles de recordar</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q1-exp', '¡Exacto! Cisco 2.0.2 establece que actualizar parches de software, crear contraseñas fuertes únicas y activar 2FA forman la tríada básica de protección.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Actualizar el software de seguridad, usar contraseñas fuertes y habilitar 2FA</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Reutilizar contraseñas provoca que una sola filtración comprometa todas tus demás cuentas.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Ignorar las actualizaciones de software y reutilizar sus contraseñas</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q1-exp', 'Incorrecto. Publicar datos sensibles facilita el robo de identidad y desactivar el 2FA elimina tu segunda barrera.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Publicar información sensible en línea y deshabilitar el 2FA</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q1-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en una opción para validar con el criterio oficial Cisco NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 2.0.3</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:17.5px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿En qué se diferencia la defensa de un smartphone frente a una PC y qué amenaza propia enfrenta?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. Los teléfonos móviles jamás son inmunes al malware ni a los ataques de ingeniería social.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Son inmunes al robo de datos por usar pantallas táctiles</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. El Windows Hello PIN está diseñado para computadoras locales, no reemplaza la seguridad del chip SIM.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Dependen solo de cortafuegos manuales sin tiendas seguras</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q2-exp', '¡Correcto! iOS y Android dependen de seguridad integrada, revisión en tiendas oficiales y sufren SIM Swapping y robo físico.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Usan defensa integrada y tiendas auditadas; sufren SIM Swapping y hurto</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q2-exp', 'Incorrecto. Todos los dispositivos conectados requieren actualizaciones constantes de seguridad.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Las PCs no requieren parches y los móviles no tienen bloqueo</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q2-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona la respuesta correcta tras escuchar las votaciones del aula.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 2.0</span>
+              <span class="footer-chip">Participación en Vivo</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 2.1 // Privacidad Digital y Vigilancia &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 07: 2.1 PRIVACIDAD DIGITAL Y VIGILANCIA -->
+        <div class="slide-view" data-index="6" data-title="2.1 Privacidad // Vigilancia Gubernamental, Corporativa y Cifrado" data-desc="Equilibrio entre seguridad y privacidad, efecto disuasorio en la democracia y herramientas cifradas" data-notes="Basado en Transcript 28 (2.1.1-2.1.2). Explicar el dilema entre vigilancia masiva (gobiernos y corporaciones que monetizan datos) y democracia: cuando las personas sienten que todo se registra aparece un efecto disuasorio sobre la libertad de expresión.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 2.1 // DETRÁS DE LA PANTALLA
+              </span>
+              <span class="header-context">Vigilancia Masiva, Derechos Ciudadanos y Comunicaciones Cifradas</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-eye-slash-fill"></i> CISCO 2.1.1 – 2.1.2</span>
+              <span class="slide-index-pill">07 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Col 1: Quién observa -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-incognito"></i> ¿Quién Recopila tus Datos?</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Gobiernos y Seguridad:</strong> Incluso en democracias, el acceso masivo a datos puede usarse para investigar delitos, pero también para vigilar disidentes o moldear opinión pública.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Corporaciones Digitales:</strong> Registran qué buscas, qué compras y adónde vas para crear perfiles publicitarios y venderlos a terceros.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-currency-exchange"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">Hoy tus datos personales son considerados <strong>"la nueva moneda"</strong> de la economía digital.</div>
+                </div>
+              </div>
+
+              <!-- Col 2: Impacto Social y Ético -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-megaphone-fill"></i> Impacto en la Democracia</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    La concentración sin restricciones de datos personales genera riesgos éticos profundos:
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">!</span>
+                      <div class="process-text"><strong>Efecto Disuasorio (Chilling Effect):</strong> Las personas temen expresar opiniones críticas o participar en activismo al saberse observadas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">!</span>
+                      <div class="process-text"><strong>Manipulación Política:</strong> El uso de perfiles de datos permite segmentar mensajes para influir en procesos electorales e integridad democrática.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-balance-scale exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">El reto clave es el equilibrio sano entre <strong>seguridad pública, comodidad y privacidad individual</strong>.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 3: Escudo Criptográfico -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-shield-lock-fill"></i> Defensa Proactiva</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-chat-lock-fill"></i></span>
+                      <div class="process-text"><strong>Cifrado de Extremo a Extremo (E2EE):</strong> Garantiza que únicamente tú y el destinatario puedan leer los mensajes enviados.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-hdd-rack-fill"></i></span>
+                      <div class="process-text"><strong>Red Privada Virtual (VPN):</strong> Oculta tu dirección IP real y cifra tu conexión a Internet ante terceros e intermediarios.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-sliders"></i></span>
+                      <div class="process-text"><strong>Control de Huella:</strong> Revisa ajustes de privacidad en redes sociales y sé selectivo al compartir ubicación o rutinas.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-check2-all exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Ser alfabetizado digitalmente es exigir transparencia sobre quién recoge tus datos y para qué los usa.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">2.1 Privacidad y Vigilancia</span>
+              <span class="footer-chip">Cifrado E2EE &amp; VPN</span>
+            </div>
+            <div class="footer-meta">Siguiente: 2.1.3 La Web Oscura (Dark Web) y Usted &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 08: 2.1.3 LA WEB OSCURA (DARK WEB) Y USTED -->
+        <div class="slide-view" data-index="7" data-title="2.1.3 La Dark Web // Mitos, Filtraciones y Protección" data-desc="Desmintiendo concepciones erróneas sobre la web oscura y su impacto en usuarios comunes" data-notes="Basado en PNGs 2.1.3 (c7.png, c8.png, c10.png). Crucial para el Quiz 2.1.4! Explicar los dos grandes mitos: 1) 'No la uso, no me afecta' (falso, allí se venden tus datos filtrados de empresas legítimas) y 2) 'Es solo para criminales' (la piratería y anuncios emergentes también redirigen allí).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 2.1.3 // ALFABETIZACIÓN DE RIESGOS
+              </span>
+              <span class="header-context">La Web Oscura (Dark Web) y Usted: Lo que Todo Usuario Debe Saber</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-globe2"></i> CISCO 2.1.3</span>
+              <span class="slide-index-pill">08 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Las 2 Concepciones Erróneas Oficiales -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-x-octagon-fill"></i> Dos Grandes Mitos sobre la Dark Web</span>
+                    <span class="feat-pill feat-pill-coral">REALIDAD VS MITO</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:13px 16px; margin-top:12px;">
+                    <div style="font-family:var(--font-display); font-size:16.5px; font-weight:800; color:var(--warn-amber);">
+                      <i class="bi bi-chat-left-quote-fill"></i> Mito 1: "Yo no accedo a la dark web, así que no me afecta"
+                    </div>
+                    <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                      <strong>Realidad Cisco:</strong> La dark web funciona como mercado donde se comercializan datos robados en filtraciones de empresas legítimas (correos, claves y tarjetas). Aunque jamás entres allí, tu información puede terminar vendiéndose si un sitio que usas sufre una brecha.
+                    </p>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-cyan); border-radius:var(--radius-sm); padding:13px 16px; margin-top:12px;">
+                    <div style="font-family:var(--font-display); font-size:16.5px; font-weight:800; color:var(--cisco-cyan);">
+                      <i class="bi bi-chat-left-quote-fill"></i> Mito 2: "La dark web es solo para criminales"
+                    </div>
+                    <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                      <strong>Realidad Cisco:</strong> No es únicamente un espacio para criminales; además, conductas comunes de riesgo como visitar <strong>sitios de piratería</strong> y pulsar anuncios emergentes pueden descargar malware o redirigir inadvertidamente a mercados ocultos.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-patch-question-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Clave de Examen 2.1.4</div>
+                    <div class="exam-callout-text">Mucha gente cree falsamente que, <strong>como no usa la dark web, no le afecta</strong> — generando una peligrosa complacencia.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: El Papel del Usuario en la Protección de Datos -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-person-check-fill"></i> El Papel del Usuario: 4 Barreras</span>
+                    <span class="feat-pill feat-pill-cyan">PREVENCIÓN</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.42; margin-top:6px;">
+                    Saber usar tecnología no equivale a estar alfabetizado digitalmente. Aplica estas <strong>4 prácticas oficiales Cisco</strong> para evitar que tus datos lleguen a mercados ilícitos:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Gestión de Contraseñas:</strong> Claves seguras y <em>únicas</em> por cuenta; si repites una clave, una sola filtración abre todas tus demás cuentas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Autenticación de Dos Factores (2FA):</strong> Actívala en todas tus cuentas compatibles como segunda barrera ante claves filtradas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Monitoreo Regular:</strong> Revisa estados financieros y movimientos bancarios para detectar compras no autorizadas de forma temprana.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text"><strong>Configuración de Privacidad &amp; Cero Piratería:</strong> Actualiza permisos en redes sociales y evita portales ilegales de descarga.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-mint">
+                  <span class="stat-num" style="color:var(--pop-mint); font-size:22px;"><i class="bi bi-shield-fill-plus"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;">
+                    <strong>Proactividad:</strong> Comprender la relación entre brechas de datos y dark web te da el control antes de ser víctima.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">2.1.3 Web Oscura</span>
+              <span class="footer-chip">Filtraciones &amp; Defensa</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 2.2 // Fortaleza Doméstica y Firmware del Router &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 09: 2.2 FORTALEZA DOMÉSTICA Y ACTUALIZACIÓN DE ROUTER -->
+        <div class="slide-view" data-index="8" data-title="2.2 Redes Seguras // Router Wi-Fi WPA3 y Flasheo de Firmware" data-desc="Cifrado inalámbrico WPA2/WPA3 vs WEP, red de invitados y tutorial paso a paso para actualizar firmware" data-notes="Basado en Transcript 27 y Transcript 29 (2.2.1). Explicar por qué WEP es obsoleto, por qué usar WPA3 o WPA2, aislar IoT en Red de Invitados y repasar el tutorial oficial de actualización de firmware sin apagar el router.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 2.2 // RED DOMÉSTICA SEGURA
+              </span>
+              <span class="header-context">Puerta de Enlace al Hogar: Cifrado WPA3, Segmentación y Firmware</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-router-fill"></i> CISCO 2.2.1</span>
+              <span class="slide-index-pill">09 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Bastionado del Router -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-wifi"></i> Tu Red Doméstica es tu Fortaleza</span>
+                    <span class="feat-pill feat-pill-cyan">PERÍMETRO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Cifrado WPA3 o WPA2 (Nunca WEP):</strong> <strong>WEP</strong> está obsoleto y se descifra en minutos. Exige <strong>WPA2</strong> (estándar sólido) o el más reciente <strong>WPA3</strong>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Cambiar Clave Predeterminada del Router:</strong> Contraseñas de fábrica como <code>admin / admin</code> son conocidas públicamente por bots e intrusos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Desactivar Administración Remota:</strong> Bloquea el acceso de gestión desde Internet (WAN) salvo necesidad técnica estricta.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text"><strong>Red de Invitados Separada:</strong> Aísla visitas, Smart TVs y cámaras IoT para impedir saltos laterales hacia tus equipos principales.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:20px;">WPA3</span>
+                  <div class="stat-desc" style="font-size:14.5px;">Estándar inalámbrico moderno que dificulta enormemente los ataques de diccionario y acceso no autorizado.</div>
+                </div>
+              </div>
+
+              <!-- Derecha: Tutorial Oficial Actualización de Firmware -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-cpu-fill"></i> Firmware del Router</span>
+                    <span class="feat-pill feat-pill-purple">5 PASOS CISCO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:6px;">
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">01</span>
+                      <div class="process-text"><strong>Ingresar al Panel:</strong> Abre el navegador y entra a <code>192.168.0.1</code> o <code>192.168.1.1</code>.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">02</span>
+                      <div class="process-text"><strong>Ver Modelo y Versión:</strong> En <em>Administración / Mantenimiento</em>, anota la versión actual.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">03</span>
+                      <div class="process-text"><strong>Web del Fabricante:</strong> Busca tu modelo (TP-Link, Netgear, Linksys) y verifica actualizaciones.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">04</span>
+                      <div class="process-text"><strong>Descargar y Descomprimir:</strong> Baja el <code>.zip</code> oficial, extrae la imagen y súbela al router.</div>
+                    </div>
+                    <div class="process-step" style="padding:8px 13px;">
+                      <span class="process-num num-purple">05</span>
+                      <div class="process-text"><strong>Flashear Sin Apagar:</strong> Ejecuta sin cortar energía, espera el reinicio y verifica.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-patch-check-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Pregunta Oficial 2.2.2</div>
+                    <div class="exam-callout-text">¿Por qué actualizar el firmware del router? <strong>Para mejorar la seguridad (parchar fallos) y el rendimiento</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">2.2 Seguridad de Red</span>
+              <span class="footer-chip">Firmware &amp; WPA3</span>
+            </div>
+            <div class="footer-meta">Siguiente: 2.2 Wi-Fi Público, VPN y Computadoras Compartidas &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 10: 2.2 WI-FI PÚBLICO, VPN Y COMPUTADORAS COMPARTIDAS -->
+        <div class="slide-view" data-index="9" data-title="2.2 Trampas // Wi-Fi Público, VPN y Keyloggers" data-desc="Riesgos en cafeterías, aeropuertos, bibliotecas y cibercafés según Cisco NetAcad" data-notes="Basado en Transcript 27 y PNGs 2.2.3. Destacar los 4 consejos en Wi-Fi público (verificar SSID legítimo contra puntos gemelos falsos, HTTPS, firewall activo, desactivar compartición de archivos + VPN) y el peligro de keyloggers en PCs públicas.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                MÓDULO 2.2 // CONEXIONES FUERA DE CASA
+              </span>
+              <span class="header-context">Redes Wi-Fi Públicas, Túneles VPN y Equipos Compartidos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-broadcast-pin"></i> CISCO 2.2.1 – 2.2.3</span>
+              <span class="slide-index-pill">10 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Wi-Fi Público + 4 Reglas -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-cup-hot-fill"></i> Wi-Fi Público (Cafés, Hoteles, Aeropuertos)</span>
+                    <span class="feat-pill feat-pill-amber">ALTO RIESGO</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.38; margin-top:4px;">
+                    Evita banca en línea en redes abiertas y aplica estas <strong>4 reglas de defensa</strong>:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:8px; gap:8px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text"><strong>Verifica la Red Legítima:</strong> Los atacantes crean redes gemelas falsas (<em>Evil Twin</em>) para interceptar tráfico.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text"><strong>Usa siempre una VPN:</strong> Cifra tu tráfico de extremo a extremo e impide lecturas en tránsito.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Exige HTTPS y Firewall/Antivirus:</strong> Comprueba el cifrado HTTPS en el navegador y verifica que tu cortafuegos esté activo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">4</span>
+                      <div class="process-text"><strong>Desactiva Compartición de Archivos:</strong> Bloquea el acceso de otros usuarios conectados a la misma red hacia tus carpetas compartidas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-amber">
+                  <span class="stat-num" style="color:var(--warn-amber); font-size:20px;">VPN</span>
+                  <div class="stat-desc" style="font-size:14.5px;">Túnel criptográfico esencial cada vez que te conectes a una red fuera de tu control.</div>
+                </div>
+              </div>
+
+              <!-- Derecha: Computadoras Públicas (Bibliotecas/Cibercafés) + Cultura de Capacitación -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-keyboard-fill"></i> Computadoras Públicas y Keyloggers</span>
+                    <span class="feat-pill feat-pill-coral">CERO CONFIANZA</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.42; margin-top:6px;">
+                    En bibliotecas o cibercafés existen riesgos adicionales invisibles:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-bug"></i></span>
+                      <div class="process-text"><strong>Registradores de Teclas (Keyloggers):</strong> Software oculto o adaptadores físicos USB que graban cada tecla pulsada para robar contraseñas y tarjetas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-eraser-fill"></i></span>
+                      <div class="process-text"><strong>Protocolo si Debes Usarlas:</strong> Evita cuentas bancarias o personales; si es urgente, usa modo privado, <strong>cierra sesión y borra historial y caché</strong> al salir.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-mortarboard-fill"></i></span>
+                      <div class="process-text"><strong>Capacitación Continua (Cisco 2.2.3):</strong> Nunca subestimes tu conocimiento actual; asistir a talleres de ciberseguridad protege datos personales y laborales frente a amenazas nuevas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-shield-exclamation exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--cyber-purple-neon);">Regla de Oro en Equipos Ajenos</div>
+                    <div class="exam-callout-text">Jamás pulses <em>"Recordar contraseña"</em> ni dejes tu USB personal conectado en computadoras compartidas.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Wi-Fi Público &amp; VPN</span>
+              <span class="footer-chip">Keyloggers</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 2 // Auditor Táctico de Redes &amp; Routers &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 11: DINÁMICA 2 // AUDITOR DE REDES Y ROUTERS -->
+        <div class="slide-view" data-index="10" data-title="Dinámica 2 // Auditor Táctico de Redes &amp; Routers" data-desc="Auditoría interactiva de 4 escenarios críticos de red doméstica, Wi-Fi público, cibercafé e IoT" data-notes="Dinámica participativa 2: Analizar los 4 escenarios de red interactivamente. Preguntar al grupo qué medida de bastionado aplicarían antes de revelar el diagnóstico técnico.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                DINÁMICA EN VIVO 2 // AUDITORÍA DE REDES
+              </span>
+              <span class="header-context">Simulador Perimetral: Routers, Wi-Fi Abierto, Keyloggers e IoT</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-joystick"></i> INTERACTIVO</span>
+              <span class="slide-index-pill">11 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector Izquierdo -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-diagram-3-fill"></i> Selecciona un Escenario</span>
+                    <span class="feat-pill feat-pill-cyan">4 ESCENARIOS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                    <button class="network-case-btn is-active-case" onclick="selectNetworkAuditCase(this, 'net1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-router-fill" style="color:var(--cyber-purple-neon);"></i> Escenario 1: Router de Fábrica</span>
+                        <span class="feat-pill feat-pill-purple" style="font-size:11.5px; padding:3px 8px;">PERÍMETRO</span>
+                      </div>
+                      <div class="case-btn-desc">Panel con clave "admin" y cifrado antiguo.</div>
+                    </button>
+
+                    <button class="network-case-btn" onclick="selectNetworkAuditCase(this, 'net2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-wifi-off" style="color:var(--warn-amber);"></i> Escenario 2: Wi-Fi de Cafetería</span>
+                        <span class="feat-pill feat-pill-amber" style="font-size:11.5px; padding:3px 8px;">EVIL TWIN</span>
+                      </div>
+                      <div class="case-btn-desc">Conexión abierta sin contraseña para revisar el banco.</div>
+                    </button>
+
+                    <button class="network-case-btn" onclick="selectNetworkAuditCase(this, 'net3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-pc-display-horizontal" style="color:var(--pop-coral);"></i> Escenario 3: PC de Cibercafé</span>
+                        <span class="feat-pill feat-pill-coral" style="font-size:11.5px; padding:3px 8px;">KEYLOGGER</span>
+                      </div>
+                      <div class="case-btn-desc">Terminal compartida para imprimir un documento urgente.</div>
+                    </button>
+
+                    <button class="network-case-btn" onclick="selectNetworkAuditCase(this, 'net4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-camera-video-fill" style="color:var(--cisco-cyan);"></i> Escenario 4: Cámaras IoT en LAN</span>
+                        <span class="feat-pill feat-pill-cyan" style="font-size:11.5px; padding:3px 8px;">SEGMENTAR</span>
+                      </div>
+                      <div class="case-btn-desc">Focos y TVs inteligentes en la red de trabajo.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-chat-square-text-fill exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Pregunta al Aula:</strong> ¿Cuál es la IP más común para administrar tu router casero?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Diagnóstico Derecho -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <span class="card-label label-purple" style="margin-bottom:0;"><i class="bi bi-shield-shaded"></i> Auditoría Técnica de Red</span>
+                    <span class="feat-pill feat-pill-purple" id="networkAuditBadge">ACCESO PERIMETRAL VULNERABLE</span>
+                  </div>
+
+                  <h3 id="networkAuditTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-top:12px;">
+                    Escenario 1: Router Wi-Fi Hogareño con Credenciales de Fábrica
+                  </h3>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(239,68,68,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:12px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:#F87171; text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-bug-fill"></i> Vulnerabilidad Expuesta:
+                    </div>
+                    <div id="networkAuditThreat" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      Módem/Router con contraseña administrativa por defecto ("admin/admin" o "1234") y cifrado WEP o WPA obsoleto, expuesto a intrusiones de red y secuestro de DNS.
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:var(--pop-mint); text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-wrench-adjustable-circle-fill"></i> Medidas de Bastionado Cisco:
+                    </div>
+                    <div id="networkAuditProtocol" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      1. Acceder a la IP de puerta de enlace (192.168.1.1 o 192.168.0.1) desde el navegador.<br>
+                      2. Cambiar inmediatamente la contraseña maestra del panel de administración del router.<br>
+                      3. Configurar cifrado WPA3-Personal (o WPA2-AES como estándar mínimo) con clave robusta.<br>
+                      4. Desactivar WPS y bloquear la gestión remota desde la interfaz WAN.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-hdd-network"></i></span>
+                  <div class="stat-desc" id="networkAuditRule" style="font-size:14.5px;">
+                    El router es la fortaleza perimetral de tu hogar. Quien controla el router puede interceptar o redirigir todo el tráfico de todos los dispositivos de la casa.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 2 // Redes</span>
+              <span class="footer-chip">WPA3 &amp; Segmentación</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint 2.1 &amp; 2.2 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 12: CHECKPOINT 2 // AUTOEVALUACIÓN 2.1 & 2.2 -->
+        <div class="slide-view" data-index="11" data-title="Checkpoint Cisco // Autoevaluación en Vivo 2.1 &amp; 2.2" data-desc="Preguntas oficiales NetAcad sobre Dark Web (2.1.4) y Firmware de Router (2.2.2)" data-notes="Validar comprensión de los submódulos 2.1 (Dark Web) y 2.2 (Firmware de Router) con preguntas textuales tomadas de las capturas del curso oficial.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 2.1 &amp; 2.2
+              </span>
+              <span class="header-context">Preguntas Oficiales Cisco NetAcad • Participa en el Chat</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">12 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 3 (2.1.4) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 2.1.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:10px; line-height:1.35;">
+                    ¿Qué concepción errónea piensa mucha gente sobre la dark web (web oscura)?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. Los usuarios cotidianos no ingresan allí para vender sus propios datos; son víctimas de filtraciones.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Piensan que pueden usarla para vender sus datos</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. La complacencia surge precisamente por creer que está desconectada de su vida diaria.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Piensan que se volverán complacientes si la usan</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q3-exp', 'Incorrecto. Aunque es otro mito común mencionado, el riesgo principal explicado en la primera concepción errónea es creer que no afecta al usuario promedio.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Piensan que sirve para proteger sus contraseñas bancarias</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q3-exp', '¡Correcto! Cisco 2.1.3-2.1.4 señala que mucha gente cree que como no accede activamente a la dark web, no le afecta, ignorando que sus datos filtrados pueden venderse allí.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Piensan que, como no la usan activamente, no les afecta</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q3-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en la opción elegida por el grupo para validar.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 4 (2.2.2) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 2.2.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:10px; line-height:1.35;">
+                    ¿Por qué es importante mantener actualizado el firmware de su router doméstico?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q4-exp', '¡Exacto! Según Cisco 2.2.2, los fabricantes publican actualizaciones de firmware regularmente para corregir vulnerabilidades (seguridad) y optimizar la estabilidad/funciones (rendimiento).')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Para mejorar la seguridad y el rendimiento de la red</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. La prevención de pérdida de datos corresponde a copias de seguridad, no al firmware del router.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Para prevenir la pérdida de archivos locales y tiempo de inactividad</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. Aunque la estabilidad mejora, la razón fundamental de Cisco combina seguridad contra ataques y rendimiento.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Únicamente para cambiar el diseño visual del panel web</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q4-exp', 'Incorrecto. El firmware no reduce el consumo eléctrico ni el plan de ancho de banda contratado con tu ISP.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Para ahorrar electricidad y ancho de banda del proveedor</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q4-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona una opción para ver la justificación oficial NetAcad.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 2.1 &amp; 2.2</span>
+              <span class="footer-chip">Dark Web &amp; Firmware</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 2.3 // Resolución de Problemas del Módulo 2 &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 13: 2.3 RESOLUCIÓN DE PROBLEMAS DEL MÓDULO 2 -->
+        <div class="slide-view" data-index="12" data-title="2.3 Triage // Casos Oficiales de Resolución Cisco" data-desc="Solución oficial a los 2 problemas críticos del Módulo 2.3: móvil extraviado y laptop en cafetería" data-notes="Basado en PNGs 2.3 (c1.png a c9.png). Cerrar el Módulo 2 con los dos casos prácticos oficiales de resolución de problemas y dar la transición clara hacia el Módulo 3 (Verifique antes de compartir).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                MÓDULO 2.3 // CIERRE Y RESOLUCIÓN DE PROBLEMAS
+              </span>
+              <span class="header-context">Protocolo Oficial ante Dos Emergencias Cotidianas de Seguridad</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-bandaid-fill"></i> CISCO 2.3</span>
+              <span class="slide-index-pill">13 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Problema 1 -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-phone-fill"></i> Problema 1 (Caso Oficial 2.3)</span>
+                    <span class="feat-pill feat-pill-coral">MÓVIL PERDIDO</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-purple); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <strong style="color:#FFFFFF; font-size:15.5px;">Escenario:</strong>
+                    <span style="font-size:15px; color:var(--text-body);"> Se extravía un dispositivo móvil que contiene datos personales y laborales confidenciales.</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Rastreo y Bloqueo Remoto:</strong> Usa de inmediato <em>Find My / Encontrar mi dispositivo</em> para bloquear la pantalla o ejecutar borrado remoto (Remote Wipe).</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Notificar a TI y Operadora:</strong> Avisa al departamento técnico de tu empresa/universidad y suspende la línea SIM e IMEI.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text"><strong>Rotación de Credenciales:</strong> Cambia las contraseñas de correo, banca y aplicaciones asociadas y revoca sesiones activas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-check-circle-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Prevención:</strong> Cifrado nativo + PIN robusto + copias de respaldo externas antes de perder el teléfono.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Problema 2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-cup-hot-fill"></i> Problema 2 (Caso Oficial 2.3)</span>
+                    <span class="feat-pill feat-pill-amber">WI-FI ABIERTA</span>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-cyan); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <strong style="color:#FFFFFF; font-size:15.5px;">Escenario:</strong>
+                    <span style="font-size:15px; color:var(--text-body);"> Un empleado necesita conectar su laptop corporativa a una red Wi-Fi abierta en una cafetería.</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Conectar VPN Corporativa/Personal:</strong> Activa la VPN antes de abrir portales de trabajo o correos confidenciales para cifrar el túnel.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Confirmar Red Real y HTTPS:</strong> Pregunta al personal el nombre exacto del Wi-Fi y opera solo en sitios HTTPS con firewall activado.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Desactivar Compartición y Auto-Conexión:</strong> Apaga el uso compartido de archivos y olvida la red pública al terminar.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-mint">
+                  <span class="stat-num" style="color:var(--pop-mint); font-size:20px;">50%</span>
+                  <div class="stat-desc" style="font-size:14.5px;"><strong>¡Módulo 2 Completado!</strong> Iniciamos la segunda mitad: <strong>Módulo 3 — Siempre verifique antes de compartir</strong>.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Fin Módulo 2</span>
+              <span class="footer-chip">Inicio Módulo 3</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 3.0 // Cookies, Web Beacons y Fingerprinting &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 14: 3.0 RASTREO WEB: COOKIES, BEACONS Y FINGERPRINTING -->
+        <div class="slide-view" data-index="13" data-title="3.0 Rastreo Web // Cookies, Web Beacons y Fingerprinting" data-desc="Los 3 métodos técnicos de seguimiento de navegación y construcción de perfiles" data-notes="Basado en Transcript 30 (3.0.1). Explicar de forma clara y cotidiana las 3 tecnologías de rastreo: Cookies (archivos de texto), Web Beacons (píxeles invisibles 1x1 en correos/webs) y Fingerprinting (huella única de hardware/pantalla/fuentes imposible de borrar como una cookie).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 3.0 // CON CALMA Y FIRMEZA
+              </span>
+              <span class="header-context">Anatomía del Seguimiento Digital: Cookies, Píxeles Espía y Huella de Hardware</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-radar"></i> CISCO 3.0.1</span>
+              <span class="slide-index-pill">14 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Vector 1: Cookies -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-cookie"></i> 1. Cookies Web</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    Pequeños archivos almacenados en tu dispositivo por los sitios que visitas.
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-check"></i></span>
+                      <div class="process-text"><strong>Cookies Propias:</strong> Útiles para recordar tu idioma, sesión iniciada o carrito de compras.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">!</span>
+                      <div class="process-text"><strong>Cookies de Terceros:</strong> Insertadas por redes publicitarias para seguirte de sitio en sitio y crear tu perfil comercial.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-sliders exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Control:</strong> Se pueden bloquear desde ajustes del navegador y eliminar periódicamente.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vector 2: Web Beacons -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-eye-fill"></i> 2. Web Beacons (Balizas)</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    También llamados <strong>píxeles de seguimiento</strong>: imágenes diminutas (1×1 px), a menudo invisibles, incrustadas en webs o correos electrónicos.
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-envelope-open-fill"></i></span>
+                      <div class="process-text"><strong>Cómo Operan:</strong> Con solo abrir un correo o web, se descarga la imagen desde el servidor remoto, enviando tu <strong>IP, hora exacta e interacción</strong>.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-image exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Defensa:</strong> Desactiva la carga automática de imágenes externas en Gmail/Outlook.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vector 3: Device Fingerprinting -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-fingerprint"></i> 3. Device Fingerprinting</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    Técnica avanzada que identifica tu equipo combinando atributos técnicos únicos: tipo de navegador, resolución de pantalla, fuentes instaladas y complementos.
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-cpu"></i></span>
+                      <div class="process-text"><strong>Alta Persistencia:</strong> A diferencia de las cookies, <strong>no se borra</strong> limpiando el historial ni bloqueando cookies tradicionales.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-exclamation-diamond-fill"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;"><strong>Riesgo de Filtración:</strong> Si una empresa rastreadora sufre un hackeo, tu perfil completo queda expuesto.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">3.0.1 Rastreo Web</span>
+              <span class="footer-chip">Cookies, Beacons &amp; Fingerprinting</span>
+            </div>
+            <div class="footer-meta">Siguiente: 3.0 Modo Incógnito, Limpieza de Navegador y Control de Cuentas &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 15: 3.0 MODO INCÓGNITO, LIMPIEZA Y PROTECCIÓN FINANCIERA -->
+        <div class="slide-view" data-index="14" data-title="3.0 Higiene // Modo Incógnito, Limpieza de Navegadores y Tarjetas" data-desc="Qué oculta realmente el modo privado, cómo limpiar Chrome/Firefox/Edge y control de cuentas" data-notes="Basado en Transcripts 30, 31, 32 y PNGs 3.0.4. Aclarar la verdad sobre el Modo Incógnito (oculta localmente, NO frente al ISP o universidad) y repasar el borrado de datos en Chrome/Firefox/Edge más la regla de oro de tarjetas/PIN.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 3.0 // HIGIENE WEB
+              </span>
+              <span class="header-context">Modo Incógnito, Limpieza Local y Resguardo Financiero</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-incognito"></i> CISCO 3.0.3 – 3.0.4</span>
+              <span class="slide-index-pill">15 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Modo Incógnito + Limpieza -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-incognito"></i> Modo Incógnito y Limpieza de Datos</span>
+                    <span class="feat-pill feat-pill-cyan">VERDAD TÉCNICA</span>
+                  </div>
+
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--pop-mint); border-radius:var(--radius-sm); padding:10px 12px;">
+                      <div style="font-weight:800; color:var(--pop-mint); font-size:14.5px;"><i class="bi bi-check-circle-fill"></i> SÍ Hace</div>
+                      <div style="font-size:14px; color:var(--text-body); margin-top:4px; line-height:1.38;">Evita guardar en tu equipo local el historial, cookies y formularios al cerrar la ventana (ideal en PCs compartidas).</div>
+                    </div>
+                    <div style="background:var(--bg-nested); border:1.5px solid var(--pop-coral); border-radius:var(--radius-sm); padding:10px 12px;">
+                      <div style="font-weight:800; color:#F87171; font-size:14.5px;"><i class="bi bi-x-circle-fill"></i> NO Hace</div>
+                      <div style="font-size:14px; color:var(--text-body); margin-top:4px; line-height:1.38;">No te vuelve anónimo: tu <strong>ISP, escuela/empleo y los sitios visitados</strong> aún pueden monitorear tu tráfico.</div>
+                    </div>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-browser-chrome"></i></span>
+                      <div class="process-text"><strong>Chrome / Edge:</strong> Menú 3 puntos &rarr; <em>Configuración &rarr; Privacidad y seguridad &rarr; Borrar datos de navegación</em> (elegir rango de tiempo).</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber"><i class="bi bi-browser-firefox"></i></span>
+                      <div class="process-text"><strong>Mozilla Firefox:</strong> Menú 3 líneas &rarr; <em>Privacidad y seguridad &rarr; Cookies y datos del sitio &rarr; Limpiar datos</em> + bloqueadores de rastreo.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-shield-fill-exclamation exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Si pierdes tu laptop, las claves guardadas y cookies almacenadas dejan tus cuentas expuestas. ¡Limpia regularmente!</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Seguridad Financiera y Cuentas Antiguas (Transcript 32) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-credit-card-2-front-fill"></i> Protección Personal y Control de Cuentas</span>
+                    <span class="feat-pill feat-pill-purple">CISCO 3.0.5</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">1</span>
+                      <div class="process-text"><strong>Nunca Envíes Tarjetas ni Códigos PIN:</strong> Ningún banco o servicio legítimo te pedirá escaneo de tarjeta o PIN por correo o chat. Si ocurre, detente al instante.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">2</span>
+                      <div class="process-text"><strong>Audita y Elimina Cuentas Olvidadas:</strong> Lleva un registro de plataformas donde te registraste. Descarga una copia de respaldo y borra cuentas que ya no usas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">3</span>
+                      <div class="process-text"><strong>Ajusta Permisos Vigentes:</strong> Desactiva seguimiento de ubicación, anuncios personalizados e intercambio con terceros en las apps activas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">4</span>
+                      <div class="process-text"><strong>Ecosistema Privado:</strong> Combina gestores de contraseñas con navegadores y buscadores enfocados en la privacidad.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-trash3-fill"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;"><strong>Menos Cuentas = Menor Exposición:</strong> Cada cuenta olvidada es un riesgo dormido si esa empresa sufre una brecha mañana.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">3.0 Modo Incógnito</span>
+              <span class="footer-chip">Limpieza &amp; Cuentas</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 3 // Laboratorio Forense Anti-Rastreo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 16: DINÁMICA 3 // LABORATORIO FORENSE ANTI-RASTREO -->
+        <div class="slide-view" data-index="15" data-title="Dinámica 3 // Laboratorio Forense Anti-Rastreo" data-desc="Inspección interactiva de cookies de terceros, web beacons 1x1, fingerprinting e incógnito" data-notes="Dinámica participativa 3: Invitar al aula a explorar cada técnica de rastreo invisible (especialmente Web Beacons vs Fingerprinting) para comprender por qué borrar historial no basta contra todas.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                DINÁMICA EN VIVO 3 // FORENSE ANTI-RASTREO
+              </span>
+              <span class="header-context">Laboratorio Interactivo: Inspección de Vectores de Vigilancia Web</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-joystick"></i> INTERACTIVO</span>
+              <span class="slide-index-pill">16 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Izquierdo -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-search"></i> Selecciona un Vector</span>
+                    <span class="feat-pill feat-pill-purple">4 VECTORES</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                    <button class="tracking-case-btn is-active-case" onclick="selectTrackingCase(this, 'track1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-cookie" style="color:var(--warn-amber);"></i> Vector 1: Cookies de Terceros</span>
+                        <span class="feat-pill feat-pill-amber" style="font-size:11.5px; padding:3px 8px;">PERFILADO</span>
+                      </div>
+                      <div class="case-btn-desc">Anuncios que te persiguen tras buscar un producto.</div>
+                    </button>
+
+                    <button class="tracking-case-btn" onclick="selectTrackingCase(this, 'track2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-eye-fill" style="color:var(--cyber-purple-neon);"></i> Vector 2: Web Beacons 1x1</span>
+                        <span class="feat-pill feat-pill-purple" style="font-size:11.5px; padding:3px 8px;">INVISIBLE</span>
+                      </div>
+                      <div class="case-btn-desc">Píxel transparente incrustado en correos HTML.</div>
+                    </button>
+
+                    <button class="tracking-case-btn" onclick="selectTrackingCase(this, 'track3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-fingerprint" style="color:var(--pop-coral);"></i> Vector 3: Fingerprinting</span>
+                        <span class="feat-pill feat-pill-coral" style="font-size:11.5px; padding:3px 8px;">PERSISTENTE</span>
+                      </div>
+                      <div class="case-btn-desc">Identificación única mediante hardware y fuentes.</div>
+                    </button>
+
+                    <button class="tracking-case-btn" onclick="selectTrackingCase(this, 'track4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-incognito" style="color:var(--cisco-cyan);"></i> Vector 4: Mito Modo Incógnito</span>
+                        <span class="feat-pill feat-pill-cyan" style="font-size:11.5px; padding:3px 8px;">AUDITORÍA</span>
+                      </div>
+                      <div class="case-btn-desc">¿Realmente oculta tu actividad frente al ISP?</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-question-octagon-fill exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Pregunta Rápida:</strong> ¿Cuál de los 4 NO se elimina al borrar el historial del navegador?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Derecho -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <span class="card-label label-cyan" style="margin-bottom:0;"><i class="bi bi-microscope"></i> Análisis Técnico Anti-Rastreo</span>
+                    <span class="feat-pill feat-pill-amber" id="trackingAuditBadge">RASTREO MULTISITIO // MARKETING</span>
+                  </div>
+
+                  <h3 id="trackingAuditTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-top:12px;">
+                    Vector 1: Cookies de Terceros y Rastreo Publicitario Cruzado
+                  </h3>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(245,158,11,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:12px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:var(--warn-amber); text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-gear-wide-connected"></i> Mecanismo de Operación:
+                    </div>
+                    <div id="trackingAuditMec" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      Fragmentos de código inyectados por dominios externos a la página que visitas. Siguen tu navegación a través de cientos de sitios web para construir un perfil detallado de tus gustos, ideología y hábitos de consumo.
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(16,185,129,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:var(--pop-mint); text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-shield-check"></i> Contramedidas Efectivas:
+                    </div>
+                    <div id="trackingAuditDefense" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      1. Configurar el navegador para bloquear cookies de terceros de forma predeterminada.<br>
+                      2. Utilizar extensiones de privacidad de código abierto como uBlock Origin o Privacy Badger.<br>
+                      3. Limpiar con regularidad el almacenamiento local de cookies y la memoria caché del navegador.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:22px;"><i class="bi bi-mortarboard-fill"></i></span>
+                  <div class="stat-desc" id="trackingAuditRule" style="font-size:14.5px;">
+                    Las cookies propias son útiles porque recuerdan tu idioma o carrito de compras; las cookies de terceros existen primordialmente para vigilar tus hábitos de navegación.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 3 // Anti-Rastreo</span>
+              <span class="footer-chip">Privacidad Web</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint 3.0 // Autoevaluación en Vivo &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 17: CHECKPOINT 3 // AUTOEVALUACIÓN 3.0 -->
+        <div class="slide-view" data-index="16" data-title="Checkpoint Cisco // Autoevaluación en Vivo 3.0" data-desc="Preguntas oficiales Cisco NetAcad 3.0 sobre rastreo mediante cookies y alcance del Modo Incógnito" data-notes="Usar la pregunta exacta de 3.0.2 (c7.png) y la pregunta sobre el alcance del Modo Incógnito (3.0.4). Invitar al grupo a votar antes de revelar.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT EN VIVO // EVALUACIÓN 3.0
+              </span>
+              <span class="header-context">Preguntas Oficiales Cisco NetAcad • Participa en el Chat</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">17 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 5 (3.0.2) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 3.0.2</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:10px; line-height:1.35;">
+                    ¿Cuál de los siguientes mecanismos se utiliza comúnmente para rastrear las actividades en línea de los usuarios?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q5-exp', '¡Correcto! Según Cisco 3.0.2, los sitios web utilizan comúnmente cookies almacenadas en el dispositivo, web beacons y fingerprinting para monitorear visitas y clics.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Cookies almacenadas en el dispositivo del usuario</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Los navegadores estándar no transmiten tu GPS sin permiso explícito ni es la técnica básica explicada en 3.0.2.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Señales satelitales GPS continuas sin autorización</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Los sitios web comerciales no graban audio de tu micrófono para rastreo web habitual.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Grabaciones de voz permanentes del dispositivo</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q5-exp', 'Incorrecto. Un keylogger es malware espía ilegal, no una técnica estándar de seguimiento web publicitario.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Registradores de teclas (Keyloggers) instalados por cada web</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q5-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Haz clic en la opción elegida para mostrar el criterio Cisco.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 6 (3.0.4) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 3.0.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:10px; line-height:1.35;">
+                    ¿Cuál es la limitación real del Modo Incógnito (navegación privada) en un navegador moderno?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. El modo incógnito sí borra el historial local, cookies y formularios al cerrar la ventana.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Guarda todo tu historial en el disco local permanentemente</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. Ocultar tu dirección IP real requiere una VPN o red Tor, no el modo incógnito.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Oculta tu dirección IP y cifra tu conexión mejor que una VPN</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q6-exp', '¡Exacto! Cisco 3.0.4 advierte que el modo incógnito protege tu historial frente a otros usuarios de la misma PC, pero tu ISP, escuela/empleador y los sitios aún pueden ver tu actividad.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Evita el registro local en el equipo, pero tu ISP y empleador aún ven tu actividad</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q6-exp', 'Incorrecto. El modo incógnito no bloquea por sí solo virus ni enlaces maliciosos.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Bloquea automáticamente cualquier malware o descarga dañina</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q6-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cisco-cyan); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Selecciona una alternativa para verificar la respuesta oficial.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 3.0</span>
+              <span class="footer-chip">Cookies &amp; Incógnito</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 3.1 // Políticas de Privacidad Explotadoras &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 18: 3.1 POLÍTICAS DE PRIVACIDAD -->
+        <div class="slide-view" data-index="17" data-title="3.1 Políticas // Cómo Detectar Políticas de Privacidad Explotadoras" data-desc="Los 3 criterios clave para auditar una política de privacidad según Cisco NetAcad" data-notes="Basado en Transcript 33 (3.1.1). Destacar el ejemplo oficial del curso: si una simple app del clima pide acceso a toda tu lista de contactos, es señal de alerta roja. Enfatizar la frase 'los datos son el nuevo petróleo'.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                MÓDULO 3.1 // EL DIABLO ESTÁ EN LOS DETALLES
+              </span>
+              <span class="header-context">Auditoría Rápida de Políticas de Privacidad en Aplicaciones</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-file-earmark-lock-fill"></i> CISCO 3.1.1</span>
+              <span class="slide-index-pill">18 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Qué son y Por qué Importan -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-file-text-fill"></i> ¿Qué Revela una Política de Privacidad?</span>
+                    <span class="feat-pill feat-pill-purple">TRANSPARENCIA</span>
+                  </div>
+
+                  <p style="font-size:15.5px; color:var(--text-body); line-height:1.45; margin-top:8px;">
+                    Al registrarnos o bajar una app solemos hacer clic en <em>"Aceptar"</em> sin leer. Sin embargo, este documento define cómo se recopilan, almacenan y comparten tus datos personales:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-person-vcard"></i></span>
+                      <div class="process-text"><strong>Datos Básicos:</strong> Tu nombre, correo electrónico, número telefónico y datos técnicos del dispositivo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-geo-alt-fill"></i></span>
+                      <div class="process-text"><strong>Datos Sensibles:</strong> Tu ubicación exacta en tiempo real, historial de navegación, compras e información financiera.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:24px;"><i class="bi bi-droplet-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>"Los datos son el nuevo petróleo":</strong> Si el producto es gratuito y pide acceso excesivo, tus datos podrían ser la verdadera mercancía.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Las 3 Señales de Alerta Roja -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-flag-fill"></i> 3 Señales de Política Explotadora</span>
+                    <span class="feat-pill feat-pill-coral">ALERTA ROJA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text"><strong>Exceso de Permisos Innecesarios:</strong> ¿Pide más datos de los necesarios para su función? Ej. <em>una simple app del clima pidiendo acceso a toda tu lista de contactos</em>.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text"><strong>Venta o Cesión a Terceros sin Beneficio:</strong> ¿Usa tus datos solo para mejorar el servicio o los vende a anunciantes y brokers priorizando ganancias?</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Opciones de Exclusión Ocultas:</strong> Si eliminar tu cuenta o retirar el consentimiento está enterrado entre laberintos y obstáculos, busca dificultar tu privacidad.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-patch-check-fill exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-title" style="color:var(--warn-amber);">Clave de Examen 3.1.2</div>
+                    <div class="exam-callout-text">Señal inequívoca de política explotadora: <strong>cuando un servicio solicita más datos de los que parecen necesarios</strong>.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">3.1.1 Políticas de Privacidad</span>
+              <span class="footer-chip">Minimización de Datos</span>
+            </div>
+            <div class="footer-meta">Siguiente: 3.1.3 Términos y Condiciones — Contratos Vinculantes &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 19: 3.1 TÉRMINOS Y CONDICIONES -->
+        <div class="slide-view" data-index="18" data-title="3.1 Términos y Condiciones // Contratos Vinculantes y Cláusulas" data-desc="Qué cedes al aceptar T&C, arbitraje obligatorio, exención de responsabilidad y salida difícil" data-notes="Basado en Transcript 34 y PNG 3.1.4 (c7.png). Destacar el aspecto más importante según Quiz 3.1.4: los T&C muestran lo que se espera que cedas a cambio de usar el servicio, son contratos legalmente vinculantes y esconden cláusulas como arbitraje obligatorio y cambios sin aviso.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-cyan">
+                <span class="status-pip pip-cyan"></span>
+                MÓDULO 3.1 // CONTRATOS DIGITALES
+              </span>
+              <span class="header-context">Términos y Condiciones (T&amp;C): Qué Estás Cediendo Realmente</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-file-earmark-ruled-fill"></i> CISCO 3.1.3 – 3.1.4</span>
+              <span class="slide-index-pill">19 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-3col">
+              <!-- Col 1: Contrato Vinculante -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <span class="card-label label-cyan"><i class="bi bi-pen-fill"></i> Acuerdos Vinculantes</span>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:8px;">
+                    Los Términos y Condiciones distan mucho de ser triviales: son <strong>contratos legalmente vinculantes</strong> entre tú y el proveedor.
+                  </p>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-arrow-left-right"></i></span>
+                      <div class="process-text"><strong>Lo que Cedes a Cambio:</strong> Especifican tus derechos, obligaciones de la empresa y <strong>qué se espera de ti a cambio del servicio</strong>.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-cyan">
+                  <i class="bi bi-check2-circle exam-callout-icon" style="color:var(--cisco-cyan);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Al pulsar "Acepto", consientes cumplir legalmente esas reglas básicas.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 2: 3 Cláusulas Peligrosas -->
+              <div class="bento-card card-amber">
+                <div>
+                  <span class="card-label label-amber"><i class="bi bi-exclamation-triangle-fill"></i> 3 Cláusulas de Riesgo</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text"><strong>Cambio Unilateral sin Aviso:</strong> Permiten alterar reglas en cualquier momento sin informarte (lo que aceptas hoy cambia mañana).</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text"><strong>Arbitraje Obligatorio:</strong> Te obligan a resolver disputas fuera de los tribunales públicos, limitando tu reparación legal.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Exención Total de Responsabilidad:</strong> Lenguaje que libera a la empresa de toda culpa si algo falla o pierdes datos.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-shield-exclamation exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Revisa siempre la sección de <em>"Resolución de Disputas"</em> antes de aceptar.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Col 3: Derecho de Salida -->
+              <div class="bento-card card-purple">
+                <div>
+                  <span class="card-label label-purple"><i class="bi bi-door-open-fill"></i> Derecho de Salida y Control</span>
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple">A</span>
+                      <div class="process-text"><strong>Rechazar Marketing y Compartición:</strong> Un servicio ético ofrece botones claros (sin pasos ocultos) para negar el uso comercial de tus datos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple">B</span>
+                      <div class="process-text"><strong>Cancelación y Borrado Real:</strong> Verifica que cancelar la cuenta sea simple y que tus datos no se conserven indefinidamente tras irte.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat-banner banner-purple">
+                  <span class="stat-num" style="color:var(--cyber-purple-neon); font-size:22px;"><i class="bi bi-search"></i></span>
+                  <div class="stat-desc" style="font-size:14.5px;"><strong>Táctica Express:</strong> Usa <code>Ctrl + F</code> para buscar 3 palabras clave: <em>"arbitraje", "terceros" y "eliminar"</em>.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">3.1.3 Términos y Condiciones</span>
+              <span class="footer-chip">Arbitraje y Derechos</span>
+            </div>
+            <div class="footer-meta">Siguiente: Módulo 3.2 // Efecto Dominó y Huella Ambiental Digital &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 20: 3.2 EL EFECTO DOMINÓ Y HUELLA AMBIENTAL DIGITAL -->
+        <div class="slide-view" data-index="19" data-title="3.2 Efecto Dominó // Responsabilidad Digital e Impacto Ambiental (4% CO2)" data-desc="Consecuencias reales de compartir desinformación y huella energética de los centros de datos" data-notes="Basado en PNGs 3.2.1 (c1.png) y 3.2.2 (c2.png). Conectar ambos pilares oficiales de Cisco 3.2: 1) El daño social en el mundo real por compartir sin verificar y 2) El costo ambiental oculto: Internet equivale al ~4% de emisiones globales de carbono (como la industria aérea).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                MÓDULO 3.2 // EFECTO DOMINÓ
+              </span>
+              <span class="header-context">Responsabilidad Digital y Huella Ambiental de Datos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-globe-americas"></i> CISCO 3.2.1 – 3.2.2</span>
+              <span class="slide-index-pill">20 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Impacto Social Real (3.2.1) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-share-fill"></i> Piense Antes de Compartir (3.2.1)</span>
+                    <span class="feat-pill feat-pill-purple">IMPACTO SOCIAL</span>
+                  </div>
+                  <p style="font-size:15.5px; color:var(--text-body); line-height:1.48; margin-top:8px;">
+                    Un titular llamativo o noticia impactante aparece en nuestro feed y pulsamos <strong>"Compartir"</strong> en segundos. Pero la desinformación causa daños tangibles fuera de la pantalla:
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-people-fill"></i></span>
+                      <div class="process-text"><strong>Malentendidos y Pánico Social:</strong> Rumores falsos sobre salud, alertas bancarias o emergencias generan compras de pánico o riesgos físicos reales.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-megaphone"></i></span>
+                      <div class="process-text"><strong>Amplificación Involuntaria:</strong> Al reenviar contenido sin contrastar, prestas tu credibilidad personal ante amigos y familia a una mentira.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analogy-box" style="border-color:var(--cyber-purple);">
+                  <i class="bi bi-water analogy-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div>
+                    <div class="analogy-title" style="color:var(--cyber-purple-neon);">El Efecto Dominó Digital</div>
+                    <div class="analogy-text">Un solo clic irresponsable se multiplica exponencialmente entre grupos de WhatsApp y redes en cuestión de minutos.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Impacto Ambiental (3.2.2) -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-lightning-charge-fill"></i> El Costo Ambiental Oculto (3.2.2)</span>
+                    <span class="feat-pill feat-pill-mint">ECO-CONCIENCIA</span>
+                  </div>
+
+                  <div class="stat-banner banner-cyan" style="margin-top:10px; margin-bottom:10px;">
+                    <span class="stat-num" style="color:var(--pop-mint); font-size:32px;">~4%</span>
+                    <div class="stat-desc" style="font-size:15px;">
+                      <strong>Emisiones Globales de Carbono:</strong> Según estudio citado por Cisco, Internet genera casi el 4% del CO<sub>2</sub> mundial, comparable con toda la <strong>industria aérea</strong>.
+                    </div>
+                  </div>
+
+                  <div class="process-pipeline">
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-server"></i></span>
+                      <div class="process-text"><strong>Servidores y Refrigeración 24/7:</strong> Cada publicación, correo reenviado, foto o video subido demanda almacenamiento y energía eléctrica constante en centros de datos.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-recycle"></i></span>
+                      <div class="process-text"><strong>Doble Desperdicio de la Desinformación:</strong> Reenviar contenido falso o spam no solo engaña a las personas, sino que desperdicia recursos digitales y energéticos del planeta.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-tree-fill exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text">Limpiar suscripciones inútiles y evitar cadenas innecesarias reduce nuestra huella colectiva.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">3.2 Efecto Dominó</span>
+              <span class="footer-chip">4% Emisiones Globales</span>
+            </div>
+            <div class="footer-meta">Siguiente: 3.2.3 Bucle de Validación Social y 5 Pasos &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 21: 3.2.3 VALIDACIÓN SOCIAL Y 5 PASOS DE VERIFICACIÓN -->
+        <div class="slide-view" data-index="20" data-title="3.2.3 Validación Social // Psicología del Like y los 5 Pasos Cisco" data-desc="Cómo romper el ciclo dopaminérgico de compartir impulsivamente y herramientas fact-checking" data-notes="Basado en PNGs 3.2/c10.png, c11.png y c2.png. Explicar el bucle de validación social (likes/comentarios activan el centro de recompensa cerebral) y las herramientas reales citadas por Cisco: Snopes, FactCheck.org e IFCN.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                MÓDULO 3.2.3 // PSICOLOGÍA Y VERIFICACIÓN
+              </span>
+              <span class="header-context">El Bucle de Validación Social y el Protocolo Cisco de 5 Pasos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-heart-pulse-fill"></i> FAKE VS FACT</span>
+              <span class="slide-index-pill">21 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Ciclo de Validación Social (3.2.3) -->
+              <div class="bento-card card-amber">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-amber"><i class="bi bi-hand-thumbs-up-fill"></i> El Bucle de Validación Social</span>
+                    <span class="feat-pill feat-pill-amber">NEUROPSICOLOGÍA</span>
+                  </div>
+                  <p style="font-size:15px; color:var(--text-body); line-height:1.45; margin-top:6px;">
+                    Cada vez que recibimos <em>"me gusta"</em>, comentarios o compartidos, se activa el centro de recompensas del cerebro (dopamina), impulsándonos a publicar rápido sin comprobar hechos.
+                  </p>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-amber">1</span>
+                      <div class="process-text"><strong>Reconocer la Influencia de las Plataformas:</strong> Los algoritmos están diseñados para provocar reacciones emocionales inmediatas e interacción continua.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">2</span>
+                      <div class="process-text"><strong>Evaluar Antes de Compartir:</strong> Resiste la prisa por ganar aprobación; verifica los datos antes de reenviar cualquier titular llamativo.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber">3</span>
+                      <div class="process-text"><strong>Construir Responsabilidad Digital:</strong> Prioriza la calidad de la información sobre la cantidad de reacciones para lograr redes más sanas.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-amber">
+                  <i class="bi bi-pause-circle-fill exam-callout-icon" style="color:var(--warn-amber);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Ejemplo Cisco 3.2:</strong> <em>"¡Comer aguacates te hace vivir 120 años! ¡Los médicos lo ocultan!"</em> &rarr; <strong>No debe compartirse</strong>.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Los 5 Pasos Oficiales Cisco 3.2.2 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-check-all"></i> 5 Pasos de Verificación y Ecología</span>
+                    <span class="feat-pill feat-pill-cyan">PROTOCOLO</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-cyan">1</span>
+                      <div class="process-text"><strong>Pausa y Verifique:</strong> Contrasta en medios confiables; en temas de salud exige respaldo de una institución médica real.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">2</span>
+                      <div class="process-text"><strong>Considere el Costo Ambiental:</strong> Pregúntate si el archivo realmente aporta valor o solo suma tráfico innecesario a los servidores.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">3</span>
+                      <div class="process-text"><strong>Sea Defensor de la Alfabetización:</strong> Enseña a tu familia a detectar titulares sensacionalistas y noticias falsas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">4</span>
+                      <div class="process-text"><strong>Limite Acciones Innecesarias:</strong> Date de baja de listas de correo que no lees y evita reenviar cadenas por costumbre.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan">5</span>
+                      <div class="process-text"><strong>Use Verificadores Oficiales:</strong> Consulta <strong>Snopes</strong>, <strong>FactCheck.org</strong> y la <strong>Red Internacional de Verificación de Hechos (IFCN)</strong>.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Validación Social</span>
+              <span class="footer-chip">Snopes &amp; FactCheck.org</span>
+            </div>
+            <div class="footer-meta">Siguiente: Dinámica 4 // Escáner de Políticas y Verificación &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 22: DINÁMICA 4 // ESCÁNER DE POLÍTICAS Y VERIFICACIÓN -->
+        <div class="slide-view" data-index="21" data-title="Dinámica 4 // Escáner de Políticas &amp; Eco-Verificación" data-desc="Auditoría interactiva de permisos en apps, arbitraje en T&amp;C, posts virales falsos y CO2 digital" data-notes="Dinámica participativa 4: Guiar al grupo por los 4 casos del Módulo 3 (permisos abusivos de app del clima, arbitraje obligatorio en T&C, publicación viral engañosa 'aguacates 120 años' y huella CO2 del 4%).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-mint">
+                <span class="status-pip pip-mint"></span>
+                DINÁMICA EN VIVO 4 // AUDITORÍA MÓDULO 3
+              </span>
+              <span class="header-context">Escáner Interactivo de Contratos, Fake News y Sostenibilidad Digital</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-joystick"></i> INTERACTIVO</span>
+              <span class="slide-index-pill">22 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-sidebar-left">
+              <!-- Panel Selector Izquierdo -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-upc-scan"></i> Selecciona un Caso a Auditar</span>
+                    <span class="feat-pill feat-pill-purple">4 CASOS</span>
+                  </div>
+
+                  <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+                    <button class="policy-case-btn is-active-case" onclick="selectAuditPolicyCase(this, 'pol1')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-cloud-sun-fill" style="color:var(--cyber-purple-neon);"></i> Caso 1: App Clima Pide Contactos</span>
+                        <span class="feat-pill feat-pill-purple" style="font-size:11.5px; padding:3px 8px;">PERMISOS</span>
+                      </div>
+                      <div class="case-btn-desc">Exige libreta telefónica y GPS permanente 24/7.</div>
+                    </button>
+
+                    <button class="policy-case-btn" onclick="selectAuditPolicyCase(this, 'pol2')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-file-earmark-text-fill" style="color:var(--warn-amber);"></i> Caso 2: Arbitraje Obligatorio</span>
+                        <span class="feat-pill feat-pill-amber" style="font-size:11.5px; padding:3px 8px;">T&amp;C</span>
+                      </div>
+                      <div class="case-btn-desc">Renuncia a demandas judiciales y cambio unilateral.</div>
+                    </button>
+
+                    <button class="policy-case-btn" onclick="selectAuditPolicyCase(this, 'pol3')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-heart-pulse-fill" style="color:var(--pop-coral);"></i> Caso 3: Post Viral "120 Años"</span>
+                        <span class="feat-pill feat-pill-coral" style="font-size:11.5px; padding:3px 8px;">FAKE VS FACT</span>
+                      </div>
+                      <div class="case-btn-desc">¿Se puede compartir la publicación de los aguacates?</div>
+                    </button>
+
+                    <button class="policy-case-btn" onclick="selectAuditPolicyCase(this, 'pol4')">
+                      <div class="case-btn-header">
+                        <span class="case-btn-title"><i class="bi bi-globe-americas" style="color:var(--pop-mint);"></i> Caso 4: Huella Carbono 4%</span>
+                        <span class="feat-pill feat-pill-mint" style="font-size:11.5px; padding:3px 8px;">ECO-DATA</span>
+                      </div>
+                      <div class="case-btn-desc">Impacto real del streaming, spam y nube acumulada.</div>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-mint">
+                  <i class="bi bi-chat-left-dots-fill exam-callout-icon" style="color:var(--pop-mint);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Votación en Vivo:</strong> En el Caso 3, ¿compartirías ese post en tu grupo familiar?</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Diagnóstico Derecho -->
+              <div class="bento-card card-featured">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--border-color); padding-bottom:10px;">
+                    <span class="card-label label-mint" style="margin-bottom:0;"><i class="bi bi-clipboard2-pulse-fill"></i> Dictamen Forense &amp; Legal</span>
+                    <span class="feat-pill feat-pill-purple" id="policyAuditBadge">PERMISOS EXCESIVOS // EXPLOTACIÓN</span>
+                  </div>
+
+                  <h3 id="policyAuditTitle" style="font-family:var(--font-display); font-size:20px; font-weight:800; color:#FFFFFF; margin-top:12px;">
+                    Caso 1: App del Clima o Linterna que Exige Acceso a Contactos y GPS Preciso
+                  </h3>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(239,68,68,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:12px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:#F87171; text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-flag-fill"></i> Señal de Alerta Roja Detectada:
+                    </div>
+                    <div id="policyAuditRedFlag" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      La aplicación solicita permisos desmedidos que no guardan relación alguna con su funcionalidad básica: libreta de contactos, micrófono, archivos y geolocalización permanente 24/7.
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid rgba(0,188,235,0.45); border-radius:var(--radius-sm); padding:12px 15px; margin-top:10px;">
+                    <div style="font-family:var(--font-mono); font-size:12.5px; font-weight:800; color:var(--cisco-cyan); text-transform:uppercase; margin-bottom:4px;">
+                      <i class="bi bi-bank2"></i> Fundamento Técnico y Contractual:
+                    </div>
+                    <div id="policyAuditLegal" style="font-size:15px; color:var(--text-body); line-height:1.45;">
+                      Estas herramientas monetizan comercializando historiales de ubicación y listas de contactos con brokers de datos publicitarios. Infringen flagrantemente el principio de minimización de datos.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-mint">
+                  <span class="stat-num" style="color:var(--pop-mint); font-size:22px;"><i class="bi bi-check2-square"></i></span>
+                  <div class="stat-desc" id="policyAuditRule" style="font-size:14.5px;">
+                    Denegar los permisos sospechosos en los ajustes del sistema operativo. Si la app se bloquea o rehúsa operar sin ellos, desinstalarla y buscar opciones limpias.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Dinámica 4 // Auditoría</span>
+              <span class="footer-chip">Fake vs Fact</span>
+            </div>
+            <div class="footer-meta">Siguiente: Checkpoint 3.1 &amp; 3.2 + Triage 3.3 &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 23: CHECKPOINT 4 // AUTOEVALUACIÓN 3.1 & 3.2 + 3.3 -->
+        <div class="slide-view" data-index="22" data-title="Checkpoint Cisco // Autoevaluación 3.1 &amp; 3.2 + Triage 3.3" data-desc="Preguntas oficiales 3.1.2 y 3.1.4 más protocolo 3.3 ante enlace sospechoso" data-notes="Último Checkpoint oficial de la Sesión 2 con preguntas textuales de 3.1.4 (T&C) y 3.1.2 (Políticas explotadoras), más la píldora de cierre de 3.3 (clic en enlace desconocido solicitando datos personales).">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-amber">
+                <span class="status-pip pip-amber"></span>
+                CHECKPOINT FINAL // EVALUACIÓN 3.1 – 3.3
+              </span>
+              <span class="header-context">Preguntas Oficiales Cisco NetAcad y Protocolo 3.3 ante Enlaces Falsos</span>
+            </div>
+            <div class="header-right">
+              <span class="header-telemetry"><i class="bi bi-patch-check-fill"></i> SIMULADOR EXAMEN</span>
+              <span class="slide-index-pill">23 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Pregunta 7 (3.1.4) -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-purple"><i class="bi bi-question-circle-fill"></i> PREGUNTA 1</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz NetAcad 3.1.4</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Cuál es posiblemente el aspecto más importante de leer los Términos y Condiciones de un servicio?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. La rutina de simplemente pulsar aceptar sin leer es precisamente lo que debemos evitar.')">
+                      <span class="process-num num-purple">A</span>
+                      <span>Explican la rutina rápida al hacer clic en aceptar</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q7-exp', '¡Exacto! Cisco 3.1.4 señala que lo más relevante de los T&C es comprender qué se espera de ti (y qué cedes) a cambio de acceder al servicio.')">
+                      <span class="process-num num-purple">B</span>
+                      <span>Muestran lo que se espera de usted a cambio del uso del servicio</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. Aunque detallan obligaciones de la empresa, el punto crítico subrayado en 3.1.4 es lo que tú cedes a cambio del acceso.')">
+                      <span class="process-num num-purple">C</span>
+                      <span>Permiten que el servicio cambie de proveedor automáticamente</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q7-exp', 'Incorrecto. No son acuerdos triviales; tienen plena validez legal contractual.')">
+                      <span class="process-num num-purple">D</span>
+                      <span>Garantizan que la empresa asumirá siempre el 100% de responsabilidad</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q7-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px; color:var(--text-muted);">
+                    <i class="bi bi-hand-index-thumb-fill" style="color:var(--cyber-purple-neon); font-size:20px;"></i>
+                    <span style="font-size:14.5px; font-weight:600;">Vota en el chat y pulsa una opción para comprobar.</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pregunta 8 (3.1.2) + Triage 3.3 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span class="feat-pill feat-pill-cyan"><i class="bi bi-question-circle-fill"></i> PREGUNTA 2</span>
+                    <span style="font-size:13.5px; font-family:var(--font-mono); color:var(--text-muted); font-weight:700;">Quiz 3.1.2 + Protocolo 3.3</span>
+                  </div>
+
+                  <h3 style="font-family:var(--font-display); font-size:18px; font-weight:800; color:#FFFFFF; margin-top:8px; line-height:1.32;">
+                    ¿Qué señal indica claramente que una política de privacidad es explotadora o invasiva?
+                  </h3>
+
+                  <div class="quiz-options-grid">
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. Explicar cómo protege tus datos es un rasgo de transparencia, no de abuso.')">
+                      <span class="process-num num-cyan">A</span>
+                      <span>Cuando explica claramente cómo se protegen sus datos</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. Dar opciones claras para darse de baja refleja respeto por el usuario.')">
+                      <span class="process-num num-cyan">B</span>
+                      <span>Cuando ofrece opciones simples para darse de baja</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="true" onclick="revealQuiz(this, true, 'q8-exp', '¡Correcto! Según Cisco 3.1.2, pedir más datos de los necesarios (como contactos para una app de clima) delata una política explotadora. Y si caíste en un enlace falso (3.3): desconecta, cambia claves, activa 2FA y monitorea cuentas.')">
+                      <span class="process-num num-cyan">C</span>
+                      <span>Cuando solicita más datos de los que parecen necesarios</span>
+                    </button>
+                    <button class="quiz-btn" data-correct="false" onclick="revealQuiz(this, false, 'q8-exp', 'Incorrecto. Pedir únicamente el correo electrónico suele ser mínimo razonable para un registro.')">
+                      <span class="process-num num-cyan">D</span>
+                      <span>Cuando solo pide su dirección de correo electrónico</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="quiz-explanation show" id="q8-exp" style="display:block;">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <i class="bi bi-bandaid-fill" style="color:var(--pop-mint); font-size:20px; flex-shrink:0;"></i>
+                    <span style="font-size:14.5px; color:var(--text-body);"><strong>Triage Cisco 3.3:</strong> Si pulsaste un enlace falso pidiendo datos: <em>cambia claves, activa 2FA con gestor de contraseñas y revisa movimientos</em>.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Evaluación 3.1 – 3.3</span>
+              <span class="footer-chip">Respuesta 2FA</span>
+            </div>
+            <div class="footer-meta">Siguiente: Cierre de Sesión 2 y Misiones de la Semana &rarr;</div>
+          </footer>
+        </div>
+
+        <!-- SLIDE 24: CIERRE DE SESIÓN 2 // LOGROS Y PRÓXIMA SESIÓN -->
+        <div class="slide-view" data-index="23" data-title="Cierre de Sesión 2 // Misiones Prácticas y Sesión 3 Final" data-desc="Resumen de competencias adquiridas, reto práctico semanal y adelanto de los Módulos 4 y 5" data-notes="Felicitar al grupo por completar los 2 módulos en 90 minutos. Proponer 3 acciones prácticas para hacer hoy mismo en casa y recordar que el próximo viernes cerramos con la Sesión 3 (Módulos 4 y 5). Abrir micrófono y chat para preguntas finales.">
+          <header class="slide-header">
+            <div class="header-left">
+              <span class="header-badge badge-purple">
+                <span class="status-pip pip-purple"></span>
+                SESIÓN 2 // CIERRE
+              </span>
+              <span class="header-context">Resumen Ejecutivo, Retos y Hoja de Ruta Final</span>
+            </div>
+            <div class="header-right">
+              <div class="session-switcher">
+                <a href="sesion1.html" class="session-pill" title="Ir a Sesión 1">S1</a>
+                <span class="session-pill active" title="Sesión Actual">S2</span>
+                <a href="sesion3.html" class="session-pill" title="Ir a Sesión 3 (Módulos 4 y 5)">S3</a>
+              </div>
+              <span class="header-telemetry"><i class="bi bi-flag-fill"></i> 90 MIN CUMPLIDOS</span>
+              <span class="slide-index-pill">24 / 24</span>
+            </div>
+          </header>
+
+          <div class="slide-body">
+            <div class="bento-2col">
+              <!-- Izquierda: Lo que Dominamos Hoy -->
+              <div class="bento-card card-purple">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-purple"><i class="bi bi-trophy-fill"></i> Competencias Dominadas Hoy</span>
+                    <span class="feat-pill feat-pill-purple">MÓDULOS 2 &amp; 3</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-purple"><i class="bi bi-shield-lock"></i></span>
+                      <div class="process-text"><strong>Blindaje de Endpoints (2.0):</strong> Antivirus, parches, Windows Hello, gestores de contraseñas, 2FA en app y defensa ante SIM Swapping.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-cyan"><i class="bi bi-router-fill"></i></span>
+                      <div class="process-text"><strong>Redes y Dark Web (2.1–2.3):</strong> Mitos de la web oscura, cifrado WPA3, flasheo de firmware del router, Red de Invitados IoT y VPN en Wi-Fi público.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-amber"><i class="bi bi-fingerprint"></i></span>
+                      <div class="process-text"><strong>Anti-Rastreo y Contratos (3.0–3.1):</strong> Cookies, Beacons 1x1, Fingerprinting, alcance real del Modo Incógnito y detección de cláusulas abusivas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint"><i class="bi bi-check2-all"></i></span>
+                      <div class="process-text"><strong>Efecto Dominó (3.2–3.3):</strong> Ruptura del bucle de validación social, verificación en Snopes/FactCheck y ahorro energético digital (4% CO<sub>2</sub>).</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exam-callout callout-purple">
+                  <i class="bi bi-person-badge-fill exam-callout-icon" style="color:var(--cyber-purple-neon);"></i>
+                  <div class="exam-callout-content">
+                    <div class="exam-callout-text"><strong>Asistente de Enseñanza Oficial:</strong> Alex Arturo Jamachi Condori • UMSA &amp; Cisco Networking Academy.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Derecha: Reto Práctico + Adelanto Sesión 3 -->
+              <div class="bento-card card-cyan">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span class="card-label label-cyan"><i class="bi bi-rocket-takeoff-fill"></i> 3 Misiones Prácticas Para Hoy</span>
+                    <span class="feat-pill feat-pill-mint">ACCIÓN INMEDIATA</span>
+                  </div>
+
+                  <div class="process-pipeline" style="margin-top:10px;">
+                    <div class="process-step">
+                      <span class="process-num num-mint">01</span>
+                      <div class="process-text"><strong>Activa 2FA sin SMS:</strong> Configura una app autenticadora en tu correo principal y cambia la clave maestra de tu router casero a WPA2/WPA3.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">02</span>
+                      <div class="process-text"><strong>Audita tu Celular y Navegador:</strong> Revoca permisos innecesarios de apps (ubicación/contactos) y limpia cookies y cuentas antiguas olvidadas.</div>
+                    </div>
+                    <div class="process-step">
+                      <span class="process-num num-mint">03</span>
+                      <div class="process-text"><strong>Pausa de 5 Segundos:</strong> Antes de reenviar una noticia viral esta semana, verifica si cita fuentes reales o aplica el filtro Fake vs. Fact.</div>
+                    </div>
+                  </div>
+
+                  <div style="background:var(--bg-nested); border:1.5px solid var(--border-amber); border-radius:var(--radius-sm); padding:13px 16px; margin-top:12px;">
+                    <div style="font-family:var(--font-display); font-size:16px; font-weight:800; color:var(--warn-amber); display:flex; align-items:center; gap:8px;">
+                      <i class="bi bi-calendar-check-fill"></i> Próximo Viernes — Sesión 3 Final (17:30 – 19:00)
+                    </div>
+                    <div style="font-size:14.5px; color:var(--text-body); margin-top:4px; line-height:1.42;">
+                      Abordaremos los <strong>Módulos 4 y 5 finales</strong> del programa <em>Conciencia sobre Seguridad y Protección Digital</em>. ¡Nos vemos la próxima clase!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stat-banner banner-cyan">
+                  <span class="stat-num" style="color:var(--cisco-cyan); font-size:24px;"><i class="bi bi-chat-heart-fill"></i></span>
+                  <div class="stat-desc" style="font-size:15px;">
+                    <strong>¿Preguntas o Consultas?</strong> Abrimos micrófono y chat en vivo para resolver cualquier duda técnica de tus dispositivos.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="slide-footer">
+            <div class="footer-tags">
+              <span class="footer-chip">Sesión 2 Completada</span>
+              <span class="footer-chip">UMSA // Cisco NetAcad</span>
+            </div>
+            <div class="footer-meta">Fin de la Presentación • Presiona [G] para Malla o [P] para HUD</div>
+          </footer>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra de Control Inferior (Dock Táctico Flotante) -->
+    <nav class="tactical-dock" id="tacticalDock">
+      <button class="dock-btn" id="prevBtn" title="Anterior (Flecha Izquierda / Shift+Espacio)">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <div class="dock-counter" id="dockCounter">
+        <span id="dockCurrSlide">01</span> / <span id="dockTotalSlide">24</span>
+      </div>
+
+      <button class="dock-btn" id="nextBtn" title="Siguiente (Flecha Derecha / Espacio)">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+      <div class="dock-sep"></div>
+
+      <button class="dock-pill-btn" id="presenterBtn" title="Panel del Expositor / HUD (Tecla P)">
+        <i class="bi bi-display"></i>
+        <span>HUD [P]</span>
+      </button>
+
+      <button class="dock-pill-btn" id="gridBtn" title="Ver Cuadrícula de Diapositivas (Tecla G)">
+        <i class="bi bi-grid-3x3-gap"></i>
+        <span>Malla [G]</span>
+      </button>
+
+      <button class="dock-btn" id="fsBtn" title="Pantalla Completa (Tecla F)">
+        <i class="bi bi-fullscreen"></i>
+      </button>
+
+      <button class="dock-btn" id="helpBtn" title="Atajos de Teclado (Tecla ?)">
+        <i class="bi bi-question-circle"></i>
+      </button>
+    </nav>
+  </div>
+
+  <!-- MODAL: CUADRÍCULA DE DIAPOSITIVAS (TECLA G) -->
+  <div class="grid-drawer-modal" id="gridModal">
+    <div class="grid-header">
+      <div class="grid-title">
+        <i class="bi bi-grid-3x3-gap-fill" style="color:var(--cyber-purple-neon);"></i>
+        <span>24 Diapositivas // Conciencia sobre Seguridad y Protección Digital — Sesión 2 (Módulos 2 y 3)</span>
+      </div>
+      <button class="grid-close-btn" id="closeGridBtn"><i class="bi bi-x-lg"></i> Cerrar [ESC]</button>
+    </div>
+    <div class="grid-container" id="gridCardsContainer"></div>
+  </div>
+
+  <!-- DRAWER: HUD DEL EXPOSITOR (TECLA P) -->
+  <div class="presenter-hud-drawer" id="presenterHud">
+    <div class="hud-inner">
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-stopwatch-fill"></i> Control de Tiempo // Sesión 90 min
+        </div>
+        <div class="hud-timer-card">
+          <div class="hud-timer-label">Cronómetro de Clase</div>
+          <div class="hud-timer-digits" id="hudTimerDigits">00:00:00</div>
+          <div class="hud-timer-actions">
+            <button class="hud-mini-btn" id="hudTimerPauseBtn"><i class="bi bi-pause-fill"></i> Pausar</button>
+            <button class="hud-mini-btn" id="hudTimerResetBtn"><i class="bi bi-arrow-counterclockwise"></i> Reiniciar</button>
+            <button class="hud-mini-btn" id="closeHudBtn" style="margin-left:auto;"><i class="bi bi-x-lg"></i> Cerrar</button>
+          </div>
+          <div class="hud-clock-row">
+            <span>Hora Local:</span>
+            <strong id="hudClockDigits" style="color:var(--cisco-cyan);">--:--:--</strong>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-mic-fill"></i> Guion y Notas del Expositor (Alex Jamachi)
+        </div>
+        <div class="hud-notes-box" id="hudSpeakerNotes">
+          Cargando notas pedagógicas...
+        </div>
+      </div>
+
+      <div>
+        <div class="hud-panel-title">
+          <i class="bi bi-arrow-right-square-fill"></i> Siguiente Diapositiva (Clic para Avanzar)
+        </div>
+        <div class="hud-next-preview-card" id="hudNextPreviewCard">
+          <div class="hud-next-title" id="hudNextTitle">Siguiente diapositiva</div>
+          <div class="hud-next-desc" id="hudNextDesc">Descripción breve</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: AYUDA Y ATAJOS DE TECLADO (TECLA ?) -->
+  <div class="help-modal-overlay" id="helpModal">
+    <div class="help-modal-card">
+      <div class="help-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span class="header-badge badge-purple"><i class="bi bi-keyboard-fill"></i> ATAJOS</span>
+          <span style="font-family:var(--font-display); font-size:17px; font-weight:800; color:#FFFFFF;">Navegación Rápida</span>
+        </div>
+        <button class="grid-close-btn" id="closeHelpBtn">&times;</button>
+      </div>
+      <div class="help-shortcuts-grid">
+        <div class="help-shortcut-row"><span>Avanzar Diapositiva</span><kbd>Flecha Derecha / Espacio</kbd></div>
+        <div class="help-shortcut-row"><span>Retroceder Diapositiva</span><kbd>Flecha Izquierda / Shift+Espacio</kbd></div>
+        <div class="help-shortcut-row"><span>HUD del Expositor (Notas y Reloj)</span><kbd>Tecla P</kbd></div>
+        <div class="help-shortcut-row"><span>Malla / Vista General</span><kbd>Tecla G</kbd></div>
+        <div class="help-shortcut-row"><span>Pantalla Completa</span><kbd>Tecla F</kbd></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts del Motor y Efectos -->
+  <script src="js/ambient-canvas.js"></script>
+  <script src="js/slides-engine.js"></script>
+</body>
+</html>
